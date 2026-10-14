@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium Ice Cream Shop</title>
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="service.css">
+  <link rel="stylesheet" href="common.css">
+</head>
+
+<body>
+
+
+  <div id="preloader">
+    <div class="loader-container">
+      <div class="circle-spinner"></div>
+      <i class="fa-solid fa-ice-cream flying-icecream fly-1"></i>
+      <i class="fa-solid fa-ice-cream flying-icecream fly-2"></i>
+      <i class="fa-solid fa-ice-cream flying-icecream fly-3"></i>
+    </div>
+    <div class="loader-text">Scooping Happiness...</div>
+  </div>
+
+
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+
+  <header class="header" id="header" data-aos="fade-down" data-aos-duration="1000">
+    <nav class="navbar">
+
+      <div class="nav-left">
+        <a href="index.html" class="logo">
+          <img src="./asset/roselogo.webp" alt="logo"> </a>
+      </div>
+
+
+      <div class="nav-center">
+        <ul class="nav-links">
+          <li data-aos="fade-down" data-aos-delay="200"><a href="index.html" class="hover-effect">Home</a></li>
+          <li data-aos="fade-down" data-aos-delay="300"><a href="about.html" class="hover-effect">About</a></li>
+          <li data-aos="fade-down" data-aos-delay="400"><a href="service.html" class="hover-effect active">Service</a>
+          </li>
+          <li data-aos="fade-down" data-aos-delay="500"><a href="blog.html" class="hover-effect">Blog</a></li>
+          <li data-aos="fade-down" data-aos-delay="600"><a href="contact.html" class="hover-effect">Contact</a></li>
+        </ul>
+      </div>
+
+
+      <div class="nav-right" data-aos="fade-left" data-aos-delay="800">
+        <div class="auth-buttons">
+          <a href="index.html" class="btn-login">Login</a>
+          <a href="signup.html" class="btn-signup">Sign Up</a>
+        </div>
+
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+  <div class="mobile-overlay"></div>
+  <aside class="mobile-sidebar">
+    <div class="mobile-header">
+      <a href="index.html" class="logo">
+        <img src="./asset/roselogo.webp" alt="logo">
+      </a>
+      <div class="close-btn"><i class="fa-solid fa-xmark"></i></div>
+    </div>
+
+    <div class="mobile-body">
+      <ul class="mobile-nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="service.html" class="active">Service</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="mobile-auth-buttons">
+        <a href="login.html" class="btn-login-mobile">Login</a>
+        <a href="signup.html" class="btn-signup-mobile">Sign Up</a>
+      </div>
+    </div>
+  </aside>
+
+
+
+
+  <section id="service-hero" class="serv-hero-section">
+
+
+    <div class="serv-slide active">
+
+      <div class="serv-bg-image" style="background-image: url('./asset/c11.webp');"></div>
+      <div class="serv-overlay"></div>
+
+      <div class="serv-container">
+
+        <div class="serv-left-card gsap-serv-content">
+          <div class="serv-breadcrumb">
+            <a href="index.html">Home</a> / <span>Services</span>
+          </div>
+          <div class="serv-label">OUR SERVICES</div>
+          <h1 class="serv-heading">Every Occasion Deserves a Little Ice Cream Magic.</h1>
+          <p class="serv-desc">From grand wedding celebrations to cozy backyard parties, we bring premium, handcrafted
+            flavors and elegant setups to make your special moments unforgettable.</p>
+          <div class="serv-buttons">
+            <a href="404page.html" class="serv-btn-primary">Explore Services</a>
+            <a href="404page.html" class="serv-btn-outline">Order Now</a>
+          </div>
+        </div>
+
+
+        <div class="serv-right-card gsap-serv-image">
+          <img src="./asset/c7.webp" alt="Ice Cream Magic">
+          <div class="serv-badge">Sweet<br>Moments</div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="serv-slide">
+
+      <div class="serv-bg-image" style="background-image: url('./asset/c2.webp');"></div>
+      <div class="serv-overlay"></div>
+
+      <div class="serv-container">
+
+        <div class="serv-left-card">
+          <div class="serv-breadcrumb">
+            <a href="index.html">Home</a> / <span>Catering</span>
+          </div>
+          <div class="serv-label">PARTY CATERING</div>
+          <h1 class="serv-heading">Bring Ultimate Joy to Your Special Events.</h1>
+          <p class="serv-desc">Customize your dessert menu with our exclusive flavor combinations. Let our expert team
+            handle the sweetness while you enjoy the party.</p>
+          <div class="serv-buttons">
+            <a href="404page.html" class="serv-btn-primary">View Packages</a>
+            <a href="404page.html" class="serv-btn-outline">Book Now</a>
+          </div>
+        </div>
+
+
+        <div class="serv-right-card">
+          <img src="./asset/c15.webp" alt="Party Catering">
+          <div class="serv-badge">Premium<br>Quality</div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="serv-slider-nav">
+      <span class="serv-dot active" onclick="changeServSlide(0)"></span>
+      <span class="serv-dot" onclick="changeServSlide(1)"></span>
+    </div>
+
+  </section>
+
+
+
+  <section id="signature-services" class="sig-serv-section">
+    <div class="sig-header gsap-sig-head">
+      <div class="story-label">DISCOVER WHAT WE OFFER</div>
+      <h2 class="theme-heading">Our Signature Services</h2>
+    </div>
+
+    <div class="sig-container">
+
+
+      <div class="sig-left gsap-sig-left">
+        <div class="sig-img-wrap">
+          <img src="./asset/c14.webp" alt="Signature Ice Cream">
+          <div class="sig-img-badge">
+            <i class="fa-solid fa-star"></i>
+            <span>Premium Selection</span>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="sig-right">
+
+
+        <div class="sig-item gsap-sig-item">
+          <div class="sig-num">01</div>
+          <div class="sig-content">
+            <h3>Ice Cream Scoops</h3>
+            <p>Freshly served scoops featuring classic and creative flavors.</p>
+          </div>
+          <a href="404page.html" class="sig-arrow"><i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+
+        <div class="sig-item gsap-sig-item">
+          <div class="sig-num">02</div>
+          <div class="sig-content">
+            <h3>Signature Sundaes</h3>
+            <p>Ice cream combinations finished with delicious toppings and sauces.</p>
+          </div>
+          <a href="404page.html" class="sig-arrow"><i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+
+        <div class="sig-item gsap-sig-item">
+          <div class="sig-num">03</div>
+          <div class="sig-content">
+            <h3>Creamy Milkshakes</h3>
+            <p>Thick, flavorful milkshakes inspired by customer favorites.</p>
+          </div>
+          <a href="404page.html" class="sig-arrow"><i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+
+        <div class="sig-item gsap-sig-item">
+          <div class="sig-num">04</div>
+          <div class="sig-content">
+            <h3>Ice Cream Takeaway</h3>
+            <p>Convenient takeaway options for enjoying desserts at home.</p>
+          </div>
+          <a href="404page.html" class="sig-arrow"><i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <section id="flavor-bar" class="flavor-bar-section">
+
+
+    <div class="flavor-header gsap-flavor-fade">
+      <div class="flavor-label">ICE CREAM FLAVOR BAR</div>
+      <h2 class="flavor-main-heading">Choose Your Perfect Scoop</h2>
+      <p class="flavor-desc">Dive into a world of rich, creamy, and handcrafted perfection. Explore our signature
+        flavors made from the finest ingredients.</p>
+    </div>
+
+
+    <div class="flavor-marquee-container gsap-flavor-fade">
+      <div class="flavor-marquee-track">
+
+
+        <div class="flavor-card">
+          <div class="flavor-circle bg-pink">
+            <img src="./asset/w2.webp" alt="Strawberry Bliss">
+          </div>
+          <div class="flavor-info">
+            <h3>Strawberry Bliss</h3>
+            <p>Fresh hand-picked strawberries mixed into creamy perfection.</p>
+          </div>
+        </div>
+
+        <div class="flavor-card">
+          <div class="flavor-circle bg-cream">
+            <img src="./asset/w3.webp" alt="Belgian Chocolate">
+          </div>
+          <div class="flavor-info">
+            <h3>Belgian Chocolate</h3>
+            <p>Deep, rich Belgian cocoa perfectly roasted for an indulgent treat.</p>
+          </div>
+        </div>
+
+        <div class="flavor-card">
+          <div class="flavor-circle bg-pink">
+            <img src="./asset/w4.webp" alt="Classic Vanilla">
+          </div>
+          <div class="flavor-info">
+            <h3>Classic Vanilla</h3>
+            <p>Locally sourced organic milk layered with pure Madagascar vanilla bean.</p>
+          </div>
+        </div>
+
+        <div class="flavor-card">
+          <div class="flavor-circle bg-cream">
+            <img src="./asset/w15.webp" alt="Mango Delight">
+          </div>
+          <div class="flavor-info">
+            <h3>Mango Delight</h3>
+            <p>Sweet and tangy seasonal mangoes blended into a tropical paradise.</p>
+          </div>
+        </div>
+
+        <div class="flavor-card">
+          <div class="flavor-circle bg-pink">
+            <img src="./asset/w19.webp" alt="Pistachio Dream">
+          </div>
+          <div class="flavor-info">
+            <h3>Pistachio Dream</h3>
+            <p>Roasted premium pistachios offering a nutty and buttery experience.</p>
+          </div>
+        </div>
+
+        <div class="flavor-card">
+          <div class="flavor-circle bg-cream">
+            <img src="./asset/a1.webp" alt="Cookies & Cream">
+          </div>
+          <div class="flavor-info">
+            <h3>Cookies & Cream</h3>
+            <p>Crunchy chocolate cookies folded into our signature sweet cream.</p>
+          </div>
+        </div>
+
+
+        <div class="flavor-card">
+          <div class="flavor-circle bg-pink"><img src="./asset/w2.webp" alt="Strawberry Bliss"></div>
+          <div class="flavor-info">
+            <h3>Strawberry Bliss</h3>
+            <p>Fresh hand-picked strawberries mixed into creamy perfection.</p>
+          </div>
+        </div>
+        <div class="flavor-card">
+          <div class="flavor-circle bg-cream"><img src="./asset/w3.webp" alt="Belgian Chocolate"></div>
+          <div class="flavor-info">
+            <h3>Belgian Chocolate</h3>
+            <p>Deep, rich Belgian cocoa perfectly roasted for an indulgent treat.</p>
+          </div>
+        </div>
+        <div class="flavor-card">
+          <div class="flavor-circle bg-pink"><img src="./asset/w4.webp" alt="Classic Vanilla"></div>
+          <div class="flavor-info">
+            <h3>Classic Vanilla</h3>
+            <p>Locally sourced organic milk layered with pure Madagascar vanilla bean.</p>
+          </div>
+        </div>
+        <div class="flavor-card">
+          <div class="flavor-circle bg-cream"><img src="./asset/w15.webp" alt="Mango Delight"></div>
+          <div class="flavor-info">
+            <h3>Mango Delight</h3>
+            <p>Sweet and tangy seasonal mangoes blended into a tropical paradise.</p>
+          </div>
+        </div>
+        <div class="flavor-card">
+          <div class="flavor-circle bg-pink"><img src="./asset/w19.webp" alt="Pistachio Dream"></div>
+          <div class="flavor-info">
+            <h3>Pistachio Dream</h3>
+            <p>Roasted premium pistachios offering a nutty and buttery experience.</p>
+          </div>
+        </div>
+        <div class="flavor-card">
+          <div class="flavor-circle bg-cream"><img src="./asset/a1.webp" alt="Cookies & Cream"></div>
+          <div class="flavor-info">
+            <h3>Cookies & Cream</h3>
+            <p>Crunchy chocolate cookies folded into our signature sweet cream.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="flavor-action gsap-flavor-fade">
+      <a href="404page.html" class="flavor-btn">Explore All Flavors</a>
+    </div>
+
+  </section>
+
+
+
+  <section id="sundae-studio" class="sundae-section">
+
+
+    <div class="sundae-header gsap-sundae-fade">
+      <div class="sundae-label">SUNDAE STUDIO</div>
+      <h2 class="sundae-main-heading">Create Your Own Dessert</h2>
+      <p class="sundae-desc">Mix and match your favorite flavors, toppings, and sauces to build the ultimate sundae.</p>
+    </div>
+
+    <div class="sundae-container">
+
+
+      <div class="sundae-left gsap-sundae-left">
+        <div class="sundae-preview-wrap">
+
+          <img id="sundae-main-img" src="./asset/w13.webp" alt="Custom Sundae Preview">
+
+
+
+          <div class="sundae-badge">Your<br>Creation</div>
+        </div>
+      </div>
+
+
+      <div class="sundae-right gsap-sundae-right">
+
+
+        <div class="sundae-option-group">
+          <h3>1. Choose Your Base</h3>
+          <div class="sundae-options" id="base-options">
+            <button class="sundae-btn active" data-price="5.00" data-img="./asset/w13.webp">Classic Vanilla</button>
+            <button class="sundae-btn" data-price="6.00" data-img="./asset/c4.webp">Rich Chocolate</button>
+            <button class="sundae-btn" data-price="5.50" data-img="./asset/c12.webp">Strawberry Bliss</button>
+          </div>
+        </div>
+
+
+        <div class="sundae-option-group">
+          <h3>2. Add Toppings (+$1.00 each)</h3>
+          <div class="sundae-options" id="topping-options">
+            <button class="sundae-btn" data-price="1.00">Sprinkles</button>
+            <button class="sundae-btn" data-price="1.00">Roasted Nuts</button>
+            <button class="sundae-btn" data-price="1.00">Chocolate Chips</button>
+          </div>
+        </div>
+
+
+        <div class="sundae-option-group">
+          <h3>3. Drizzle with Sauce (+$0.50 each)</h3>
+          <div class="sundae-options" id="sauce-options">
+            <button class="sundae-btn" data-price="0.50">Chocolate Fudge</button>
+            <button class="sundae-btn" data-price="0.50">Golden Caramel</button>
+            <button class="sundae-btn" data-price="0.50">Strawberry Syrup</button>
+          </div>
+        </div>
+
+
+        <div class="sundae-summary">
+          <div class="price-display">
+            <span>Total: </span>
+            <span id="sundae-total-price">$5.00</span>
+          </div>
+          <button onclick="window.location.href='404page.html'" class="sundae-submit-btn">Build My Sundae</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <section id="catering" class="catering-section">
+    <div class="cat-container">
+
+
+      <div class="cat-left gsap-cat-img">
+        <div class="cat-img-wrapper">
+          <img src="./asset/w16.webp" alt="Ice Cream Catering Setup">
+
+
+          <div class="cat-badge">
+            <span>MADE FOR<br>MEMORABLE<br>MOMENTS</span>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="cat-right">
+        <h2 class="cat-heading gsap-cat-text">Bring the Ice Cream Experience to Your Celebration.</h2>
+        <p class="cat-desc gsap-cat-text">Transform your weddings, birthdays, and corporate events into sweet memories.
+          Our dedicated catering team ensures every guest gets a scoop of happiness.</p>
+
+
+        <ul class="cat-features">
+          <li class="gsap-cat-item">
+            <div class="cat-icon"><i class="fa-solid fa-check"></i></div>
+            Multiple premium flavor choices.
+          </li>
+          <li class="gsap-cat-item">
+            <div class="cat-icon"><i class="fa-solid fa-check"></i></div>
+            Customizable toppings bar.
+          </li>
+          <li class="gsap-cat-item">
+            <div class="cat-icon"><i class="fa-solid fa-check"></i></div>
+            Event-friendly serving options.
+          </li>
+          <li class="gsap-cat-item">
+            <div class="cat-icon"><i class="fa-solid fa-check"></i></div>
+            Packages tailored to the occasion.
+          </li>
+        </ul>
+
+
+        <div class="cat-action gsap-cat-text">
+          <a href="404page.html" class="cat-btn">Enquire About Catering</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <section id="event-packages" class="pkg-section">
+    <div class="pkg-container">
+
+      <div class="pkg-header gsap-pkg-fade">
+        <div class="pkg-label">CELEBRATE WITH US</div>
+        <h2 class="theme-heading">Ice Cream Event Packages</h2>
+      </div>
+
+      <div class="pkg-accordion gsap-pkg-fade">
+
+
+        <div class="pkg-panel active">
+          <div class="pkg-head">
+            <div class="pkg-num">01</div>
+            <h3 class="pkg-title">Birthday Ice Cream Cart</h3>
+
+            <div class="pkg-icon"><i class="fa-solid fa-plus"></i></div>
+          </div>
+          <div class="pkg-body">
+            <div class="pkg-body-inner">
+              <img src="./asset/w21.webp" class="pkg-bg-img" alt="Birthday Ice Cream Cart">
+              <div class="pkg-overlay"></div>
+              <div class="pkg-content-box">
+                <p class="pkg-desc">Bring a magical ice cream cart to your kid's birthday! Unlimited scoops of their
+                  favorite flavors with a fun DIY topping station.</p>
+                <ul class="pkg-highlights">
+                  <li><i class="fa-solid fa-check"></i> Unlimited ice cream scoops</li>
+                  <li><i class="fa-solid fa-check"></i> Fun sprinkles & candies station</li>
+                </ul>
+                <div class="pkg-price-wrap">
+                  <span class="pkg-price">Starts at $150</span>
+                </div>
+                <a href="404page.html" class="pkg-btn">Enquire Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="pkg-panel">
+          <div class="pkg-head">
+            <div class="pkg-num">02</div>
+            <h3 class="pkg-title">Family Sundae Kits</h3>
+            <div class="pkg-icon"><i class="fa-solid fa-plus"></i></div>
+          </div>
+          <div class="pkg-body">
+            <div class="pkg-body-inner">
+              <img src="./asset/c2.webp" class="pkg-bg-img" alt="Family Sundae Kits">
+              <div class="pkg-overlay"></div>
+              <div class="pkg-content-box">
+                <p class="pkg-desc">Perfect for family reunions. We deliver giant tubs of our signature ice cream along
+                  with a variety of rich syrups and roasted nuts.</p>
+                <ul class="pkg-highlights">
+                  <li><i class="fa-solid fa-check"></i> 5 Large flavor tubs</li>
+                  <li><i class="fa-solid fa-check"></i> Complete sundae making kit</li>
+                </ul>
+                <div class="pkg-price-wrap">
+                  <span class="pkg-price">Starts at $200</span>
+                </div>
+                <a href="404page.html" class="pkg-btn">Enquire Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="pkg-panel">
+          <div class="pkg-head">
+            <div class="pkg-num">03</div>
+            <h3 class="pkg-title">Office Ice Cream Socials</h3>
+            <div class="pkg-icon"><i class="fa-solid fa-plus"></i></div>
+          </div>
+          <div class="pkg-body">
+            <div class="pkg-body-inner">
+              <img src="./asset/c6.webp" class="pkg-bg-img" alt="Office Ice Cream Socials">
+              <div class="pkg-overlay"></div>
+              <div class="pkg-content-box">
+                <p class="pkg-desc">Treat your hardworking team to a premium ice cream buffet. Served by our
+                  professional staff to make corporate events sweeter.</p>
+                <ul class="pkg-highlights">
+                  <li><i class="fa-solid fa-check"></i> Branded ice cream cups</li>
+                  <li><i class="fa-solid fa-check"></i> Professional servers included</li>
+                </ul>
+                <div class="pkg-price-wrap">
+                  <span class="pkg-price">Custom Pricing</span>
+                </div>
+                <a href="404page.html" class="pkg-btn">Enquire Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="pkg-panel">
+          <div class="pkg-head">
+            <div class="pkg-num">04</div>
+            <h3 class="pkg-title">Wedding Gelato Bar</h3>
+            <div class="pkg-icon"><i class="fa-solid fa-plus"></i></div>
+          </div>
+          <div class="pkg-body">
+            <div class="pkg-body-inner">
+              <img src="./asset/w12.webp" class="pkg-bg-img" alt="Wedding Gelato Bar">
+              <div class="pkg-overlay"></div>
+              <div class="pkg-content-box">
+                <p class="pkg-desc">Elegant artisanal gelato and premium ice cream served in freshly baked waffle cones
+                  to make your special day truly unforgettable.</p>
+                <ul class="pkg-highlights">
+                  <li><i class="fa-solid fa-check"></i> Elegant display carts</li>
+                  <li><i class="fa-solid fa-check"></i> Freshly baked waffle cones</li>
+                </ul>
+                <div class="pkg-price-wrap">
+                  <span class="pkg-price">Starts at $450</span>
+                </div>
+                <a href="404page.html" class="pkg-btn">Enquire Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <section id="freshness-quality" class="fq-section">
+    <div class="fq-container">
+
+
+      <div class="fq-left">
+        <div class="fq-sticky-wrap">
+          <div class="fq-img-box">
+            <img src="./asset/c8.webp" alt="Fresh Ice Cream Preparation" id="fq-main-img">
+            <div class="fq-badge">CRAFTED WITH CARE</div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="fq-right">
+
+
+        <div class="fq-block gsap-fq-block">
+          <div class="fq-num">01</div>
+          <h3 class="fq-title">Carefully Selected Ingredients</h3>
+          <p class="fq-desc">We highlight the finest, locally sourced ingredients used in our exclusive recipes to
+            guarantee the ultimate freshness in every scoop.</p>
+        </div>
+
+
+        <div class="fq-block gsap-fq-block">
+          <div class="fq-num">02</div>
+          <h3 class="fq-title">Flavor Variety</h3>
+          <p class="fq-desc">From beloved classic favorites to innovative, creative combinations, we ensure there is a
+            perfect scoop for every craving.</p>
+        </div>
+
+
+        <div class="fq-block gsap-fq-block">
+          <div class="fq-num">03</div>
+          <h3 class="fq-title">Beautiful Presentation</h3>
+          <p class="fq-desc">Each dessert is artfully prepared and served, ensuring that it looks just as beautiful as
+            it tastes.</p>
+        </div>
+
+
+        <div class="fq-block gsap-fq-block">
+          <div class="fq-num">04</div>
+          <h3 class="fq-title">Customer-Focused Service</h3>
+          <p class="fq-desc">We emphasize friendly, attentive service, creating a welcoming and joyful experience for
+            every guest who visits our shop.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <section id="final-cta" class="cta-section">
+
+
+    <div class="cta-container">
+
+
+      <div class="cta-left gsap-cta-left">
+        <h2 class="cta-heading">Every Celebration Is Sweeter with Ice Cream.</h2>
+        <p class="cta-desc">From everyday treats to unforgettable celebrations, discover the perfect ice cream
+          experience for your next special moment.</p>
+
+        <div class="cta-buttons">
+
+          <a href="404page.html" class="btn-primary-cta">
+            <i class="fa-solid fa-ice-cream"></i> Explore Our Flavors
+          </a>
+          <a href="404page.html" class="btn-outline-cta">
+            <i class="fa-solid fa-calendar-check"></i> Book Your Event
+          </a>
+        </div>
+      </div>
+
+
+      <div class="cta-right gsap-cta-right">
+        <div class="cta-img-wrapper">
+          <img src="./asset/w7.webp" alt="Delicious Ice Cream">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <footer class="footer-section">
+    <div class="footer-container">
+
+
+      <div class="footer-col" data-aos="fade-up" data-aos-delay="100">
+        <a href="index.html" class="logo">
+          <img src="./asset/roselogo.webp" alt="logo">
+        </a>
+        <p class="footer-desc">
+          "Scooping happiness daily! Handcrafted artisanal ice creams made with organic ingredients. Treat yourself to a
+          swirl of joy every single day without fail."
+        </p>
+        <div class="social-icons">
+          <a href="404page.html"><i class="fa-brands fa-instagram"></i></a>
+          <a href="404page.html"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="404page.html"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="404page.html"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+
+
+      <div class="footer-col" data-aos="fade-up" data-aos-delay="200">
+        <h4>Explore</h4>
+        <ul class="footer-links">
+          <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+          <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
+          <li><a href="service.html"><i class="fa-solid fa-chevron-right"></i> Services</a></li>
+          <li><a href="blog.html"><i class="fa-solid fa-chevron-right"></i> Blog</a></li>
+          <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Contact</a></li>
+        </ul>
+      </div>
+
+
+      <div class="footer-col" data-aos="fade-up" data-aos-delay="300">
+        <h4>Visit Us</h4>
+        <ul class="footer-contact">
+          <li><i class="fa-regular fa-envelope"></i> info@thestackly.com</li>
+          <li><i class="fa-solid fa-location-dot"></i> MMR Complex, Chinna Thirupathi,near Chinna Muniyappan Kovil,
+            Salem</li>
+          <li><i class="fa-solid fa-phone"></i> +91 98765 43210</li>
+          <li><i class="fa-regular fa-clock"></i> Mon - Sun: 10 AM - 11 PM</li>
+        </ul>
+      </div>
+
+
+      <div class="footer-col" data-aos="fade-up" data-aos-delay="400">
+        <h4>Quick Order</h4>
+        <p class="footer-desc">
+          Craving a sweet midnight treat? Enter your ZIP code and order now!
+        </p>
+        <form id="orderForm" class="order-form">
+          <input type="text" id="areaCode" placeholder="Area / ZIP">
+          <button type="submit"> ORDER</button>
+        </form>
+        <div id="errorMsg" class="error-msg">Please enter your area code!</div>
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom" data-aos="fade-in" data-aos-delay="500">
+      <p>&copy; 2026 Scoops Ice Cream. All rights reserved.</p>
+      <div class="legal-links">
+        <a href="404page.html">Terms & Conditions</a>
+        <a href="404page.html">Privacy Policy</a>
+        <a href="404page.html">Refund Policy</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  <script src="script.js"></script>
+
+  <script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const servSlides = document.querySelectorAll('.serv-slide');
+      const servDots = document.querySelectorAll('.serv-dot');
+      let currentServSlide = 0;
+      let slideInterval;
+
+
+      window.changeServSlide = function (index) {
+        if (servSlides.length === 0) return;
+
+
+        servSlides.forEach(slide => slide.classList.remove('active'));
+        servDots.forEach(dot => dot.classList.remove('active'));
+
+
+        currentServSlide = index;
+        if (currentServSlide >= servSlides.length) currentServSlide = 0;
+
+        servSlides[currentServSlide].classList.add('active');
+        servDots[currentServSlide].classList.add('active');
+
+
+        resetInterval();
+      };
+
+
+      function startInterval() {
+        slideInterval = setInterval(() => {
+          let nextSlide = currentServSlide + 1;
+          if (nextSlide >= servSlides.length) nextSlide = 0;
+          changeServSlide(nextSlide);
+        }, 6000); 
+      }
+
+      function resetInterval() {
+        clearInterval(slideInterval);
+        startInterval();
+      }
+
+
+      if (servSlides.length > 0) {
+        startInterval();
+      }
+    });
+
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+
+
+        gsap.from(".gsap-sig-head", {
+          scrollTrigger: {
+            trigger: ".sig-serv-section",
+            start: "top 85%"
+          },
+          y: 30,
+          opacity: 0,
+          duration: 1
+        });
+
+
+        gsap.from(".gsap-sig-left", {
+          scrollTrigger: {
+            trigger: ".sig-serv-section",
+            start: "top 80%"
+          },
+          y: 40, 
+          opacity: 0,
+          duration: 1.2,
+          ease: "power3.out"
+        });
+
+
+        gsap.from(".gsap-sig-item", {
+          scrollTrigger: {
+            trigger: ".sig-right",
+            start: "top 85%", 
+            toggleActions: "play none none none" 
+          },
+          y: 40, 
+          opacity: 0,
+          duration: 0.8,
+          stagger: 0.2,
+          ease: "power2.out",
+          clearProps: "all"
+        });
+
+      }
+    });
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+
+        gsap.from(".gsap-flavor-fade", {
+          scrollTrigger: {
+            trigger: ".flavor-bar-section",
+            start: "top 80%",
+            toggleActions: "play none none none"
+          },
+          y: 40,
+          opacity: 0,
+          duration: 1,
+          stagger: 0.3,
+          ease: "power2.out",
+          clearProps: "all"
+        });
+
+      }
+    });
+
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+
+      const baseButtons = document.querySelectorAll('#base-options .sundae-btn');
+      const toppingButtons = document.querySelectorAll('#topping-options .sundae-btn');
+      const sauceButtons = document.querySelectorAll('#sauce-options .sundae-btn');
+      const totalPriceEl = document.getElementById('sundae-total-price');
+      const mainImg = document.getElementById('sundae-main-img');
+
+      function updatePrice() {
+        let total = 0;
+        const activeBase = document.querySelector('#base-options .sundae-btn.active');
+        if (activeBase) total += parseFloat(activeBase.getAttribute('data-price'));
+
+        const activeToppings = document.querySelectorAll('#topping-options .sundae-btn.active');
+        activeToppings.forEach(btn => total += parseFloat(btn.getAttribute('data-price')));
+
+        const activeSauces = document.querySelectorAll('#sauce-options .sundae-btn.active');
+        activeSauces.forEach(btn => total += parseFloat(btn.getAttribute('data-price')));
+
+        totalPriceEl.innerText = '$' + total.toFixed(2);
+      }
+
+
+      baseButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          baseButtons.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          const newImg = btn.getAttribute('data-img');
+          if (newImg) {
+            mainImg.style.opacity = 0;
+            setTimeout(() => {
+              mainImg.src = newImg + '&auto=format&fit=crop&w=800&q=80';
+              mainImg.style.opacity = 1;
+            }, 300);
+          }
+          updatePrice();
+        });
+      });
+
+
+      const toggleSelection = (buttons) => {
+        buttons.forEach(btn => {
+          btn.addEventListener('click', () => {
+            btn.classList.toggle('active');
+            updatePrice();
+          });
+        });
+      };
+
+      toggleSelection(toppingButtons);
+      toggleSelection(sauceButtons);
+
+
+
+      if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+
+        gsap.from(".gsap-sundae-fade", {
+          scrollTrigger: { trigger: ".sundae-section", start: "top 80%" },
+          y: 30, opacity: 0, duration: 1, clearProps: "all"
+        });
+
+        gsap.from(".gsap-sundae-left", {
+          scrollTrigger: { trigger: ".sundae-section", start: "top 75%" },
+          x: -50, opacity: 0, duration: 1.2, ease: "power3.out", clearProps: "all"
+        });
+
+        gsap.from(".gsap-sundae-right", {
+          scrollTrigger: { trigger: ".sundae-section", start: "top 75%" },
+          x: 50, opacity: 0, duration: 1.2, ease: "power3.out", clearProps: "all"
+        });
+      }
+    });
+
+
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+
+
+        gsap.from(".gsap-cat-img", {
+          scrollTrigger: { trigger: ".catering-section", start: "top 80%" },
+          y: 40, opacity: 0, duration: 1.2, ease: "power3.out", clearProps: "all"
+        });
+
+
+        gsap.from(".gsap-cat-text", {
+          scrollTrigger: { trigger: ".cat-right", start: "top 85%" },
+          y: 30, opacity: 0, duration: 1, stagger: 0.2, ease: "power2.out", clearProps: "all"
+        });
+
+
+        gsap.from(".gsap-cat-item", {
+          scrollTrigger: { trigger: ".cat-features", start: "top 85%" },
+          x: -30, opacity: 0, duration: 0.8, stagger: 0.15, ease: "back.out(1.2)", clearProps: "all"
+        });
+
+      }
+    });
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+      const pkgPanels = document.querySelectorAll('.pkg-panel');
+
+      pkgPanels.forEach(panel => {
+
+
+        panel.addEventListener('mouseenter', () => {
+          if (window.innerWidth > 992) {
+            pkgPanels.forEach(p => p.classList.remove('active'));
+            panel.classList.add('active');
+          }
+        });
+
+
+        const head = panel.querySelector('.pkg-head');
+        head.addEventListener('click', () => {
+          if (window.innerWidth <= 992) {
+
+            if (panel.classList.contains('active')) {
+              panel.classList.remove('active');
+            } else {
+              pkgPanels.forEach(p => p.classList.remove('active'));
+              panel.classList.add('active');
+            }
+          }
+        });
+      });
+
+
+      if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+        gsap.from(".gsap-pkg-fade", {
+          scrollTrigger: {
+            trigger: ".pkg-section",
+            start: "top 80%",
+            toggleActions: "play none none none"
+          },
+          y: 40,
+          opacity: 0,
+          duration: 1,
+          stagger: 0.3,
+          ease: "power2.out",
+          clearProps: "all"
+        });
+      }
+    });
+
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+
+
+        gsap.to("#fq-main-img", {
+          scrollTrigger: {
+            trigger: ".fq-section",
+            start: "top bottom",
+            end: "bottom top",
+            scrub: 1
+          },
+          scale: 1.15,
+          ease: "none"
+        });
+
+
+        const fqBlocks = document.querySelectorAll('.fq-block');
+
+        fqBlocks.forEach((block) => {
+
+
+          ScrollTrigger.create({
+            trigger: block,
+            start: "top center", 
+            end: "bottom center",
+            toggleClass: "active"
+          });
+
+
+          gsap.from(block, {
+            scrollTrigger: {
+              trigger: block,
+              start: "top 85%",
+              toggleActions: "play none none reverse"
+            },
+            y: 40,
+            opacity: 0,
+            duration: 0.8,
+            ease: "power2.out"
+          });
+        });
+
+      }
+    });
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+
+
+        gsap.from(".gsap-cta-left", {
+          scrollTrigger: {
+            trigger: ".cta-section",
+            start: "top 80%",
+            toggleActions: "play none none reverse"
+          },
+          x: -50,
+          opacity: 0,
+          duration: 1.2,
+          ease: "power3.out"
+        });
+
+
+        gsap.from(".gsap-cta-right", {
+          scrollTrigger: {
+            trigger: ".cta-section",
+            start: "top 80%",
+            toggleActions: "play none none reverse"
+          },
+          scale: 0.8,
+          opacity: 0,
+          duration: 1.2,
+          ease: "back.out(1.2)"
+        });
+
+      }
+    });
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium Ice Cream Shop</title>
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="blog.css">
+  <link rel="stylesheet" href="common.css">
+</head>
+
+<body>
+
+
+  <div id="preloader">
+    <div class="loader-container">
+      <div class="circle-spinner"></div>
+      <i class="fa-solid fa-ice-cream flying-icecream fly-1"></i>
+      <i class="fa-solid fa-ice-cream flying-icecream fly-2"></i>
+      <i class="fa-solid fa-ice-cream flying-icecream fly-3"></i>
+    </div>
+    <div class="loader-text">Scooping Happiness...</div>
+  </div>
+
+
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+
+  <header class="header" id="header" data-aos="fade-down" data-aos-duration="1000">
+    <nav class="navbar">
+
+      <div class="nav-left">
+        <a href="index.html" class="logo">
+          <img src="./asset/roselogo.webp" alt="logo"> </a>
+      </div>
+
+
+      <div class="nav-center">
+        <ul class="nav-links">
+          <li data-aos="fade-down" data-aos-delay="200"><a href="index.html" class="hover-effect">Home</a></li>
+          <li data-aos="fade-down" data-aos-delay="300"><a href="about.html" class="hover-effect">About</a></li>
+          <li data-aos="fade-down" data-aos-delay="400"><a href="service.html" class="hover-effect">Service</a></li>
+          <li data-aos="fade-down" data-aos-delay="500"><a href="blog.html" class="hover-effect  active">Blog</a></li>
+          <li data-aos="fade-down" data-aos-delay="600"><a href="contact.html" class="hover-effect">Contact</a></li>
+        </ul>
+      </div>
+
+
+      <div class="nav-right" data-aos="fade-left" data-aos-delay="800">
+        <div class="auth-buttons">
+          <a href="index.html" class="btn-login">Login</a>
+          <a href="signup.html" class="btn-signup">Sign Up</a>
+        </div>
+
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+  <div class="mobile-overlay"></div>
+  <aside class="mobile-sidebar">
+    <div class="mobile-header">
+      <a href="index.html" class="logo">
+        <img src="./asset/roselogo.webp" alt="logo">
+      </a>
+      <div class="close-btn"><i class="fa-solid fa-xmark"></i></div>
+    </div>
+
+    <div class="mobile-body">
+      <ul class="mobile-nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="service.html">Service</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="mobile-auth-buttons">
+        <a href="login.html" class="btn-login-mobile">Login</a>
+        <a href="signup.html" class="btn-signup-mobile">Sign Up</a>
+      </div>
+    </div>
+  </aside>
+
+
+
+  <section id="blog-hero-center" class="blog-hero-centered">
+
+
+    <div class="blog-c-slide active">
+      <div class="blog-c-bg" style="background-image: url('./asset/w8.webp');"></div>
+      <div class="blog-c-overlay"></div>
+
+      <div class="blog-c-content">
+        <div class="blog-c-label">THE SCOOP JOURNAL</div>
+        <h1 class="blog-c-heading">A Little Scoop of Stories,<br>A Lot of Sweet Inspiration.</h1>
+        <p class="blog-c-desc">Discover our latest ice cream recipes, flavor trends, and behind-the-scenes magic from
+          our sweet kitchen. Join our community of dessert lovers today.</p>
+
+        <div class="blog-c-buttons">
+          <a href="404page.html" class="btn-solid-rose"><i class="fa-solid fa-book-open"></i> Read Stories</a>
+          <a href="404page.html" class="btn-outline-white"><i class="fa-solid fa-bell"></i> Subscribe</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="blog-c-slide">
+      <div class="blog-c-bg" style="background-image: url('./asset/c7.webp');"></div>
+      <div class="blog-c-overlay"></div>
+
+      <div class="blog-c-content">
+        <div class="blog-c-label">RECIPES & TIPS</div>
+        <h1 class="blog-c-heading">Master the Art of<br>Homemade Desserts.</h1>
+        <p class="blog-c-desc">Learn the secret techniques and premium ingredients we use to craft the perfect scoop
+          every single time. Recreate our signature flavors at home.</p>
+
+        <div class="blog-c-buttons">
+          <a href="404page.html" class="btn-solid-rose"><i class="fa-solid fa-utensils"></i> View Recipes</a>
+          <a href="404page.html" class="btn-outline-white"><i class="fa-solid fa-lightbulb"></i> Pro Tips</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="blog-c-nav">
+      <span class="blog-c-dot active" onclick="changeCenterBlogSlide(0)"></span>
+      <span class="blog-c-dot" onclick="changeCenterBlogSlide(1)"></span>
+    </div>
+
+  </section>
+
+
+
+  <section id="featured-story" class="feat-story-section">
+    <div class="feat-container">
+
+
+      <div class="feat-left gsap-feat-img">
+        <div class="feat-img-wrap">
+          <img src="./asset/w6.webp" alt="Perfect Homemade Ice Cream">
+
+
+          <div class="feat-badge">FEATURED STORY</div>
+        </div>
+      </div>
+
+
+      <div class="feat-right gsap-feat-content">
+        <div class="feat-content-panel">
+
+          <div class="feat-meta">
+            <span class="feat-date"><i class="fa-regular fa-calendar"></i> October 13, 2026</span>
+            <span class="feat-time"><i class="fa-regular fa-clock"></i> 6 min read</span>
+          </div>
+
+          <h2 class="feat-heading">The Art of Making the Perfect Homemade Ice Cream</h2>
+
+          <p class="feat-desc">Discover the essential ingredients, preparation techniques, and little details that make
+            homemade ice cream special. Learn how to craft the creamiest texture right from your kitchen.</p>
+
+
+          <a href="404page.html" class="feat-btn">
+            Read the Story <i class="fa-solid fa-arrow-right feat-arrow"></i>
+          </a>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <section id="latest-stories" class="ls-section">
+    <div class="ls-container">
+
+
+      <div class="ls-header gsap-ls-fade">
+        <div class="ls-label">FRESH FROM OUR JOURNAL</div>
+        <h2 class="theme-heading">Latest Stories</h2>
+      </div>
+
+
+      <div class="ls-grid-top">
+
+
+        <article class="ls-article large-article gsap-ls-up">
+          <a href="404page.html" class="ls-img-link">
+            <div class="ls-img-wrap">
+              <img src="./asset/c12.webp" alt="Homemade Ice Cream">
+              <span class="ls-category">Recipes</span>
+            </div>
+          </a>
+          <div class="ls-content">
+            <div class="ls-meta">
+              <span><i class="fa-regular fa-calendar"></i> Oct 13, 2026</span>
+              <span><i class="fa-regular fa-clock"></i> 8 min read</span>
+            </div>
+            <a href="404page.html" class="ls-title-link">
+              <h3 class="ls-title">5 Secrets to Creamier Homemade Ice Cream</h3>
+            </a>
+            <p class="ls-excerpt">Discover the hidden techniques, precise temperatures, and ingredient ratios that
+              elevate your homemade ice cream from good to artisan-quality perfection.</p>
+            <a href="404page.html" class="ls-read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+
+        <div class="ls-stacked-articles">
+
+
+          <article class="ls-article small-article gsap-ls-right">
+            <a href="404page.html" class="ls-img-link">
+              <div class="ls-img-wrap">
+                <img src="./asset/c10.webp" alt="Strawberry vs Mango">
+                <span class="ls-category">Flavor Profiles</span>
+              </div>
+            </a>
+            <div class="ls-content">
+              <div class="ls-meta">
+                <span><i class="fa-regular fa-calendar"></i> Oct 10, 2026</span>
+                <span><i class="fa-regular fa-clock"></i> 5 min read</span>
+              </div>
+              <a href="404page.html" class="ls-title-link">
+                <h3 class="ls-title">Strawberry vs. Mango: Which Summer Flavor Wins?</h3>
+              </a>
+              <a href="404page.html" class="ls-read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+
+          <article class="ls-article small-article gsap-ls-right">
+            <a href="404page.html" class="ls-img-link">
+              <div class="ls-img-wrap">
+                <img src="./asset/w1.webp" alt="Ice Cream Sundae">
+                <span class="ls-category">Guides</span>
+              </div>
+            </a>
+            <div class="ls-content">
+              <div class="ls-meta">
+                <span><i class="fa-regular fa-calendar"></i> Oct 05, 2026</span>
+                <span><i class="fa-regular fa-clock"></i> 4 min read</span>
+              </div>
+              <a href="404page.html" class="ls-title-link">
+                <h3 class="ls-title">How to Create the Perfect Ice Cream Sundae</h3>
+              </a>
+              <a href="404page.html" class="ls-read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+
+      <div class="ls-grid-bottom">
+
+
+        <article class="ls-article horizontal-article gsap-ls-up">
+          <a href="404page.html" class="ls-img-link">
+            <div class="ls-img-wrap">
+              <img src="./asset/w2.webp" alt="Creative Toppings">
+              <span class="ls-category">Tips</span>
+            </div>
+          </a>
+          <div class="ls-content">
+            <div class="ls-meta">
+              <span><i class="fa-regular fa-calendar"></i> Sep 28, 2026</span>
+            </div>
+            <a href="404page.html" class="ls-title-link">
+              <h3 class="ls-title">Creative Toppings That Transform Every Scoop</h3>
+            </a>
+            <p class="ls-excerpt">Move beyond standard sprinkles and explore unique artisanal toppings.</p>
+            <a href="404page.html" class="ls-read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+
+        <article class="ls-article horizontal-article gsap-ls-up">
+          <a href="404page.html" class="ls-img-link">
+            <div class="ls-img-wrap">
+              <img src="./asset/w3.webp" alt="Exploring Gelato">
+              <span class="ls-category">Education</span>
+            </div>
+          </a>
+          <div class="ls-content">
+            <div class="ls-meta">
+              <span><i class="fa-regular fa-calendar"></i> Sep 22, 2026</span>
+            </div>
+            <a href="404page.html" class="ls-title-link">
+              <h3 class="ls-title">A Beginner's Guide to Exploring Gelato</h3>
+            </a>
+            <p class="ls-excerpt">Understand the delicious differences between traditional ice cream and gelato.</p>
+            <a href="404page.html" class="ls-read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <section id="recipe-lab" class="recipe-section">
+
+    <div class="recipe-header gsap-rec-fade">
+      <div class="recipe-label">ICE CREAM RECIPE LAB</div>
+      <h2 class="recipe-main-heading">Your Next Favorite Dessert Starts Here.</h2>
+    </div>
+
+    <div class="recipe-container">
+
+
+      <div class="rec-col rec-left gsap-rec-left">
+        <div class="recipe-card active" data-img="./asset/c12.webp">
+          <div class="rec-num">01</div>
+          <h3 class="rec-title">Strawberry Dream Ice Cream</h3>
+          <p class="rec-desc">Fresh strawberry-inspired dessert with a perfectly creamy texture.</p>
+          <div class="rec-meta">
+            <span><i class="fa-regular fa-clock"></i> 20 mins + freezing</span>
+            <span><i class="fa-solid fa-chart-simple"></i> Easy</span>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="rec-col rec-center gsap-rec-zoom">
+        <div class="rec-main-img-wrap">
+          <img id="rec-featured-img" src="./asset/c12.webp" alt="Featured Recipe">
+          <div class="rec-hover-overlay">
+            <a href="404page.html" class="btn-solid-rose"><i class="fa-solid fa-book-open"></i> Read Full Recipe</a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="rec-col rec-right gsap-rec-right">
+
+        <div class="recipe-card" data-img="./asset/c4.webp">
+          <div class="rec-num">02</div>
+          <h3 class="rec-title">Chocolate Bliss Sundae</h3>
+          <p class="rec-desc">Rich chocolate dessert layered with premium toppings and fudge.</p>
+          <div class="rec-meta">
+            <span><i class="fa-regular fa-clock"></i> 15 mins</span>
+            <span><i class="fa-solid fa-chart-simple"></i> Easy</span>
+          </div>
+        </div>
+
+        <div class="recipe-card" data-img="./asset/w15.webp">
+          <div class="rec-num">03</div>
+          <h3 class="rec-title">Mango Magic Pops</h3>
+          <p class="rec-desc">Fruity frozen dessert sticks packed with real seasonal mangoes.</p>
+          <div class="rec-meta">
+            <span><i class="fa-regular fa-clock"></i> 15 mins + freezing</span>
+            <span><i class="fa-solid fa-chart-simple"></i> Easy</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="recipe-action gsap-rec-fade">
+      <a href="404page.html" class="btn-outline-dark">Explore All Recipes <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+
+  </section>
+
+
+
+  <section id="behind-scoops" class="bts-section">
+    <div class="bts-container">
+
+
+      <div class="bts-left gsap-bts-left">
+        <div class="bts-sticky-wrap">
+          <div class="bts-img-box">
+            <img src="./asset/a1.webp" alt="Ice Cream Preparation">
+
+
+            <div class="bts-overlay-text">
+              <span class="bts-label">BEHIND THE SCOOPS</span>
+              <h3>Every Flavor<br>Has a Story.</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="bts-right">
+        <div class="bts-accordion">
+
+
+          <div class="bts-panel active gsap-bts-panel">
+            <div class="bts-head">
+              <span class="bts-num">01</span>
+              <h3 class="bts-title">From Ingredients to Ice Cream</h3>
+              <div class="bts-icon"><i class="fa-solid fa-plus"></i></div>
+            </div>
+            <div class="bts-body">
+              <div class="bts-body-inner">
+                <div class="bts-content-wrap">
+                  <div class="bts-text-side">
+                    <p>Discover the precise steps, temperature controls, and artisanal techniques involved in turning
+                      raw, fresh ingredients into perfectly churned, delicious ice cream flavors.</p>
+                    <a href="404page.html" class="bts-btn">Read Article <i class="fa-solid fa-arrow-right"></i></a>
+                  </div>
+                  <div class="bts-img-side">
+                    <img src="./asset/w20.webp" alt="Ingredients">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="bts-panel gsap-bts-panel">
+            <div class="bts-head">
+              <span class="bts-num">02</span>
+              <h3 class="bts-title">The Story Behind Our Favorite Flavors</h3>
+              <div class="bts-icon"><i class="fa-solid fa-plus"></i></div>
+            </div>
+            <div class="bts-body">
+              <div class="bts-body-inner">
+                <div class="bts-content-wrap">
+                  <div class="bts-text-side">
+                    <p>Explore the inspiration behind our classic and creative combinations. From childhood memories to
+                      exotic travels, learn how our signature menus are born.</p>
+                    <a href="404page.html" class="bts-btn">Read Article <i class="fa-solid fa-arrow-right"></i></a>
+                  </div>
+                  <div class="bts-img-side">
+                    <img src="./asset/w22.webp" alt="Flavors">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="bts-panel gsap-bts-panel">
+            <div class="bts-head">
+              <span class="bts-num">03</span>
+              <h3 class="bts-title">Meet the People Behind the Scoops</h3>
+              <div class="bts-icon"><i class="fa-solid fa-plus"></i></div>
+            </div>
+            <div class="bts-body">
+              <div class="bts-body-inner">
+                <div class="bts-content-wrap">
+                  <div class="bts-text-side">
+                    <p>Learn about the passionate chefs, flavor specialists, and friendly staff who prepare and serve
+                      our desserts with a smile every single day.</p>
+                    <a href="404page.html" class="bts-btn">Read Article <i class="fa-solid fa-arrow-right"></i></a>
+                  </div>
+                  <div class="bts-img-side">
+                    <img src="./asset/c5.webp" alt="Chef">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="bts-panel gsap-bts-panel">
+            <div class="bts-head">
+              <span class="bts-num">04</span>
+              <h3 class="bts-title">How We Create Seasonal Specials</h3>
+              <div class="bts-icon"><i class="fa-solid fa-plus"></i></div>
+            </div>
+            <div class="bts-body">
+              <div class="bts-body-inner">
+                <div class="bts-content-wrap">
+                  <div class="bts-text-side">
+                    <p>Discover how fresh, seasonal ingredients inspire exciting new dessert ideas. Get a sneak peek
+                      into our limited-time summer and winter collections.</p>
+                    <a href="404page.html" class="bts-btn">Read Article <i class="fa-solid fa-arrow-right"></i></a>
+                  </div>
+                  <div class="bts-img-side">
+                    <img src="./asset/c8.webp" alt="Seasonal Specials">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <section id="reader-favorites" class="rf-section">
+    <div class="rf-container">
+
+
+      <div class="rf-left gsap-rf-fade">
+        <div class="rf-label">POPULAR READS</div>
+        <h2 class="rf-heading">Stories Everyone Is Scooping Up.</h2>
+        <p class="rf-desc">Dive into our most-loved articles. From secret techniques to sweet history, these are the
+          stories our community can't get enough of.</p>
+
+        <div class="rf-nav-controls">
+          <button class="rf-btn" id="rf-prev"><i class="fa-solid fa-arrow-left"></i></button>
+          <button class="rf-btn" id="rf-next"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+      </div>
+
+
+      <div class="rf-right gsap-rf-carousel">
+        <div class="rf-track" id="rf-track">
+
+
+          <article class="rf-card rf-large">
+            <img src="./asset/c10.webp" alt="Ice Cream Toppings">
+            <div class="rf-meta">
+              <span class="rf-cat">Guides</span>
+              <span class="rf-time">5 min</span>
+            </div>
+            <div class="rf-overlay">
+              <h3 class="rf-title">The Ultimate Guide to Ice Cream Toppings.</h3>
+              <a href="404page.html" class="rf-read">Read Story <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+
+          <article class="rf-card rf-small">
+            <img src="./asset/c14.webp" alt="Serve Ice Cream">
+            <div class="rf-meta">
+              <span class="rf-cat">Tips</span>
+              <span class="rf-time">4 min</span>
+            </div>
+            <div class="rf-overlay">
+              <h3 class="rf-title">7 Creative Ways to Serve Ice Cream at Home.</h3>
+              <a href="404page.html" class="rf-read">Read Story <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+
+          <article class="rf-card rf-large">
+            <img src="./asset/c15.webp" alt="Store Ice Cream">
+            <div class="rf-meta">
+              <span class="rf-cat">Education</span>
+              <span class="rf-time">6 min</span>
+            </div>
+            <div class="rf-overlay">
+              <h3 class="rf-title">How to Store Ice Cream for Better Texture.</h3>
+              <a href="404page.html" class="rf-read">Read Story <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+
+          <article class="rf-card rf-small">
+            <img src="./asset/w9.webp" alt="Sweet History">
+            <div class="rf-meta">
+              <span class="rf-cat">History</span>
+              <span class="rf-time">8 min</span>
+            </div>
+            <div class="rf-overlay">
+              <h3 class="rf-title">The Sweet History of Your Favorite Flavors.</h3>
+              <a href="404page.html" class="rf-read">Read Story <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+
+          <article class="rf-card rf-large">
+            <img src="./asset/w22.webp" alt="Frozen Desserts">
+            <div class="rf-meta">
+              <span class="rf-cat">Recipes</span>
+              <span class="rf-time">5 min</span>
+            </div>
+            <div class="rf-overlay">
+              <h3 class="rf-title">Easy Frozen Desserts for Summer Days.</h3>
+              <a href="404page.html" class="rf-read">Read Story <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <section id="sweet-loop" class="loop-section-centered">
+
+    <div class="loop-container-centered gsap-loop-up">
+      <h2 class="loop-heading">A Little More Sweetness in Your Inbox.</h2>
+      <p class="loop-desc">Get inspired with delicious recipes, dessert ideas, and the latest stories from our sweet
+        kitchen.</p>
+
+
+      <form id="newsletter-form-centered" class="loop-form-centered">
+
+        <div class="loop-input-group">
+
+          <input type="text" id="user-email-centered" class="loop-input" placeholder="Enter your email address">
+          <button type="submit" class="loop-submit-btn">Subscribe</button>
+        </div>
+
+
+        <div id="form-message" class="form-message"></div>
+
+      </form>
+    </div>
+
+  </section>
+
+
+
+
+  <footer class="footer-section">
+    <div class="footer-container">
+
+
+      <div class="footer-col" data-aos="fade-up" data-aos-delay="100">
+        <a href="index.html" class="logo">
+          <img src="./asset/roselogo.webp" alt="logo">
+        </a>
+        <p class="footer-desc">
+          "Scooping happiness daily! Handcrafted artisanal ice creams made with organic ingredients. Treat yourself to a
+          swirl of joy every single day without fail."
+        </p>
+        <div class="social-icons">
+          <a href="404page.html"><i class="fa-brands fa-instagram"></i></a>
+          <a href="404page.html"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="404page.html"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="404page.html"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+
+
+      <div class="footer-col" data-aos="fade-up" data-aos-delay="200">
+        <h4>Explore</h4>
+        <ul class="footer-links">
+          <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+          <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
+          <li><a href="service.html"><i class="fa-solid fa-chevron-right"></i> Services</a></li>
+          <li><a href="blog.html"><i class="fa-solid fa-chevron-right"></i> Blog</a></li>
+          <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Contact</a></li>
+        </ul>
+      </div>
+
+
+      <div class="footer-col" data-aos="fade-up" data-aos-delay="300">
+        <h4>Visit Us</h4>
+        <ul class="footer-contact">
+          <li><i class="fa-regular fa-envelope"></i> info@thestackly.com</li>
+          <li><i class="fa-solid fa-location-dot"></i> MMR Complex, Chinna Thirupathi,near Chinna Muniyappan Kovil,
+            Salem</li>
+          <li><i class="fa-solid fa-phone"></i> +91 98765 43210</li>
+          <li><i class="fa-regular fa-clock"></i> Mon - Sun: 10 AM - 11 PM</li>
+        </ul>
+      </div>
+
+
+      <div class="footer-col" data-aos="fade-up" data-aos-delay="400">
+        <h4>Quick Order</h4>
+        <p class="footer-desc">
+          Craving a sweet midnight treat? Enter your ZIP code and order now!
+        </p>
+        <form id="orderForm" class="order-form">
+          <input type="text" id="areaCode" placeholder="Area / ZIP">
+          <button type="submit"> ORDER</button>
+        </form>
+        <div id="errorMsg" class="error-msg">Please enter your area code!</div>
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom" data-aos="fade-in" data-aos-delay="500">
+      <p>&copy; 2026 Scoops Ice Cream. All rights reserved.</p>
+      <div class="legal-links">
+        <a href="404page.html">Terms & Conditions</a>
+        <a href="404page.html">Privacy Policy</a>
+        <a href="404page.html">Refund Policy</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  <script src="script.js"></script>
+
+  <script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const centerSlides = document.querySelectorAll('.blog-c-slide');
+      const centerDots = document.querySelectorAll('.blog-c-dot');
+      let currentCenterSlide = 0;
+      let centerInterval;
+
+      window.changeCenterBlogSlide = function (index) {
+        if (centerSlides.length === 0) return;
+        centerSlides.forEach(slide => slide.classList.remove('active'));
+        centerDots.forEach(dot => dot.classList.remove('active'));
+
+        currentCenterSlide = index;
+        if (currentCenterSlide >= centerSlides.length) currentCenterSlide = 0;
+
+        centerSlides[currentCenterSlide].classList.add('active');
+        centerDots[currentCenterSlide].classList.add('active');
+
+        resetCenterInterval();
+      };
+
+      function startCenterInterval() {
+        centerInterval = setInterval(() => {
+          let nextSlide = currentCenterSlide + 1;
+          if (nextSlide >= centerSlides.length) nextSlide = 0;
+          changeCenterBlogSlide(nextSlide);
+        }, 6000);
+      }
+
+      function resetCenterInterval() {
+        clearInterval(centerInterval);
+        startCenterInterval();
+      }
+
+      if (centerSlides.length > 0) { startCenterInterval(); }
+    });
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+
+
+        gsap.from(".gsap-feat-img", {
+          scrollTrigger: {
+            trigger: ".feat-story-section",
+            start: "top 75%",
+            toggleActions: "play none none reverse"
+          },
+          x: -80,
+          opacity: 0,
+          duration: 1.2,
+          ease: "power3.out"
+        });
+
+
+        gsap.from(".gsap-feat-content", {
+          scrollTrigger: {
+            trigger: ".feat-story-section",
+            start: "top 70%",
+            toggleActions: "play none none reverse"
+          },
+          x: 80,
+          opacity: 0,
+          duration: 1.2,
+          ease: "power3.out"
+        });
+
+      }
+    });
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+
+        gsap.from(".gsap-ls-up", {
+          scrollTrigger: {
+            trigger: ".ls-section",
+            start: "top 80%",
+          },
+          y: 50,
+          opacity: 0,
+          duration: 1,
+          stagger: 0.2,
+          ease: "power2.out",
+          clearProps: "all"
+        });
+
+        gsap.from(".gsap-ls-right", {
+          scrollTrigger: {
+            trigger: ".ls-stacked-articles",
+            start: "top 85%",
+          },
+          x: 50,
+          opacity: 0,
+          duration: 1,
+          stagger: 0.3,
+          ease: "power2.out",
+          clearProps: "all"
+        });
+
+      }
+    });
+
+
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const recipeCards = document.querySelectorAll('.recipe-card');
+      const mainImg = document.getElementById('rec-featured-img');
+
+      if (recipeCards.length > 0 && mainImg) {
+        recipeCards.forEach(card => {
+
+
+          ['mouseenter', 'click'].forEach(evt => {
+            card.addEventListener(evt, function () {
+
+              recipeCards.forEach(c => c.classList.remove('active'));
+
+              this.classList.add('active');
+
+
+              const newSrc = this.getAttribute('data-img');
+              if (mainImg.src !== newSrc) {
+                mainImg.style.opacity = 0; 
+                setTimeout(() => {
+                  mainImg.src = newSrc;
+                  mainImg.style.opacity = 1; 
+                }, 300); 
+              }
+            });
+          });
+
+        });
+      }
+
+
+      if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+
+        gsap.from(".gsap-rec-fade", {
+          scrollTrigger: { trigger: ".recipe-section", start: "top 80%" },
+          y: 30, opacity: 0, duration: 1, clearProps: "all"
+        });
+
+
+        gsap.from(".gsap-rec-left", {
+          scrollTrigger: { trigger: ".recipe-container", start: "top 75%" },
+          x: -50, opacity: 0, duration: 1, ease: "power2.out", clearProps: "all"
+        });
+
+
+        gsap.from(".gsap-rec-right", {
+          scrollTrigger: { trigger: ".recipe-container", start: "top 75%" },
+          x: 50, opacity: 0, duration: 1, ease: "power2.out", clearProps: "all"
+        });
+
+
+        gsap.from(".gsap-rec-zoom", {
+          scrollTrigger: { trigger: ".recipe-container", start: "top 75%" },
+          scale: 0.9, y: 50, opacity: 0, duration: 1.2, ease: "back.out(1.2)", clearProps: "all"
+        });
+      }
+    });
+
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+
+      const btsPanels = document.querySelectorAll('.bts-panel');
+
+      btsPanels.forEach(panel => {
+        const head = panel.querySelector('.bts-head');
+
+        head.addEventListener('click', () => {
+
+          if (panel.classList.contains('active')) {
+            panel.classList.remove('active');
+            return;
+          }
+
+
+          btsPanels.forEach(p => p.classList.remove('active'));
+
+
+          panel.classList.add('active');
+        });
+      });
+
+
+      if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+
+
+        gsap.from(".gsap-bts-left", {
+          scrollTrigger: {
+            trigger: ".bts-section",
+            start: "top 75%",
+          },
+          y: 40,
+          opacity: 0,
+          duration: 1.2,
+          ease: "power3.out",
+          clearProps: "all"
+        });
+
+
+        gsap.from(".gsap-bts-panel", {
+          scrollTrigger: {
+            trigger: ".bts-right",
+            start: "top 80%",
+          },
+          x: 30,
+          opacity: 0,
+          duration: 0.8,
+          stagger: 0.2,
+          ease: "power2.out",
+          clearProps: "all"
+        });
+
+      }
+    });
+
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const track = document.getElementById('rf-track');
+      const btnPrev = document.getElementById('rf-prev');
+      const btnNext = document.getElementById('rf-next');
+
+      if (track) {
+
+        const scrollAmount = 350; 
+        if (btnPrev && btnNext) {
+          btnNext.addEventListener('click', () => track.scrollBy({ left: scrollAmount, behavior: 'smooth' }));
+          btnPrev.addEventListener('click', () => track.scrollBy({ left: -scrollAmount, behavior: 'smooth' }));
+        }
+
+
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        track.addEventListener('mousedown', (e) => {
+          isDown = true;
+          track.style.cursor = 'grabbing';
+          startX = e.pageX - track.offsetLeft;
+          scrollLeft = track.scrollLeft;
+        });
+
+        track.addEventListener('mouseleave', () => {
+          isDown = false;
+          track.style.cursor = 'grab';
+        });
+
+        track.addEventListener('mouseup', () => {
+          isDown = false;
+          track.style.cursor = 'grab';
+        });
+
+        track.addEventListener('mousemove', (e) => {
+          if (!isDown) return;
+          e.preventDefault();
+          const x = e.pageX - track.offsetLeft;
+          const walk = (x - startX) * 2; 
+          track.scrollLeft = scrollLeft - walk;
+        });
+      }
+
+
+      if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+
+
+        gsap.from(".gsap-rf-fade", {
+          scrollTrigger: { trigger: ".rf-section", start: "top 80%" },
+          y: 40, opacity: 0, duration: 1, ease: "power2.out", clearProps: "all"
+        });
+
+
+        gsap.from(".gsap-rf-carousel", {
+          scrollTrigger: { trigger: ".rf-section", start: "top 75%" },
+          x: 100, opacity: 0, duration: 1.2, ease: "power3.out", clearProps: "all"
+        });
+      }
+    });
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+      const form = document.getElementById('newsletter-form-centered');
+      const emailInput = document.getElementById('user-email-centered');
+      const messageBox = document.getElementById('form-message');
+
+      if (form) {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault(); 
+
+          const emailValue = emailInput.value.trim();
+
+          const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+          messageBox.className = "form-message show"; 
+
+
+          if (emailValue === "") {
+            messageBox.textContent = "Please enter an email address.";
+            messageBox.classList.add("error");
+          }
+
+          else if (!emailPattern.test(emailValue)) {
+            messageBox.textContent = "Please enter a valid email address.";
+            messageBox.classList.add("error");
+          }
+
+          else {
+            messageBox.textContent = "Successfully subscribed! Redirecting...";
+            messageBox.classList.add("success");
+
+            const btn = form.querySelector('.loop-submit-btn');
+            btn.style.backgroundColor = "#38a169"; 
+
+
+            setTimeout(() => {
+              window.location.href = "404page.html";
+            }, 1500);
+          }
+        });
+
+
+        emailInput.addEventListener('input', () => {
+          messageBox.classList.remove("show");
+        });
+      }
+
+
+      if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+        gsap.from(".gsap-loop-up", {
+          scrollTrigger: { trigger: ".loop-section-centered", start: "top 80%" },
+          y: 40, opacity: 0, duration: 1, ease: "power2.out", clearProps: "all"
+        });
+      }
+
+    });
+
+
+  </script>
+</body>
+
+</html>

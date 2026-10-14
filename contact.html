@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium Ice Cream Shop</title>
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="contact.css">
+  <link rel="stylesheet" href="common.css">
+</head>
+
+<body>
+
+
+  <div id="preloader">
+    <div class="loader-container">
+      <div class="circle-spinner"></div>
+      <i class="fa-solid fa-ice-cream flying-icecream fly-1"></i>
+      <i class="fa-solid fa-ice-cream flying-icecream fly-2"></i>
+      <i class="fa-solid fa-ice-cream flying-icecream fly-3"></i>
+    </div>
+    <div class="loader-text">Scooping Happiness...</div>
+  </div>
+
+
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+
+  <header class="header" id="header" data-aos="fade-down" data-aos-duration="1000">
+    <nav class="navbar">
+
+      <div class="nav-left">
+        <a href="index.html" class="logo">
+          <img src="./asset/roselogo.webp" alt="logo"> </a>
+      </div>
+
+
+      <div class="nav-center">
+        <ul class="nav-links">
+          <li data-aos="fade-down" data-aos-delay="200"><a href="index.html" class="hover-effect">Home</a></li>
+          <li data-aos="fade-down" data-aos-delay="300"><a href="about.html" class="hover-effect">About</a></li>
+          <li data-aos="fade-down" data-aos-delay="400"><a href="service.html" class="hover-effect">Service</a></li>
+          <li data-aos="fade-down" data-aos-delay="500"><a href="blog.html" class="hover-effect">Blog</a></li>
+          <li data-aos="fade-down" data-aos-delay="600"><a href="contact.html" class="hover-effect active">Contact</a>
+          </li>
+        </ul>
+      </div>
+
+
+      <div class="nav-right" data-aos="fade-left" data-aos-delay="800">
+        <div class="auth-buttons">
+          <a href="index.html" class="btn-login">Login</a>
+          <a href="signup.html" class="btn-signup">Sign Up</a>
+        </div>
+
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+  <div class="mobile-overlay"></div>
+  <aside class="mobile-sidebar">
+    <div class="mobile-header">
+      <a href="index.html" class="logo">
+        <img src="./asset/roselogo.webp" alt="logo">
+      </a>
+      <div class="close-btn"><i class="fa-solid fa-xmark"></i></div>
+    </div>
+
+    <div class="mobile-body">
+      <ul class="mobile-nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="service.html">Service</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <div class="mobile-auth-buttons">
+        <a href="login.html" class="btn-login-mobile">Login</a>
+        <a href="signup.html" class="btn-signup-mobile">Sign Up</a>
+      </div>
+    </div>
+  </aside>
+
+
+
+  <section id="contact-hero" class="contact-hero-section">
+
+
+    <i class="fa-solid fa-ice-cream floating-icon icon-1"></i>
+    <i class="fa-solid fa-cookie floating-icon icon-2"></i>
+    <i class="fa-solid fa-spoon floating-icon icon-3"></i>
+    <i class="fa-solid fa-star floating-icon icon-4"></i>
+    <i class="fa-solid fa-heart floating-icon icon-5"></i>
+
+
+    <div class="contact-slide active">
+      <div class="contact-bg" style="background-image: url('./asset/c6.webp');"></div>
+      <div class="contact-overlay"></div>
+
+      <div class="contact-content gsap-contact-up">
+        <div class="contact-breadcrumb">
+          <a href="index.html">Home</a> / <span>Contact</span>
+        </div>
+        <div class="contact-label">WE'D LOVE TO HEAR FROM YOU</div>
+        <h1 class="contact-heading">Have a Sweet Question?<br>Let's Scoop Up an Answer!</h1>
+        <p class="contact-desc">Whether you have a question about our flavors, want to plan a celebration, or simply
+          want to say hello, we're here for you.</p>
+
+        <div class="contact-buttons">
+          <a href="404page.html" class="btn-solid-rose">Get in Touch</a>
+          <a href="404page.html" class="btn-outline-white">Explore Our Flavors</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="contact-slide">
+      <div class="contact-bg" style="background-image: url('./asset/c3.webp');"></div>
+      <div class="contact-overlay"></div>
+
+      <div class="contact-content">
+        <div class="contact-breadcrumb">
+          <a href="index.html">Home</a> / <span>Events</span>
+        </div>
+        <div class="contact-label">PLAN YOUR CELEBRATION</div>
+        <h1 class="contact-heading">Make Your Next Event<br>Unforgettably Sweet.</h1>
+        <p class="contact-desc">From birthdays to weddings, our catering team is ready to serve happiness. Reach out to
+          us to customize your ice cream menu today.</p>
+
+        <div class="contact-buttons">
+          <a href="404page.html" class="btn-solid-rose">Book an Event</a>
+          <a href="404page.html" class="btn-outline-white">View Catering Menu</a>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="contact-nav">
+      <span class="contact-dot active" onclick="changeContactSlide(0)"></span>
+      <span class="contact-dot" onclick="changeContactSlide(1)"></span>
+    </div>
+
+  </section>
+
+
+
+  <section id="contact-form-section" class="cf-section">
+    <div class="cf-container">
+
+
+      <div class="cf-left gsap-cf-fade">
+        <div class="cf-visual-panel">
+          <img src="./asset/w1.webp" alt="Ice Cream Shop" class="cf-visual-img">
+          <div class="cf-visual-overlay">
+            <h2>Let's create something<br>sweet together.</h2>
+            <p>Drop us a line and we'll get back to you faster than ice cream melts on a summer day.</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="cf-right gsap-cf-slide">
+        <div class="cf-form-wrapper">
+
+
+          <form id="sweet-contact-form" class="cf-form" novalidate>
+
+            <div class="cf-input-group gsap-form-el">
+              <input type="text" id="cf-name" class="cf-input" placeholder=" ">
+              <label for="cf-name">Full Name</label>
+              <div class="cf-error" id="err-name"></div>
+            </div>
+
+            <div class="cf-input-group gsap-form-el">
+              <input type="email" id="cf-email" class="cf-input" placeholder=" ">
+              <label for="cf-email">Email Address</label>
+              <div class="cf-error" id="err-email"></div>
+            </div>
+
+            <div class="cf-input-group gsap-form-el">
+              <input type="text" id="cf-phone" class="cf-input" placeholder=" " maxlength="10">
+              <label for="cf-phone">Phone Number (10 Digits)</label>
+              <div class="cf-error" id="err-phone"></div>
+            </div>
+
+            <div class="cf-input-group gsap-form-el">
+              <select id="cf-type" class="cf-select">
+                <option value="" disabled selected>Select Enquiry Type</option>
+                <option value="General Enquiry">General Enquiry</option>
+                <option value="Ice Cream Orders">Ice Cream Orders</option>
+                <option value="Birthday Parties">Birthday Parties</option>
+                <option value="Catering & Events">Catering & Events</option>
+                <option value="Other">Other</option>
+              </select>
+              <div class="cf-error" id="err-type"></div>
+            </div>
+
+            <div class="cf-input-group gsap-form-el">
+              <input type="text" id="cf-subject" class="cf-input" placeholder=" ">
+              <label for="cf-subject">Subject</label>
+              <div class="cf-error" id="err-subject"></div>
+            </div>
+
+            <div class="cf-input-group gsap-form-el">
+              <textarea id="cf-message" class="cf-input cf-textarea" placeholder=" "></textarea>
+              <label for="cf-message">Your Message (Min 10 characters)</label>
+              <div class="cf-error" id="err-message"></div>
+            </div>
+
+
+            <div id="cf-global-success" class="cf-global-success"></div>
+
+            <button type="submit" class="cf-submit-btn gsap-form-el">Send Message</button>
+
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <section id="find-us" class="map-section">
+
+
+    <div class="map-header gsap-map-up">
+
+      <h2 class="map-heading">Your Next Favorite Scoop Is Closer Than You Think.</h2>
+      <p class="map-desc">Stop by for your favorite flavors, discover something new, and enjoy a little sweetness.</p>
+    </div>
+
+    <div class="map-container">
+
+
+      <div class="map-left gsap-map-fade">
+        <div class="map-iframe-wrap">
+
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3907.161609877078!2d78.17140487386635!3d11.682956588526377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babefef7fd970bb%3A0xe11aef1a71994f9!2sStackly!5e0!3m2!1sen!2sin!4v1791887742148!5m2!1sen!2sin"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+      </div>
+
+
+      <div class="map-right gsap-panel-slide">
+        <div class="map-panel">
+
+
+          <div class="shop-photo-wrap">
+            <img src="./asset/c15.webp" alt="Ice Cream Shop Interior">
+          </div>
+
+          <div class="map-panel-content">
+            <h3 class="shop-name">SweetCrumbs Creamery</h3>
+
+            <ul class="shop-details">
+              <li>
+                <i class="fa-solid fa-location-dot pink-icon"></i>
+                <span>Salem, India<br>Visit us in the heart of the city.</span>
+              </li>
+              <li>
+                <i class="fa-regular fa-clock pink-icon"></i>
+                <span><strong>Mon - Sun:</strong> 10:00 AM - 11:00 PM</span>
+              </li>
+            </ul>
+
+            <a href="404page.html" class="btn-directions">
+              Get Directions <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <section id="contact-info" class="ci-section">
+    <div class="ci-container">
+
+
+      <div class="ci-header gsap-ci-fade">
+        <h2 class="ci-main-heading">A Few Ways to Reach Our Sweet Team.</h2>
+      </div>
+
+
+      <div class="ci-strip">
+
+
+        <div class="ci-block gsap-ci-block">
+          <div class="ci-icon"><i class="fa-solid fa-location-dot"></i></div>
+          <h3 class="ci-title">Visit Our Shop</h3>
+          <div class="ci-details">
+            <p>MMR Complex, Chinna Thirupathi,<br> near Chinna Muniyappan Kovil,
+              Salem</p>
+          </div>
+          <a href="404page.html" class="ci-link">Get Directions <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+
+        <div class="ci-block gsap-ci-block">
+          <div class="ci-icon"><i class="fa-solid fa-phone"></i></div>
+          <h3 class="ci-title">Give Us a Call</h3>
+          <div class="ci-details">
+            <p class="ci-highlight">+91 98765 43210</p>
+            <p>Support available 10 AM - 9 PM</p>
+          </div>
+          <a href="tel:+919876543210" class="ci-link">Call Us <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+
+        <div class="ci-block gsap-ci-block">
+          <div class="ci-icon"><i class="fa-regular fa-envelope"></i></div>
+          <h3 class="ci-title">Drop Us an Email</h3>
+          <div class="ci-details">
+            <p class="ci-highlight">info@thestackly.com</p>
+            <p>For large orders & party enquiries</p>
+          </div>
+          <a href="404page.html" class="ci-link">Email Us <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+
+        <div class="ci-block gsap-ci-block">
+          <div class="ci-icon"><i class="fa-regular fa-clock"></i></div>
+          <h3 class="ci-title">Opening Hours</h3>
+          <div class="ci-details ci-hours">
+            <div class="hours-row">
+              <span>Mon – Fri</span>
+              <span>10:00 AM – 9:00 PM</span>
+            </div>
+            <div class="hours-row">
+              <span>Sat – Sun</span>
+              <span>10:00 AM – 10:00 PM</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <section id="sweet-closing-cta" class="compact-cta-section">
+
+
+    <div class="compact-cta-bg"></div>
+
+
+    <div class="compact-cta-overlay"></div>
+
+
+    <div class="compact-cta-container gsap-cta-fade">
+
+      <div class="compact-cta-label">
+        <i class="fa-solid fa-ice-cream"></i> SWEETNESS AWAITS
+      </div>
+
+      <h2 class="compact-cta-heading">Got a Sweet Idea?<br>Let's Make It Happen!</h2>
+
+      <p class="compact-cta-desc">Discover your next favorite flavor or plan a special celebration with us. We're ready
+        to make your ice cream experience memorable.</p>
+
+      <div class="compact-cta-buttons">
+        <a href="404page.html" class="btn-cta-rose">
+          <i class="fa-solid fa-ice-cream"></i> Explore Flavors
+        </a>
+        <a href="404page.html" class="btn-cta-outline-white">
+          <i class="fa-solid fa-calendar-check"></i> Book an Event
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <footer class="footer-section">
+    <div class="footer-container">
+
+
+      <div class="footer-col" data-aos="fade-up" data-aos-delay="100">
+        <a href="index.html" class="logo">
+          <img src="./asset/roselogo.webp" alt="logo">
+        </a>
+        <p class="footer-desc">
+          "Scooping happiness daily! Handcrafted artisanal ice creams made with organic ingredients. Treat yourself to a
+          swirl of joy every single day without fail."
+        </p>
+        <div class="social-icons">
+          <a href="404page.html"><i class="fa-brands fa-instagram"></i></a>
+          <a href="404page.html"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="404page.html"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="404page.html"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+
+
+      <div class="footer-col" data-aos="fade-up" data-aos-delay="200">
+        <h4>Explore</h4>
+        <ul class="footer-links">
+          <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+          <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
+          <li><a href="service.html"><i class="fa-solid fa-chevron-right"></i> Services</a></li>
+          <li><a href="blog.html"><i class="fa-solid fa-chevron-right"></i> Blog</a></li>
+          <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Contact</a></li>
+        </ul>
+      </div>
+
+
+      <div class="footer-col" data-aos="fade-up" data-aos-delay="300">
+        <h4>Visit Us</h4>
+        <ul class="footer-contact">
+          <li><i class="fa-regular fa-envelope"></i> info@thestackly.com</li>
+          <li><i class="fa-solid fa-location-dot"></i> MMR Complex, Chinna Thirupathi,near Chinna Muniyappan Kovil,
+            Salem</li>
+          <li><i class="fa-solid fa-phone"></i> +91 98765 43210</li>
+          <li><i class="fa-regular fa-clock"></i> Mon - Sun: 10 AM - 11 PM</li>
+        </ul>
+      </div>
+
+
+      <div class="footer-col" data-aos="fade-up" data-aos-delay="400">
+        <h4>Quick Order</h4>
+        <p class="footer-desc">
+          Craving a sweet midnight treat? Enter your ZIP code and order now!
+        </p>
+        <form id="orderForm" class="order-form">
+          <input type="text" id="areaCode" placeholder="Area / ZIP">
+          <button type="submit"> ORDER</button>
+        </form>
+        <div id="errorMsg" class="error-msg">Please enter your area code!</div>
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom" data-aos="fade-in" data-aos-delay="500">
+      <p>&copy; 2026 Scoops Ice Cream. All rights reserved.</p>
+      <div class="legal-links">
+        <a href="404page.html">Terms & Conditions</a>
+        <a href="404page.html">Privacy Policy</a>
+        <a href="404page.html">Refund Policy</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  <script src="script.js"></script>
+
+  <script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const contactSlides = document.querySelectorAll('.contact-slide');
+      const contactDots = document.querySelectorAll('.contact-dot');
+      let currentContactSlide = 0;
+      let contactInterval;
+
+
+      window.changeContactSlide = function (index) {
+        if (contactSlides.length === 0) return;
+
+        contactSlides.forEach(slide => slide.classList.remove('active'));
+        contactDots.forEach(dot => dot.classList.remove('active'));
+
+        currentContactSlide = index;
+        if (currentContactSlide >= contactSlides.length) currentContactSlide = 0;
+
+        contactSlides[currentContactSlide].classList.add('active');
+        contactDots[currentContactSlide].classList.add('active');
+
+        resetContactInterval();
+      };
+
+
+      function startContactInterval() {
+        contactInterval = setInterval(() => {
+          let nextSlide = currentContactSlide + 1;
+          if (nextSlide >= contactSlides.length) nextSlide = 0;
+          changeContactSlide(nextSlide);
+        }, 6000); 
+      }
+
+      function resetContactInterval() {
+        clearInterval(contactInterval);
+        startContactInterval();
+      }
+
+      if (contactSlides.length > 0) {
+        startContactInterval();
+      }
+
+
+      if (typeof gsap !== 'undefined') {
+        gsap.from(".gsap-contact-up", {
+          y: 50, opacity: 0, duration: 1.2, ease: "power3.out", delay: 0.2
+        });
+      }
+    });
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+      const contactForm = document.getElementById('sweet-contact-form');
+      if (!contactForm) return;
+
+      const nameInput = document.getElementById('cf-name');
+      const emailInput = document.getElementById('cf-email');
+      const phoneInput = document.getElementById('cf-phone');
+      const typeInput = document.getElementById('cf-type');
+      const subjectInput = document.getElementById('cf-subject');
+      const messageInput = document.getElementById('cf-message');
+      const globalSuccess = document.getElementById('cf-global-success');
+
+
+      function showError(inputEl, errId, msg) {
+        inputEl.classList.add('invalid');
+        const errEl = document.getElementById(errId);
+        errEl.textContent = msg;
+        errEl.style.display = 'block';
+      }
+
+
+      function clearError(inputEl, errId) {
+        inputEl.classList.remove('invalid');
+        const errEl = document.getElementById(errId);
+        errEl.textContent = '';
+        errEl.style.display = 'none';
+      }
+
+
+      const nameRegex = /^[a-zA-Z\s\-]+$/; 
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      const phoneRegex = /^\d{10}$/; 
+
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        let isValid = true;
+        globalSuccess.style.display = 'none';
+
+
+        clearError(nameInput, 'err-name');
+        const nameVal = nameInput.value.trim();
+        if (nameVal === '') {
+          showError(nameInput, 'err-name', 'Please enter your name.');
+          isValid = false;
+        } else if (!nameRegex.test(nameVal)) {
+          showError(nameInput, 'err-name', 'Numbers & special characters are not allowed. Use letters, spaces, or hyphens.');
+          isValid = false;
+        }
+
+
+        clearError(emailInput, 'err-email');
+        if (emailInput.value.trim() === '') {
+          showError(emailInput, 'err-email', 'Please enter your email address.');
+          isValid = false;
+        } else if (!emailRegex.test(emailInput.value.trim())) {
+          showError(emailInput, 'err-email', 'Please enter a valid email address.');
+          isValid = false;
+        }
+
+
+        clearError(phoneInput, 'err-phone');
+        if (phoneInput.value.trim() === '') {
+          showError(phoneInput, 'err-phone', 'Please enter your phone number.');
+          isValid = false;
+        } else if (!phoneRegex.test(phoneInput.value.trim())) {
+          showError(phoneInput, 'err-phone', 'Phone number must contain exactly 10 digits.');
+          isValid = false;
+        }
+
+
+        clearError(typeInput, 'err-type');
+        if (typeInput.value === '') {
+          showError(typeInput, 'err-type', 'Please select an enquiry type.');
+          isValid = false;
+        }
+
+
+        clearError(subjectInput, 'err-subject');
+        if (subjectInput.value.trim() === '') {
+          showError(subjectInput, 'err-subject', 'Please enter a subject.');
+          isValid = false;
+        }
+
+
+        clearError(messageInput, 'err-message');
+        if (messageInput.value.trim() === '') {
+          showError(messageInput, 'err-message', 'Please enter your message.');
+          isValid = false;
+        } else if (messageInput.value.trim().length < 10) {
+          showError(messageInput, 'err-message', 'Your message must be at least 10 characters long.');
+          isValid = false;
+        }
+
+
+        if (isValid) {
+          globalSuccess.textContent = 'Message sent successfully! Redirecting...';
+          globalSuccess.style.display = 'block';
+
+          const submitBtn = contactForm.querySelector('.cf-submit-btn');
+          submitBtn.style.backgroundColor = "#38a169";
+          submitBtn.textContent = 'Sending...';
+
+
+          setTimeout(() => {
+            window.location.href = "404page.html";
+          }, 1500);
+        }
+      });
+
+
+      const allInputs = [nameInput, emailInput, phoneInput, typeInput, subjectInput, messageInput];
+      allInputs.forEach(input => {
+        input.addEventListener('input', (e) => {
+          const errId = 'err-' + e.target.id.split('-')[1];
+          clearError(e.target, errId);
+        });
+      });
+
+
+      if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+        gsap.from(".gsap-cf-fade", {
+          scrollTrigger: { trigger: ".cf-section", start: "top 80%" },
+          y: 40, opacity: 0, duration: 1, ease: "power2.out", clearProps: "all"
+        });
+        gsap.from(".gsap-cf-slide", {
+          scrollTrigger: { trigger: ".cf-section", start: "top 75%" },
+          x: 50, opacity: 0, duration: 1.2, ease: "power3.out", clearProps: "all"
+        });
+        gsap.from(".gsap-form-el", {
+          scrollTrigger: { trigger: ".cf-form", start: "top 85%" },
+          y: 20, opacity: 0, duration: 0.6, stagger: 0.1, ease: "power2.out", clearProps: "all"
+        });
+      }
+    });
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+
+
+        gsap.from(".gsap-map-up", {
+          scrollTrigger: { trigger: ".map-section", start: "top 80%" },
+          y: 40, opacity: 0, duration: 1, ease: "power2.out", clearProps: "all"
+        });
+
+
+        gsap.from(".gsap-map-fade", {
+          scrollTrigger: { trigger: ".map-container", start: "top 75%" },
+          y: 30, opacity: 0, duration: 1.2, ease: "power2.out", clearProps: "all"
+        });
+
+
+        gsap.from(".gsap-panel-slide", {
+          scrollTrigger: { trigger: ".map-container", start: "top 70%" },
+          x: 80, opacity: 0, duration: 1.2, ease: "power3.out", clearProps: "all"
+        });
+
+      }
+    });
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+
+
+        gsap.from(".gsap-ci-fade", {
+          scrollTrigger: {
+            trigger: ".ci-section",
+            start: "top 80%"
+          },
+          y: 30, opacity: 0, duration: 1, ease: "power2.out", clearProps: "all"
+        });
+
+
+        gsap.from(".gsap-ci-block", {
+          scrollTrigger: {
+            trigger: ".ci-strip",
+            start: "top 75%"
+          },
+          y: 50,
+          opacity: 0,
+          duration: 0.8,
+          stagger: 0.15, 
+          ease: "power2.out",
+          clearProps: "all"
+        });
+
+      }
+    });
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+
+
+        gsap.from(".gsap-cta-fade", {
+          scrollTrigger: {
+            trigger: ".compact-cta-section",
+            start: "top 85%",
+            toggleActions: "play none none reverse"
+          },
+          y: 40,
+          opacity: 0,
+          duration: 1,
+          ease: "power3.out",
+          clearProps: "all"
+        });
+
+      }
+    });
+
+  </script>
+</body>
+
+</html>

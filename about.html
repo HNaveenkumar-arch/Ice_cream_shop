@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium Ice Cream Shop</title>
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="about.css">
+  <link rel="stylesheet" href="common.css">
+</head>
+
+<body>
+
+
+  <div id="preloader">
+    <div class="loader-container">
+      <div class="circle-spinner"></div>
+      <i class="fa-solid fa-ice-cream flying-icecream fly-1"></i>
+      <i class="fa-solid fa-ice-cream flying-icecream fly-2"></i>
+      <i class="fa-solid fa-ice-cream flying-icecream fly-3"></i>
+    </div>
+    <div class="loader-text">Scooping Happiness...</div>
+  </div>
+
+
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+
+  <header class="header" id="header" data-aos="fade-down" data-aos-duration="1000">
+    <nav class="navbar">
+
+      <div class="nav-left">
+        <a href="index.html" class="logo">
+          <img src="./asset/roselogo.webp" alt="logo"> </a>
+      </div>
+
+
+      <div class="nav-center">
+        <ul class="nav-links">
+          <li data-aos="fade-down" data-aos-delay="200"><a href="index.html" class="hover-effect">Home</a>
+          </li>
+          <li data-aos="fade-down" data-aos-delay="300"><a href="about.html" class="hover-effect active">About</a></li>
+          <li data-aos="fade-down" data-aos-delay="400"><a href="service.html" class="hover-effect">Service</a></li>
+          <li data-aos="fade-down" data-aos-delay="500"><a href="blog.html" class="hover-effect">Blog</a></li>
+          <li data-aos="fade-down" data-aos-delay="600"><a href="contact.html" class="hover-effect">Contact</a></li>
+        </ul>
+      </div>
+
+
+      <div class="nav-right" data-aos="fade-left" data-aos-delay="800">
+        <div class="auth-buttons">
+          <a href="index.html" class="btn-login">Login</a>
+          <a href="signup.html" class="btn-signup">Sign Up</a>
+        </div>
+
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+  <div class="mobile-overlay"></div>
+  <aside class="mobile-sidebar">
+    <div class="mobile-header">
+      <a href="index.html" class="logo">
+        <img src="./asset/roselogo.webp" alt="logo">
+      </a>
+      <div class="close-btn"><i class="fa-solid fa-xmark"></i></div>
+    </div>
+
+    <div class="mobile-body">
+      <ul class="mobile-nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="service.html">Service</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="mobile-auth-buttons">
+        <a href="login.html" class="btn-login-mobile">Login</a>
+        <a href="signup.html" class="btn-signup-mobile">Sign Up</a>
+      </div>
+    </div>
+  </aside>
+
+
+
+  <section id="about-hero" class="about-hero-section" style="background-image: url('./asset/w10.webp');">
+
+
+    <div class="about-overlay"></div>
+
+    <div class="about-container">
+
+
+      <div class="about-slider-wrap">
+
+
+        <div class="about-slide active" data-animation="left">
+          <div class="about-left-box">
+            <div class="breadcrumb"><a href="index.html" class="home-link">Home</a> / About Us</div>
+            <div class="story-label">Our Story</div>
+            <h1 class="about-heading">A Little of Happiness in Every Bite.</h1>
+            <p>We are passionately dedicated to crafting the most delicious, artisanal ice cream using pure,
+              natural ingredients to bring joy to your everyday life.</p>
+            <a href="404page.html" class="btn-rose">Discover Our Story</a>
+          </div>
+
+          <div class="about-right-box">
+            <div class="about-image-card">
+              <img src="./asset/w19.webp" alt="Ice Cream">
+              <div class="love-badge"><i class="fa-solid fa-heart"></i> Made with Love</div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="about-slide" data-animation="right">
+          <div class="about-left-box">
+            <div class="breadcrumb"><a href="index.html" class="home-link">Home</a> / About Us</div>
+            <div class="story-label">Our Craft</div>
+            <h1 class="about-heading">Crafted with Passion & Pure Ingredients.</h1>
+            <p>Every single batch is locally churned with love, mixing rich Belgian chocolate and farm-fresh
+              dairy to create an unforgettable dessert experience.</p>
+            <a href="404page.html" class="btn-rose">Learn More</a>
+          </div>
+
+          <div class="about-right-box">
+            <div class="about-image-card">
+              <img src="./asset/w7.webp" alt="Chocolate Ice Cream">
+              <div class="love-badge"><i class="fa-solid fa-heart"></i> Handcrafted</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="about-slider-nav">
+        <button class="about-arrow" onclick="moveSlide(-1)"><i class="fa-solid fa-angle-left"></i></button>
+        <button class="about-arrow" onclick="moveSlide(1)"><i class="fa-solid fa-angle-right"></i></button>
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <section id="our-story" class="story-section">
+
+    <div class="story-watermark">2015</div>
+
+    <div class="story-container">
+
+
+      <div class="story-left gsap-story-left">
+        <div class="story-img-main">
+          <img src="./asset/w14.webp" alt="Artisan Making Ice Cream">
+        </div>
+        <div class="story-img-overlap">
+          <img src="./asset/c4.webp" alt="Colorful Ice Cream Scoops">
+        </div>
+        <div class="story-floating-badge">
+          <i class="fa-solid fa-heart"><span> 10+ Years of Craft</span></i>
+        </div>
+      </div>
+
+
+      <div class="story-right gsap-story-right">
+        <div class="story-label">HOW IT ALL STARTED</div>
+        <h2 class="theme-heading">From One Small Dream to a World of Flavors.</h2>
+
+        <p class="story-desc-1">
+          What began as a tiny kitchen experiment with fresh dairy and hand-picked strawberries has blossomed into a
+          beloved sanctuary for dessert lovers.
+        </p>
+        <p class="story-desc-2">
+          Every single batch is locally churned using traditional artisanal techniques, combining premium organic
+          ingredients with creative passion.
+        </p>
+
+        <a href="404page.html" class="btn-rose">
+          Our Journey <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <section id="philosophy" class="philosophy-section">
+    <div class="phil-container">
+
+      <h2 class="phil-main-heading gsap-phil-heading">
+        We Don't Just Make Ice Cream.<br>We Create Happy Moments.
+      </h2>
+
+      <div class="phil-grid">
+        <div class="phil-connecting-line"></div>
+
+
+        <div class="phil-item gsap-phil-item">
+          <div class="phil-bg-number">01</div>
+          <div class="phil-circle">
+            <img src="./asset/c5.webp" alt="Made with Passion">
+          </div>
+          <h3 class="phil-title">— Made with Passion</h3>
+          <p class="phil-desc">Every flavor is created with care and attention to taste.</p>
+
+          <a href="404page.html" class="phil-btn">Learn More</a>
+        </div>
+
+
+        <div class="phil-item gsap-phil-item">
+          <div class="phil-bg-number">02</div>
+          <div class="phil-circle">
+            <img src="./asset/c12.webp" alt="Quality Comes First">
+          </div>
+          <h3 class="phil-title">— Quality Comes First</h3>
+          <p class="phil-desc">We focus on carefully selected ingredients and delicious combinations.</p>
+
+          <a href="404page.html" class="phil-btn">Learn More</a>
+        </div>
+
+
+        <div class="phil-item gsap-phil-item">
+          <div class="phil-bg-number">03</div>
+          <div class="phil-circle">
+            <img src="./asset/w25.webp" alt="Happiness in Every Scoop">
+          </div>
+          <h3 class="phil-title">— Happiness in Every Scoop</h3>
+          <p class="phil-desc">We want every visit to create a memorable experience.</p>
+
+          <a href="404page.html" class="phil-btn">Learn More</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <section id="ingredients" class="ingredients-section">
+    <div class="ing-header gsap-ing-head">
+      <div class="story-label">The Secret</div>
+      <h2 class="theme-heading">The Magic Behind Every Scoop</h2>
+    </div>
+
+    <div class="ing-container">
+
+
+      <div class="ing-column ing-left gsap-ing-left">
+
+
+        <div class="ing-item">
+          <div class="ing-connector left-connector"></div>
+          <div class="ing-img-box">
+            <img src="./asset/w15.webp" alt="Fresh Fruits">
+          </div>
+          <div class="ing-text">
+            <h3>Fresh Fruits</h3>
+            <p class="ing-desc">Bright, hand-picked seasonal fruity flavors providing a 100% natural and refreshing
+              taste.</p>
+          </div>
+        </div>
+
+
+        <div class="ing-item">
+          <div class="ing-connector left-connector-bottom"></div>
+          <div class="ing-img-box">
+            <img src="./asset/w9.webp" alt="Creamy Dairy">
+          </div>
+          <div class="ing-text">
+            <h3>Creamy Dairy</h3>
+            <p class="ing-desc">Locally sourced, organic whole milk and cream for an unforgettably smooth and rich
+              texture.</p>
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="ing-column ing-center gsap-ing-center">
+        <div class="center-bowl-wrapper">
+          <div class="dashed-circle"></div>
+
+          <img src="./asset/c6.webp" alt="Premium Ice Cream Bowl" class="floating-bowl">
+        </div>
+      </div>
+
+
+      <div class="ing-column ing-right gsap-ing-right">
+
+
+        <div class="ing-item">
+          <div class="ing-connector right-connector"></div>
+          <div class="ing-img-box">
+            <img src="./asset/w11.webp" alt="Premium Chocolate">
+          </div>
+          <div class="ing-text">
+            <h3>Premium Chocolate</h3>
+            <p class="ing-desc">Deep, rich Belgian cocoa perfectly roasted for an indulgent and authentic chocolate
+              flavor.</p>
+          </div>
+        </div>
+
+
+        <div class="ing-item">
+          <div class="ing-connector right-connector-bottom"></div>
+          <div class="ing-img-box">
+            <img src="./asset/c8.webp" alt="Natural Flavors">
+          </div>
+          <div class="ing-text">
+            <h3>Natural Inspirations</h3>
+            <p class="ing-desc">Delicious combinations inspired by earth's finest botanicals and familiar ingredients.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <section id="process" class="process-section">
+    <div class="process-header gsap-process-head">
+      <div class="story-label">The Art</div>
+      <h2 class="theme-heading">How We Craft Happiness</h2>
+    </div>
+
+    <div class="process-container">
+
+
+      <div class="timeline-line-bg"></div>
+      <div class="timeline-line-progress" id="timeline-progress"></div>
+
+
+      <div class="process-row">
+        <div class="process-content left-content gsap-slide-left">
+          <h3 class="process-title">Ingredient Selection</h3>
+          <p class="process-desc">We carefully select the freshest, highest-quality organic ingredients for our
+            exclusive recipes.</p>
+        </div>
+        <div class="process-center">
+          <div class="process-circle">01</div>
+        </div>
+        <div class="process-image right-image gsap-slide-right">
+          <img src="./asset/c2.webp" alt="Ingredient Selection">
+        </div>
+      </div>
+
+
+      <div class="process-row reverse-row">
+        <div class="process-image left-image gsap-slide-left">
+          <img src="./asset/w17.webp" alt="Preparation">
+        </div>
+        <div class="process-center">
+          <div class="process-circle">02</div>
+        </div>
+        <div class="process-content right-content gsap-slide-right">
+          <h3 class="process-title">Preparation</h3>
+          <p class="process-desc">Ingredients are meticulously measured and prepared in exact proportions for each
+            unique flavor.</p>
+        </div>
+      </div>
+
+
+      <div class="process-row">
+        <div class="process-content left-content gsap-slide-left">
+          <h3 class="process-title">Mixing & Churning</h3>
+          <p class="process-desc">The mixture is expertly churned at the perfect temperature to achieve our signature
+            smooth texture.</p>
+        </div>
+        <div class="process-center">
+          <div class="process-circle">03</div>
+        </div>
+        <div class="process-image right-image gsap-slide-right">
+          <img src="./asset/c10.webp" alt="Mixing and Churning">
+        </div>
+      </div>
+
+
+      <div class="process-row reverse-row">
+        <div class="process-image left-image gsap-slide-left">
+          <img src="./asset/c12.webp" alt="Flavor Creation">
+        </div>
+        <div class="process-center">
+          <div class="process-circle">04</div>
+        </div>
+        <div class="process-content right-content gsap-slide-right">
+          <h3 class="process-title">Flavor Creation</h3>
+          <p class="process-desc">Fresh fruits, roasted nuts, and rich chocolate are folded in to bring each magical
+            recipe to life.</p>
+        </div>
+      </div>
+
+
+      <div class="process-row">
+        <div class="process-content left-content gsap-slide-left">
+          <h3 class="process-title">Ready to Serve</h3>
+          <p class="process-desc">The finished artisanal ice cream is perfectly chilled and prepared for you to enjoy
+            and share.</p>
+        </div>
+        <div class="process-center">
+          <div class="process-circle">05</div>
+        </div>
+        <div class="process-image right-image gsap-slide-right">
+          <img src="./asset/w22.webp" alt="Ready to Serve">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <section id="testimonials" class="testi-section">
+    <div class="testi-container">
+
+
+      <div class="testi-left gsap-testi-left">
+        <div class="testi-img-wrapper">
+          <img src="./asset/w23.webp" alt="Friends enjoying ice cream">
+
+          <div class="sweet-sticker">
+            <span>Sweet<br>Moments</span>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="testi-right gsap-testi-right">
+        <h2 class="theme-heading">The Best Part Is Seeing You Smile.</h2>
+
+        <div class="testi-slider-wrapper">
+
+          <i class="fa-solid fa-quote-left testi-quote-icon"></i>
+
+          <div class="testi-slides">
+
+
+            <div class="testi-slide active">
+              <p class="testi-quote">"Every visit feels special, and the flavors make it even sweeter. The artisanal
+                strawberry scoop is my absolute favorite!"</p>
+              <div class="testi-author">
+                <img src="./asset/d3.webp" alt="Sarah Jenkins">
+                <div class="author-info">
+                  <h4>Sarah Jenkins</h4>
+                  <div class="stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                      class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="testi-slide">
+              <p class="testi-quote">"The creamiest ice cream I have ever tasted! You can immediately tell they use
+                premium, natural ingredients."</p>
+              <div class="testi-author">
+                <img src="./asset/d2.webp" alt="Mark Roberts">
+                <div class="author-info">
+                  <h4>Mark Roberts</h4>
+                  <div class="stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                      class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+
+          <div class="testi-nav">
+            <button class="testi-btn" onclick="moveTesti(-1)"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="testi-btn" onclick="moveTesti(1)"><i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <section id="final-cta" class="cta-section">
+
+
+    <div class="cta-container">
+
+
+      <div class="cta-left gsap-cta-left">
+        <h2 class="cta-heading">Your Next Favorite Flavor Is Waiting.</h2>
+        <p class="cta-desc">From timeless classics to exciting new combinations, discover the little moments of
+          happiness waiting in every scoop.</p>
+
+        <div class="cta-buttons">
+          <a href="404page.html" class="btn-primary-cta">Explore Our Flavors</a>
+          <a href="404page.html" class="btn-outline-cta">Contact Us</a>
+        </div>
+      </div>
+
+
+      <div class="cta-right gsap-cta-right">
+        <div class="cta-img-wrapper">
+          <img src="./asset/c5.webp" alt="Delicious Ice Cream">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+  <footer class="footer-section">
+    <div class="footer-container">
+
+
+      <div class="footer-col" data-aos="fade-up" data-aos-delay="100">
+        <a href="index.html" class="logo">
+          <img src="./asset/roselogo.webp" alt="logo">
+        </a>
+        <p class="footer-desc">
+          "Scooping happiness daily! Handcrafted artisanal ice creams made with organic ingredients. Treat
+          yourself to a
+          swirl of joy every single day without fail."
+        </p>
+        <div class="social-icons">
+          <a href="404page.html"><i class="fa-brands fa-instagram"></i></a>
+          <a href="404page.html"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="404page.html"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="404page.html"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+
+
+      <div class="footer-col" data-aos="fade-up" data-aos-delay="200">
+        <h4>Explore</h4>
+        <ul class="footer-links">
+          <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+          <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
+          <li><a href="service.html"><i class="fa-solid fa-chevron-right"></i> Services</a></li>
+          <li><a href="blog.html"><i class="fa-solid fa-chevron-right"></i> Blog</a></li>
+          <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Contact</a></li>
+        </ul>
+      </div>
+
+
+      <div class="footer-col" data-aos="fade-up" data-aos-delay="300">
+        <h4>Visit Us</h4>
+        <ul class="footer-contact">
+          <li><i class="fa-regular fa-envelope"></i> info@thestackly.com</li>
+          <li><i class="fa-solid fa-location-dot"></i> MMR Complex, Chinna Thirupathi,near Chinna Muniyappan
+            Kovil,
+            Salem</li>
+          <li><i class="fa-solid fa-phone"></i> +91 98765 43210</li>
+          <li><i class="fa-regular fa-clock"></i> Mon - Sun: 10 AM - 11 PM</li>
+        </ul>
+      </div>
+
+
+      <div class="footer-col" data-aos="fade-up" data-aos-delay="400">
+        <h4>Quick Order</h4>
+        <p class="footer-desc">
+          Craving a sweet midnight treat? Enter your ZIP code and order now!
+        </p>
+        <form id="orderForm" class="order-form">
+          <input type="text" id="areaCode" placeholder="Area / ZIP">
+          <button type="submit"> ORDER</button>
+        </form>
+        <div id="errorMsg" class="error-msg">Please enter your area code!</div>
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom" data-aos="fade-in" data-aos-delay="500">
+      <p>&copy; 2026 Scoops Ice Cream. All rights reserved.</p>
+      <div class="legal-links">
+        <a href="404page.html">Terms & Conditions</a>
+        <a href="404page.html">Privacy Policy</a>
+        <a href="404page.html">Refund Policy</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  <script src="script.js"></script>
+
+
+  <script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+      let currentIndex = 0;
+      const slides = document.querySelectorAll('.about-slide');
+
+      window.moveSlide = function (step) {
+        if (slides.length === 0) return;
+
+        slides[currentIndex].classList.remove('active');
+        currentIndex += step;
+
+        if (currentIndex >= slides.length) currentIndex = 0;
+        if (currentIndex < 0) currentIndex = slides.length - 1;
+
+        slides[currentIndex].classList.add('active');
+      };
+
+
+      if (slides.length > 0) {
+        setInterval(() => {
+          moveSlide(1);
+        }, 4000); 
+      }
+    });
+
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+
+
+        gsap.from(".gsap-story-left", {
+          scrollTrigger: {
+            trigger: ".story-section",
+            start: "top 75%",
+            toggleActions: "play none none reverse"
+          },
+          x: -60,
+          opacity: 0,
+          duration: 1.2,
+          ease: "power3.out"
+        });
+
+
+        gsap.from(".gsap-story-right", {
+          scrollTrigger: {
+            trigger: ".story-section",
+            start: "top 75%",
+            toggleActions: "play none none reverse"
+          },
+          x: 60,
+          opacity: 0,
+          duration: 1.2,
+          delay: 0.2,
+          ease: "power3.out"
+        });
+
+
+        gsap.to(".story-img-overlap", {
+          y: -30,
+          ease: "none",
+          scrollTrigger: {
+            trigger: ".story-section",
+            start: "top bottom",
+            end: "bottom top",
+            scrub: true
+          }
+        });
+
+      }
+    });
+
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+
+
+        gsap.from(".gsap-phil-heading", {
+          scrollTrigger: {
+            trigger: ".philosophy-section",
+            start: "top 80%",
+            toggleActions: "play none none reverse"
+          },
+          y: 40,
+          opacity: 0,
+          duration: 1,
+          ease: "power3.out"
+        });
+
+
+        const isMobile = window.innerWidth <= 992;
+
+        gsap.from(".phil-connecting-line", {
+          scrollTrigger: {
+            trigger: ".phil-grid",
+            start: "top 75%",
+            toggleActions: "play none none reverse"
+          },
+          scaleX: isMobile ? 1 : 0, 
+          scaleY: isMobile ? 0 : 1, 
+          opacity: 0,
+          duration: 1.5,
+          ease: "power2.inOut"
+        });
+
+
+        gsap.from(".gsap-phil-item", {
+          scrollTrigger: {
+            trigger: ".phil-grid",
+            start: "top 70%",
+            toggleActions: "play none none reverse"
+          },
+          y: 50,
+          opacity: 0,
+          duration: 1,
+          stagger: 0.3, 
+          ease: "back.out(1.2)"
+        });
+
+      }
+    });
+
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+
+
+        gsap.from(".gsap-ing-head", {
+          scrollTrigger: { trigger: ".ingredients-section", start: "top 80%" },
+          y: 30, opacity: 0, duration: 1
+        });
+
+
+        gsap.from(".gsap-ing-left", {
+          scrollTrigger: { trigger: ".ingredients-section", start: "top 70%" },
+          x: -60, opacity: 0, duration: 1.2, ease: "power3.out"
+        });
+
+
+        gsap.from(".gsap-ing-right", {
+          scrollTrigger: { trigger: ".ingredients-section", start: "top 70%" },
+          x: 60, opacity: 0, duration: 1.2, ease: "power3.out"
+        });
+
+
+        gsap.from(".gsap-ing-center", {
+          scrollTrigger: { trigger: ".ingredients-section", start: "top 75%" },
+          scale: 0.7, opacity: 0, duration: 1.5, ease: "back.out(1.5)"
+        });
+
+      }
+    });
+
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+
+
+        gsap.from(".gsap-process-head", {
+          scrollTrigger: { trigger: ".process-section", start: "top 80%" },
+          y: 30, opacity: 0, duration: 1
+        });
+
+
+        gsap.to("#timeline-progress", {
+          scrollTrigger: {
+            trigger: ".process-container",
+            start: "top center",
+            end: "bottom center",
+            scrub: 1 
+          },
+          height: "100%",
+          ease: "none"
+        });
+
+
+        const processRows = document.querySelectorAll('.process-row');
+
+        processRows.forEach((row) => {
+          const circle = row.querySelector('.process-circle');
+          const leftSlide = row.querySelector('.gsap-slide-left');
+          const rightSlide = row.querySelector('.gsap-slide-right');
+
+
+          ScrollTrigger.create({
+            trigger: row,
+            start: "top 60%",
+            toggleClass: { targets: circle, className: "active" }
+          });
+
+
+          if (leftSlide) {
+            gsap.from(leftSlide, {
+              scrollTrigger: { trigger: row, start: "top 75%" },
+              x: -50, opacity: 0, duration: 1, ease: "power3.out"
+            });
+          }
+
+
+          if (rightSlide) {
+            gsap.from(rightSlide, {
+              scrollTrigger: { trigger: row, start: "top 75%" },
+              x: 50, opacity: 0, duration: 1, ease: "power3.out"
+            });
+          }
+        });
+
+      }
+    });
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+
+      const slides = document.querySelectorAll('.testi-slide');
+      let currentSlide = 0;
+
+      window.moveTesti = function (direction) {
+        if (slides.length === 0) return;
+        slides[currentSlide].classList.remove('active');
+
+        currentSlide += direction;
+        if (currentSlide >= slides.length) currentSlide = 0;
+        if (currentSlide < 0) currentSlide = slides.length - 1;
+
+        slides[currentSlide].classList.add('active');
+      };
+
+
+      if (slides.length > 0) {
+        setInterval(() => { moveTesti(1); }, 5000); 
+      }
+
+
+      if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+        gsap.from(".gsap-testi-left", {
+          scrollTrigger: { trigger: ".testi-section", start: "top 75%" },
+          x: -60, opacity: 0, duration: 1.2, ease: "power3.out"
+        });
+
+        gsap.from(".gsap-testi-right", {
+          scrollTrigger: { trigger: ".testi-section", start: "top 75%" },
+          x: 60, opacity: 0, duration: 1.2, ease: "power3.out"
+        });
+      }
+    });
+
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+
+
+        gsap.from(".gsap-cta-left", {
+          scrollTrigger: {
+            trigger: ".cta-section",
+            start: "top 80%",
+            toggleActions: "play none none reverse"
+          },
+          x: -50,
+          opacity: 0,
+          duration: 1.2,
+          ease: "power3.out"
+        });
+
+
+        gsap.from(".gsap-cta-right", {
+          scrollTrigger: {
+            trigger: ".cta-section",
+            start: "top 80%",
+            toggleActions: "play none none reverse"
+          },
+          scale: 0.8,
+          opacity: 0,
+          duration: 1.5,
+          ease: "back.out(1.2)"
+        });
+
+      }
+    });
+
+
+  </script>
+</body>
+
+</html>

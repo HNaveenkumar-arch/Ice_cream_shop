@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SweetCrumbs - Delivery Partner</title>
+
+
+    <script>
+        if (!localStorage.getItem('userEmail')) {
+            window.location.replace("login.html");
+        }
+    </script>
+
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Nunito:wght@400;600;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="delivery-dashboard.css">
+</head>
+
+<body>
+
+
+    <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+
+
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-logo">
+            <a href="index.html">
+                <img src="./asset/roselogo.webp" alt="SweetCrumbs Logo">
+            </a>
+            <div class="dashboard-badge">Delivery Dashboard</div>
+        </div>
+
+        <div class="nav-menu">
+            <div class="nav-item active" onclick="switchTab('tab-overview', this, 'Delivery Overview')"><i
+                    class="fa-solid fa-gauge-high"></i> Overview</div>
+            <div class="nav-item" onclick="switchTab('tab-routes', this, 'Active Routes & Map')"><i
+                    class="fa-solid fa-map-location-dot"></i> Live Routes</div>
+            <div class="nav-item" onclick="switchTab('tab-earnings', this, 'Earnings & Payouts')"><i
+                    class="fa-solid fa-wallet"></i> Earnings </div>
+            <div class="nav-item" onclick="switchTab('tab-vehicle', this, 'Vehicle & Equipment')"><i
+                    class="fa-solid fa-truck-fast"></i> Vehicle & Bag</div>
+            <div class="nav-item" onclick="switchTab('tab-ratings', this, 'Customer Ratings')"><i
+                    class="fa-solid fa-star"></i> Ratings</div>
+            <div class="nav-item" onclick="switchTab('tab-settings', this, 'App Settings')"><i
+                    class="fa-solid fa-gear"></i> Settings</div>
+        </div>
+
+        <div class="sidebar-profile">
+
+            <div class="profile-img-box">
+                <img src="./asset/u2.webp" alt="User Profile">
+            </div>
+            <div class="profile-details">
+                <h4 id="sidebarName">Loading...</h4>
+                <p id="sidebarEmail">loading@email.com</p>
+            </div>
+        </div>
+    </nav>
+
+
+    <main class="main-wrapper">
+
+
+        <header class="top-header">
+            <div class="header-left">
+                <i class="fa-solid fa-bars menu-toggle" onclick="toggleSidebar()"></i>
+                <h2 id="pageTitle" class="page-title">Delivery Overview</h2>
+            </div>
+            <div class="header-right">
+
+                <span class="badge bg-green online-badge"><i class="fa-solid fa-circle-dot"
+                        style="margin-right: 5px;"></i> Online</span>
+                <a href="index.html" class="header-btn btn-home"><i class="fa-solid fa-house"></i> <span>Home</span></a>
+                <button onclick="logout()" class="header-btn btn-logout"><i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Logout</span></button>
+            </div>
+        </header>
+
+
+        <div class="dashboard-body">
+
+
+
+
+            <div id="tab-overview" class="content-tab active">
+                <div class="dashboard-grid">
+
+
+                    <div class="premium-card card-full" data-aos="fade-up">
+                        <div class="section-title"><i class="fa-solid fa-bolt"></i> Today's Shift Snapshot</div>
+                        <div class="stats-grid">
+                            <div class="stat-box">
+                                <div class="stat-icon"><i class="fa-solid fa-indian-rupee-sign"></i></div>
+                                <div class="stat-info">
+                                    <h4>Today's Earnings</h4>
+                                    <h2>₹850</h2>
+                                </div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-icon"><i class="fa-solid fa-clipboard-check"></i></div>
+                                <div class="stat-info">
+                                    <h4>Completed</h4>
+                                    <h2>12 Orders</h2>
+                                </div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-icon"><i class="fa-solid fa-spinner"></i></div>
+                                <div class="stat-info">
+                                    <h4>Pending</h4>
+                                    <h2>2 Orders</h2>
+                                </div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-icon"><i class="fa-solid fa-star"></i></div>
+                                <div class="stat-info">
+                                    <h4>Customer Rating</h4>
+                                    <h2>4.9</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="premium-card card-half" data-aos="fade-up">
+                        <div class="section-title"><i class="fa-solid fa-motorcycle"></i> Live Active Order</div>
+                        <div class="action-list">
+                            <div class="action-item" style="border-left: 4px solid var(--primary-color);">
+                                <div class="action-text">
+                                    <h4>Drop: OMR IT Park (Phase 1)</h4>
+                                    <p>Order #ORD-1048 • Distance: 4.2 km</p>
+                                </div>
+                                <a href="404page.html" class="btn-action"
+                                    style="background: var(--primary-color);">Navigate</a>
+                            </div>
+                            <div class="action-item">
+                                <div class="action-text">
+                                    <h4>Pickup: SweetCrumbs Anna Nagar</h4>
+                                    <p>Next Order Ready in 10 mins</p>
+                                </div>
+                                <span class="badge bg-orange">Waiting</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="premium-card card-half" data-aos="fade-up">
+                        <div class="section-title"><i class="fa-solid fa-bullseye"></i> Daily Incentives</div>
+                        <div class="progress-list">
+                            <div class="prog-item">
+                                <div class="prog-head"><span>15 Deliveries (₹200 Bonus)</span><span>12/15</span></div>
+                                <div class="prog-bg">
+                                    <div class="prog-fill" style="width: 80%;"></div>
+                                </div>
+                            </div>
+                            <div class="prog-item">
+                                <div class="prog-head"><span>No Delay Penalty Target</span><span>100% Maintained</span>
+                                </div>
+                                <div class="prog-bg">
+                                    <div class="prog-fill" style="width: 100%; background: #16a34a;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="premium-card card-half" data-aos="fade-up">
+                        <div class="section-title"><i class="fa-solid fa-cloud-sun"></i> Weather & Traffic</div>
+                        <div class="action-list">
+                            <div class="action-item" style="background: #eff6ff;">
+                                <div class="action-text">
+                                    <h4>Weather Clear</h4>
+                                    <p>Good conditions for riding.</p>
+                                </div><i class="fa-solid fa-sun fa-2x" style="color:#f59e0b;"></i>
+                            </div>
+                            <div class="action-item" style="background: #fffbeb;">
+                                <div class="action-text">
+                                    <h4>Moderate Traffic</h4>
+                                    <p>T-Nagar routes are busy.</p>
+                                </div><i class="fa-solid fa-car-side fa-2x" style="color:#ea580c;"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="premium-card card-half" data-aos="fade-up">
+                        <div class="section-title"><i class="fa-solid fa-bullhorn"></i> Important Alerts</div>
+                        <div class="timeline-list">
+                            <div class="timeline-item"><i class="fa-solid fa-bell text-pink"></i>
+                                <div>
+                                    <h4>Store Alert</h4>
+                                    <p>Heavy rush expected between 6 PM to 9 PM.</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item"><i class="fa-solid fa-shield-halved text-dark"></i>
+                                <div>
+                                    <h4>Safety Reminder</h4>
+                                    <p>Please wear your helmet. Inspections active.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="premium-card card-full" data-aos="fade-up">
+                        <div class="section-title"><i class="fa-solid fa-chart-line"></i> Deliveries This Week</div>
+                        <div class="chart-container"><canvas id="deliveryChart"></canvas></div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+            <div id="tab-routes" class="content-tab">
+                <div class="dashboard-grid">
+
+
+                    <div class="premium-card card-full" data-aos="fade-up">
+                        <div class="section-title"><i class="fa-solid fa-map-location-dot"></i> Live Route Navigation
+                        </div>
+                        <div
+                            style="width: 100%; height: 350px; background: #1a202c; border-radius: 16px; display:flex; align-items:center; justify-content:center; flex-direction:column; overflow: hidden; position: relative;">
+                            <img src="./asset/c1.webp" alt="Map View"
+                                style="width:100%; height:100%; object-fit:cover; opacity: 0.5;">
+                            <div
+                                style="position: absolute; text-align: center; background: rgba(255, 255, 255, 0.95); padding: 15px 25px; border-radius: 50px; color: var(--text-dark); box-shadow: 0 10px 20px rgba(0,0,0,0.2);">
+                                <h3 style="font-size: 1.1rem; font-weight:800;"><i class="fa-solid fa-location-arrow"
+                                        style="color:var(--primary-color);"></i> Routing to OMR Phase 1 (14 mins)</h3>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="premium-card card-half" data-aos="fade-up">
+                        <div class="section-title"><i class="fa-solid fa-list-ol"></i> Drop Sequence</div>
+                        <div class="timeline-list">
+                            <div class="timeline-item"><i class="fa-solid fa-check-circle text-green"></i>
+                                <div>
+                                    <h4>Pickup at Store</h4>
+                                    <p>Completed at 04:15 PM</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item"><i class="fa-solid fa-location-dot text-pink"></i>
+                                <div>
+                                    <h4>Drop 1: Taramani (Order #45)</h4>
+                                    <p>In Progress • ETA: 04:30 PM</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item"><i class="fa-solid fa-location-dot text-dark"></i>
+                                <div>
+                                    <h4>Drop 2: Velachery (Order #46)</h4>
+                                    <p>Next Stop • ETA: 04:45 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="premium-card card-half" data-aos="fade-up">
+                        <div class="section-title"><i class="fa-solid fa-fire"></i> Hot Delivery Zones</div>
+                        <div class="progress-list">
+                            <div class="prog-item">
+                                <div class="prog-head"><span>Anna Nagar (High Demand)</span><span>Very Busy</span></div>
+                                <div class="prog-bg">
+                                    <div class="prog-fill" style="width: 95%; background: #ef4444;"></div>
+                                </div>
+                            </div>
+                            <div class="prog-item">
+                                <div class="prog-head"><span>T-Nagar</span><span>Moderate</span></div>
+                                <div class="prog-bg">
+                                    <div class="prog-fill" style="width: 60%; background: #ea580c;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="premium-card card-half" data-aos="fade-up">
+                        <div class="section-title"><i class="fa-solid fa-road"></i> Route Preferences</div>
+                        <div class="action-list">
+                            <div class="action-item">
+                                <div class="action-text">
+                                    <h4>Avoid Toll Roads</h4>
+                                </div><input type="checkbox"
+                                    style="width:20px; height:20px; accent-color: var(--primary-color);">
+                            </div>
+                            <div class="action-item">
+                                <div class="action-text">
+                                    <h4>Shortest Distance First</h4>
+                                </div><input type="checkbox" checked
+                                    style="width:20px; height:20px; accent-color: var(--primary-color);">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="premium-card card-half" data-aos="fade-up">
+                        <div class="section-title"><i class="fa-solid fa-gas-pump"></i> Fuel & Expense Tracker</div>
+                        <div class="action-list">
+                            <div class="action-item">
+                                <div class="action-text">
+                                    <h4>Petrol Expense Today</h4>
+                                    <p>₹250 Logged</p>
+                                </div><a href="404page.html" class="btn-action">Add Entry</a>
+                            </div>
+                            <div class="action-item">
+                                <div class="action-text">
+                                    <h4>Parking Tickets</h4>
+                                    <p>₹40 Logged</p>
+                                </div><a href="404page.html" class="btn-action">Add Entry</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+            <div id="tab-earnings" class="content-tab">
+                <div class="dashboard-grid">
+
+                    <div class="premium-card card-full" data-aos="fade-up">
+                        <div class="section-title"><i class="fa-solid fa-wallet"></i> Earnings Overview</div>
+                        <div class="stats-grid">
+                            <div class="stat-box">
+                                <div class="stat-icon"><i class="fa-solid fa-indian-rupee-sign"></i></div>
+                                <div class="stat-info">
+                                    <h4>This Week</h4>
+                                    <h2>₹5,240</h2>
+                                </div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-icon"><i class="fa-solid fa-gift"></i></div>
+                                <div class="stat-info">
+                                    <h4>Customer Tips</h4>
+                                    <h2>₹450</h2>
+                                </div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-icon"><i class="fa-solid fa-money-bill-wave"></i></div>
+                                <div class="stat-info">
+                                    <h4>Available Balance</h4>
+                                    <h2>₹2,800</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="premium-card card-half" data-aos="fade-up">
+                        <div class="section-title"><i class="fa-solid fa-chart-pie"></i> Earnings Breakdown</div>
+                        <div class="progress-list">
+                            <div class="prog-item">
+                                <div class="prog-head"><span>Base Delivery Pay</span><span>₹3,800</span></div>
+                                <div class="prog-bg">
+                                    <div class="prog-fill" style="width: 70%;"></div>
+                                </div>
+                            </div>
+                            <div class="prog-item">
+                                <div class="prog-head"><span>Distance Pay</span><span>₹990</span></div>
+                                <div class="prog-bg">
+                                    <div class="prog-fill" style="width: 20%; background: #3b82f6;"></div>
+                                </div>
+                            </div>
+                            <div class="prog-item">
+                                <div class="prog-head"><span>Tips</span><span>₹450</span></div>
+                                <div class="prog-bg">
+                                    <div class="prog-fill" style="width: 10%; background: #16a34a;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="premium-card card-half" data-aos="fade-up">
+                        <div class="section-title"><i class="fa-solid fa-building-columns"></i> Cashout Actions</div>
+                        <div class="action-list">
+                            <div class="action-item">
+                                <div class="action-text">
+                                    <h4>Withdraw to Bank</h4>
+                                    <p>Transfer ₹2,800 instantly.</p>
+                                </div><a href="404page.html" class="btn-action">Withdraw</a>
+                            </div>
+                            <div class="action-item">
+                                <div class="action-text">
+                                    <h4>Download Payslip</h4>
+                                    <p>Get last week's summary.</p>
+                                </div><a href="404page.html" class="btn-action">Download</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="premium-card card-half" data-aos="fade-up">
+                        <div class="section-title"><i class="fa-solid fa-gift"></i> Peak Hour Bonuses</div>
+                        <div class="action-list">
+                            <div class="action-item">
+                                <div class="action-text">
+                                    <h4>Lunch Rush (1 PM - 3 PM)</h4>
+                                    <p>₹20 Extra per order</p>
+                                </div><span class="badge bg-green">Active</span>
+                            </div>
+                            <div class="action-item">
+                                <div class="action-text">
+                                    <h4>Dinner Rush (8 PM - 11 PM)</h4>
+                                    <p>₹30 Extra per order</p>
+                                </div><span class="badge bg-orange">Upcoming</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="premium-card card-half" data-aos="fade-up">
+                        <div class="section-title"><i class="fa-solid fa-flag-checkered"></i> Weekly Goal Progress</div>
+                        <div class="progress-list">
+                            <div class="prog-item">
+                                <div class="prog-head"><span>Complete 50 Orders (₹500 Bonus)</span><span>35/50</span>
+                                </div>
+                                <div class="prog-bg">
+                                    <div class="prog-fill" style="width: 70%; background: #8b5cf6;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="premium-card card-full" data-aos="fade-up">
+                        <div class="section-title"><i class="fa-solid fa-receipt"></i> Recent Payout History</div>
+                        <div class="table-responsive">
+                            <table class="premium-table">
+                                <thead>
+                                    <tr>
+                                        <th>Transaction ID</th>
+                                        <th>Date</th>
+                                        <th>Method</th>
+                                        <th>Amount</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>#TRX-0091</td>
+                                        <td>Oct 08, 2026</td>
+                                        <td>Bank Transfer (HDFC)</td>
+                                        <td>₹4,500</td>
+                                        <td><span class="badge bg-green">Successful</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>#TRX-0085</td>
+                                        <td>Oct 01, 2026</td>
+                                        <td>UPI (Google Pay)</td>
+                                        <td>₹4,100</td>
+                                        <td><span class="badge bg-green">Successful</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+            <div id="tab-vehicle" class="content-tab">
+                <div class="dashboard-grid">
+
+                    <div class="premium-card card-full" data-aos="fade-up">
+                        <div class="section-title"><i class="fa-solid fa-snowflake"></i> Delivery Bag Status (CRITICAL)
+                        </div>
+                        <div class="stats-grid">
+                            <div class="stat-box" style="border-color: #3b82f6;">
+                                <div class="stat-icon" style="background:#3b82f6; color:#fff;"><i
+                                        class="fa-solid fa-temperature-empty"></i></div>
+                                <div class="stat-info">
+                                    <h4>Bag Temperature</h4>
+                                    <h2 style="color:#3b82f6;">-18°C (Optimal)</h2>
+                                </div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-icon"><i class="fa-solid fa-cubes"></i></div>
+                                <div class="stat-info">
+                                    <h4>Dry Ice Level</h4>
+                                    <h2>70% Remaining</h2>
+                                </div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-icon"><i class="fa-solid fa-battery-full"></i></div>
+                                <div class="stat-info">
+                                    <h4>Sensor Battery</h4>
+                                    <h2>85%</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="premium-card card-half" data-aos="fade-up">
+                        <div class="section-title"><i class="fa-solid fa-motorcycle"></i> Vehicle Condition</div>
+                        <div class="progress-list">
+                            <div class="prog-item">
+                                <div class="prog-head"><span>Fuel Level</span><span>Half Tank</span></div>
+                                <div class="prog-bg">
+                                    <div class="prog-fill" style="width: 50%;"></div>
+                                </div>
+                            </div>
+                            <div class="prog-item">
+                                <div class="prog-head"><span>Tire Pressure Status</span><span>Good</span></div>
+                                <div class="prog-bg">
+                                    <div class="prog-fill" style="width: 100%; background:#16a34a;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="premium-card card-half" data-aos="fade-up">
+                        <div class="section-title"><i class="fa-solid fa-camera"></i> Pre-Shift Verification</div>
+                        <div class="image-grid">
+                            <div class="img-card"><img src="./asset/u1.webp" alt="Bike">
+                                <div class="img-label">Bike Cleaned</div>
+                            </div>
+                            <div class="img-card"><img src="./asset/w17.webp" alt="Bag">
+                                <div class="img-label">Bag Sanitized</div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="premium-card card-half" data-aos="fade-up">
+                        <div class="section-title"><i class="fa-solid fa-wrench"></i> Maintenance Log</div>
+                        <div class="timeline-list">
+                            <div class="timeline-item"><i class="fa-solid fa-oil-can text-pink"></i>
+                                <div>
+                                    <h4>Oil Change Completed</h4>
+                                    <p>Oct 05, 2026</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item"><i class="fa-solid fa-calendar-day text-dark"></i>
+                                <div>
+                                    <h4>Next General Service</h4>
+                                    <p>Due in 12 Days</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="premium-card card-half" data-aos="fade-up">
+                        <div class="section-title"><i class="fa-solid fa-box-archive"></i> Equipment Request</div>
+                        <div class="action-list">
+                            <div class="action-item">
+                                <div class="action-text">
+                                    <h4>Request New Uniform</h4>
+                                    <p>T-Shirts & Raincoats</p>
+                                </div><a href="404page.html" class="btn-action">Request</a>
+                            </div>
+                            <div class="action-item">
+                                <div class="action-text">
+                                    <h4>Replace Freezer Bag</h4>
+                                    <p>Current bag has a tear.</p>
+                                </div><a href="404page.html" class="btn-action">Request</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="premium-card card-full" data-aos="fade-up" style="border: 1px solid #fee2e2;">
+                        <div class="section-title" style="color: #ef4444; border-bottom-color:#fecaca;"><i
+                                class="fa-solid fa-triangle-exclamation" style="color: #ef4444;"></i> Report an
+                            Emergency Issue</div>
+                        <p class="text-content" style="margin-bottom: 20px;">If your freezer bag is leaking or the
+                            vehicle broke down, report immediately to pause your incoming orders and alert the store.
+                        </p>
+                        <button onclick="window.location.href='404page.html'" class="header-btn"
+                            style="background:#ef4444; color:#fff; border:none; padding:12px 25px; cursor:pointer;"><i
+                                class="fa-solid fa-phone"></i> Emergency SOS Call</button>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+            <div id="tab-ratings" class="content-tab">
+                <div class="dashboard-grid">
+
+                    <div class="premium-card card-full" data-aos="fade-up">
+                        <div class="section-title"><i class="fa-solid fa-star-half-stroke"></i> Personal Rating Summary
+                        </div>
+                        <div class="stats-grid">
+                            <div class="stat-box">
+                                <div class="stat-icon"><i class="fa-solid fa-star"></i></div>
+                                <div class="stat-info">
+                                    <h4>Overall Rating</h4>
+                                    <h2>4.9 / 5</h2>
+                                </div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-icon"><i class="fa-solid fa-thumbs-up"></i></div>
+                                <div class="stat-info">
+                                    <h4>Thumbs Up</h4>
+                                    <h2>245</h2>
+                                </div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-icon"><i class="fa-solid fa-clock-rotate-left"></i></div>
+                                <div class="stat-info">
+                                    <h4>On-Time Delivery</h4>
+                                    <h2>98%</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="premium-card card-half" data-aos="fade-up">
+                        <div class="section-title"><i class="fa-solid fa-chart-pie"></i> Ratings Breakdown</div>
+                        <div class="progress-list">
+                            <div class="prog-item">
+                                <div class="prog-head"><span>5 Stars</span><span>90%</span></div>
+                                <div class="prog-bg">
+                                    <div class="prog-fill" style="width: 90%; background:#16a34a;"></div>
+                                </div>
+                            </div>
+                            <div class="prog-item">
+                                <div class="prog-head"><span>4 Stars</span><span>8%</span></div>
+                                <div class="prog-bg">
+                                    <div class="prog-fill" style="width: 8%; background:#84cc16;"></div>
+                                </div>
+                            </div>
+                            <div class="prog-item">
+                                <div class="prog-head"><span>3 Stars & Below</span><span>2%</span></div>
+                                <div class="prog-bg">
+                                    <div class="prog-fill" style="width: 2%; background:#ea580c;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="premium-card card-half" data-aos="fade-up">
+                        <div class="section-title"><i class="fa-solid fa-comment-dots"></i> Customer Compliments</div>
+                        <div class="action-list">
+                            <div class="action-item">
+                                <div class="action-text">
+                                    <h4>"Very polite & fast!"</h4>
+                                    <p>From Anjali on Oct 12</p>
+                                </div><i class="fa-solid fa-heart" style="color:var(--primary-color);"></i>
+                            </div>
+                            <div class="action-item">
+                                <div class="action-text">
+                                    <h4>"Handled ice cream carefully."</h4>
+                                    <p>From Suresh on Oct 10</p>
+                                </div><i class="fa-solid fa-heart" style="color:var(--primary-color);"></i>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="premium-card card-half" data-aos="fade-up">
+                        <div class="section-title"><i class="fa-solid fa-arrow-trend-up"></i> Areas for Improvement
+                        </div>
+                        <div class="timeline-list">
+                            <div class="timeline-item"><i class="fa-solid fa-phone-slash text-orange"></i>
+                                <div>
+                                    <h4>Communication</h4>
+                                    <p>2 customers reported you didn't call before arriving.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="premium-card card-half" data-aos="fade-up">
+                        <div class="section-title"><i class="fa-solid fa-gavel"></i> Dispute Unfair Ratings</div>
+                        <div class="action-list">
+                            <div class="action-item">
+                                <div class="action-text">
+                                    <h4>Order #1011 (1 Star)</h4>
+                                    <p>Customer was not reachable.</p>
+                                </div><a href="404page.html" class="btn-action">Dispute</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="premium-card card-full" data-aos="fade-up">
+                        <div class="section-title"><i class="fa-solid fa-comments"></i> Recent Feedback History</div>
+                        <div class="table-responsive">
+                            <table class="premium-table">
+                                <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Rating</th>
+                                        <th>Customer Comment</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Today</td>
+                                        <td>⭐⭐⭐⭐⭐</td>
+                                        <td>Ice cream arrived perfectly frozen. Great job!</td>
+                                        <td><span class="badge bg-green">Verified</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Yesterday</td>
+                                        <td>⭐⭐⭐⭐⭐</td>
+                                        <td>Very polite delivery person.</td>
+                                        <td><span class="badge bg-green">Verified</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Oct 10</td>
+                                        <td>⭐⭐⭐</td>
+                                        <td>Order was a bit late due to rain.</td>
+                                        <td><span class="badge bg-orange">Noted</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+            <div id="tab-settings" class="content-tab">
+                <div class="dashboard-grid">
+
+                    <div class="premium-card card-full" data-aos="fade-up">
+                        <div class="section-title"><i class="fa-solid fa-id-card"></i> Delivery Partner Profile</div>
+                        <div class="stats-grid">
+                            <div class="stat-box">
+                                <div class="stat-icon"><i class="fa-solid fa-id-badge"></i></div>
+                                <div class="stat-info">
+                                    <h4>Partner ID</h4>
+                                    <h2>#DEL-4092</h2>
+                                </div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-icon"><i class="fa-solid fa-user"></i></div>
+                                <div class="stat-info">
+                                    <h4>Name</h4>
+                                    <h2 id="setName">Name</h2>
+                                </div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-icon"><i class="fa-solid fa-at"></i></div>
+                                <div class="stat-info">
+                                    <h4>Registered Email</h4>
+                                    <h2 id="setEmail" style="font-size:1.1rem; word-break:break-all;">email</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="premium-card card-half" data-aos="fade-up">
+                        <div class="section-title"><i class="fa-solid fa-building-columns"></i> Linked Bank Account
+                        </div>
+                        <div class="action-list">
+                            <div class="action-item">
+                                <div class="action-text">
+                                    <h4>HDFC Bank (**** 4022)</h4>
+                                    <p>Primary Account</p>
+                                </div><span class="badge bg-green">Verified</span>
+                            </div>
+                            <a href="404page.html" class="btn-action" style="text-align:center;">Change Bank Account</a>
+                        </div>
+                    </div>
+
+                    <div class="premium-card card-half" data-aos="fade-up">
+                        <div class="section-title"><i class="fa-solid fa-bell"></i> General App Preferences</div>
+                        <div class="action-list">
+                            <div class="action-item">
+                                <div class="action-text">
+                                    <h4>Auto-Accept Orders</h4>
+                                    <p>Accept orders automatically.</p>
+                                </div><input type="checkbox"
+                                    style="width:20px; height:20px; accent-color: var(--primary-color);">
+                            </div>
+                            <div class="action-item">
+                                <div class="action-text">
+                                    <h4>Dark Mode</h4>
+                                    <p>Switch app to dark theme.</p>
+                                </div><input type="checkbox"
+                                    style="width:20px; height:20px; accent-color: var(--primary-color);">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="premium-card card-half" data-aos="fade-up">
+                        <div class="section-title"><i class="fa-solid fa-volume-high"></i> Notification Sounds</div>
+                        <div class="action-list">
+                            <div class="action-item">
+                                <div class="action-text">
+                                    <h4>Loud Notification Rings</h4>
+                                </div><input type="checkbox" checked
+                                    style="width:20px; height:20px; accent-color: var(--primary-color);">
+                            </div>
+                            <div class="action-item">
+                                <div class="action-text">
+                                    <h4>Vibrate on New Order</h4>
+                                </div><input type="checkbox" checked
+                                    style="width:20px; height:20px; accent-color: var(--primary-color);">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="premium-card card-half" data-aos="fade-up">
+                        <div class="section-title"><i class="fa-solid fa-mobile-screen"></i> App Data & Cache</div>
+                        <div class="action-list">
+                            <div class="action-item">
+                                <div class="action-text">
+                                    <h4>Clear App Cache</h4>
+                                    <p>Frees up 45MB space.</p>
+                                </div><a href="404page.html" class="btn-action">Clear</a>
+                            </div>
+                            <div class="action-item">
+                                <div class="action-text">
+                                    <h4>App Version</h4>
+                                    <p>v2.4.0 (Latest)</p>
+                                </div><span class="badge bg-green">Updated</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+
+            const storedEmail = localStorage.getItem('userEmail');
+
+            if (storedEmail) {
+
+
+
+                if (typeof AOS !== 'undefined') {
+                    AOS.init({ duration: 800, once: true, offset: 50, disable: 'mobile' });
+                }
+
+
+                let extractedName = storedEmail.split('@')[0];
+                extractedName = extractedName.charAt(0).toUpperCase() + extractedName.slice(1);
+
+
+                const sideName = document.getElementById("sidebarName");
+                const sideEmail = document.getElementById("sidebarEmail");
+                if (sideName) sideName.textContent = extractedName;
+                if (sideEmail) sideEmail.textContent = storedEmail;
+
+                const setName = document.getElementById("setName");
+                const setEmail = document.getElementById("setEmail");
+                if (setName) setName.textContent = extractedName;
+                if (setEmail) setEmail.textContent = storedEmail;
+
+
+                initChart();
+            }
+        });
+
+
+        window.toggleSidebar = function () {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('sidebarOverlay');
+            sidebar.classList.toggle('mobile-open');
+            if (sidebar.classList.contains('mobile-open')) {
+                overlay.classList.add('show');
+                document.body.style.overflow = 'hidden';
+            } else {
+                overlay.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            }
+        };
+
+
+        window.switchTab = function (tabId, element, pageTitle) {
+
+            document.querySelectorAll('.content-tab').forEach(tab => tab.classList.remove('active'));
+
+            document.querySelectorAll('.nav-item').forEach(nav => nav.classList.remove('active'));
+
+
+            document.getElementById(tabId).classList.add('active');
+            element.classList.add('active');
+
+
+            document.getElementById('pageTitle').innerText = pageTitle;
+
+
+            if (typeof AOS !== 'undefined' && window.innerWidth > 992) {
+                setTimeout(() => { AOS.refresh(); }, 100);
+            }
+
+
+            if (window.innerWidth <= 992) { toggleSidebar(); }
+        };
+
+
+        window.logout = function () {
+            localStorage.removeItem('userEmail');
+            window.location.href = "login.html";
+        };
+
+
+        function initChart() {
+            const ctx = document.getElementById('deliveryChart');
+            if (ctx && typeof Chart !== 'undefined') {
+                new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                        datasets: [{
+                            label: 'Deliveries Completed',
+                            data: [12, 19, 15, 22, 28, 35, 30],
+                            borderColor: '#ff5e78',
+                            backgroundColor: 'rgba(255, 94, 120, 0.2)',
+                            borderWidth: 3,
+                            fill: true,
+                            tension: 0.4,
+                            pointBackgroundColor: '#1a202c',
+                            pointRadius: 5
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: { legend: { display: false } },
+                        scales: {
+                            y: { beginAtZero: true, grid: { color: '#e2e8f0', borderDash: [5, 5] } },
+                            x: { grid: { display: false } }
+                        },
+                        animation: {
+                            duration: 2000,
+                            easing: 'easeOutQuart'
+                        }
+                    }
+                });
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SweetCrumbs - Staff Portal</title>
+
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Nunito:wght@400;600;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-cream: #fffdf8;
+            --text-dark: #1a202c;
+            --text-gray: #64748b;
+            --neon-rose: #ff5e78;
+            --border-light: #e2e8f0;
+            --error-red: #e53e3e;
+            --success-green: #38a169;
+            --font-title: 'Playfair Display', serif;
+            --font-text: 'Nunito', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-text);
+            background-color: var(--bg-cream);
+            overflow-x: hidden;
+        }
+
+
+        .login-split-section {
+            display: flex;
+            min-height: 100vh;
+            width: 100%;
+            position: relative;
+        }
+
+
+        .back-home-link {
+            position: absolute;
+            top: 30px;
+            left: 40px;
+            z-index: 100;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1rem;
+            font-weight: 700;
+            color: #fff;
+            text-decoration: none;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px 20px;
+            border-radius: 50px;
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+        }
+
+        .back-home-link:hover {
+            background: var(--neon-rose);
+            transform: translateY(-2px);
+        }
+
+
+        .login-left-panel {
+            flex: 1.2;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 50px;
+        }
+
+        .login-bg-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('./asset/w17.webp');
+            background-size: cover;
+            background-position: center;
+            z-index: 1;
+        }
+
+        .login-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(26, 32, 44, 0.8) 0%, rgba(26, 32, 44, 0.3) 100%);
+            z-index: 2;
+        }
+
+        .login-left-content {
+            position: relative;
+            z-index: 5;
+            color: #fff;
+            animation: fadeUp 1s ease-out;
+        }
+
+        .login-left-content h2 {
+            font-family: var(--font-title);
+            font-size: 3.5rem;
+            font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .login-left-content p {
+            font-size: 1.15rem;
+            color: #e2e8f0;
+            line-height: 1.6;
+            max-width: 450px;
+        }
+
+
+        .login-right-panel {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            background-color: var(--bg-cream);
+            animation: fadeUp 1.2s ease-out;
+        }
+
+        .login-card-inner {
+            width: 100%;
+            max-width: 450px;
+        }
+
+        .login-logo img {
+            width: 150px;
+        }
+
+        .login-logo {
+            font-family: var(--font-title);
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--neon-rose);
+            text-align: center;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .login-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .login-header h3 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+
+        .login-header p {
+            font-size: 1rem;
+            color: var(--text-gray);
+        }
+
+
+        .login-input-group {
+            position: relative;
+            margin-bottom: 25px;
+        }
+
+        .left-icon {
+            position: absolute;
+            top: 18px;
+            left: 20px;
+            color: #94a3b8;
+            font-size: 1.1rem;
+            transition: 0.3s;
+        }
+
+        .login-input {
+            width: 100%;
+            padding: 18px 20px 18px 50px;
+            border: 2px solid var(--border-light);
+            border-radius: 16px;
+            background-color: #fff;
+            font-size: 1rem;
+            color: var(--text-dark);
+            font-family: inherit;
+            font-weight: 600;
+            outline: none;
+            transition: 0.3s;
+        }
+
+
+        input[type="password"]::-ms-reveal,
+        input[type="password"]::-ms-clear {
+            display: none;
+        }
+
+        select.login-input {
+            appearance: none;
+            cursor: pointer;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231a202c' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 20px center;
+            background-size: 15px;
+        }
+
+        .login-input:focus {
+            border-color: var(--neon-rose);
+            box-shadow: 0 0 0 4px rgba(255, 94, 120, 0.1);
+        }
+
+        .login-input:focus~.left-icon {
+            color: var(--neon-rose);
+        }
+
+
+        .toggle-pwd {
+            position: absolute;
+            top: 18px;
+            right: 20px;
+            color: #94a3b8;
+            cursor: pointer;
+            font-size: 1.1rem;
+        }
+
+        .toggle-pwd:hover {
+            color: var(--neon-rose);
+        }
+
+
+        .error-msg {
+            color: var(--error-red);
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-top: 8px;
+            margin-left: 10px;
+            display: none;
+        }
+
+        .login-input-group.error .login-input {
+            border-color: var(--error-red);
+            background: #fff5f5;
+            animation: shake 0.4s ease-in-out;
+        }
+
+        .login-input-group.error .left-icon {
+            color: var(--error-red);
+        }
+
+        .login-input-group.error .error-msg {
+            display: block;
+        }
+
+        @keyframes shake {
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            25%,
+            75% {
+                transform: translateX(-5px);
+            }
+
+            50% {
+                transform: translateX(5px);
+            }
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        .login-options {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .remember-me {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-gray);
+            cursor: pointer;
+        }
+
+        .remember-me input {
+            accent-color: var(--neon-rose);
+            width: 16px;
+            height: 16px;
+        }
+
+        .forgot-pwd {
+            color: var(--neon-rose);
+            text-decoration: none;
+        }
+
+        .forgot-pwd:hover {
+            text-decoration: underline;
+        }
+
+
+        .login-submit-btn {
+            width: 100%;
+            padding: 18px;
+            background-color: var(--neon-rose);
+            color: #fff;
+            border: none;
+            border-radius: 16px;
+            font-size: 1.1rem;
+            font-weight: 800;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 10px 20px rgba(255, 94, 120, 0.2);
+            margin-bottom: 30px;
+        }
+
+        .login-submit-btn:hover {
+            background-color: var(--text-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 25px rgba(26, 32, 44, 0.2);
+        }
+
+
+        .global-success {
+            color: var(--success-green);
+            font-size: 1rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 20px;
+            display: none;
+        }
+
+
+        .login-divider {
+            display: flex;
+            align-items: center;
+            color: #94a3b8;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+        }
+
+        .login-divider::before,
+        .login-divider::after {
+            content: '';
+            flex: 1;
+            border-bottom: 2px dashed var(--border-light);
+        }
+
+        .login-divider::before {
+            margin-right: 15px;
+        }
+
+        .login-divider::after {
+            margin-left: 15px;
+        }
+
+        .social-logins {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .social-icon-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #fff;
+            border: 2px solid var(--border-light);
+            color: var(--text-dark);
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .social-icon-btn:hover {
+            background: var(--text-dark);
+            color: #fff;
+            border-color: var(--text-dark);
+            transform: translateY(-3px);
+        }
+
+        .create-account-link {
+            text-align: center;
+            font-size: 0.95rem;
+            color: var(--text-gray);
+            font-weight: 600;
+        }
+
+        .create-account-link a {
+            color: var(--neon-rose);
+            font-weight: 800;
+            text-decoration: none;
+        }
+
+        .create-account-link a:hover {
+            text-decoration: underline;
+            color: var(--text-dark);
+        }
+
+
+        @media screen and (max-width: 992px) {
+            .login-split-section {
+                flex-direction: column;
+                display: block;
+                padding-top: 80px;
+            }
+
+            .login-left-panel {
+                display: none;
+
+            }
+
+            .back-home-link {
+                top: 20px;
+                left: 20px;
+                background: #ffe4e8;
+                color: var(--neon-rose);
+                border: 1px solid var(--neon-rose);
+            }
+
+            .login-right-panel {
+                padding: 20px 15px;
+                background: transparent;
+            }
+
+            .login-card-inner {
+                background: #fff;
+                padding: 40px 25px;
+                border-radius: 30px;
+                box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="login-split-section">
+
+
+        <a href="index.html" class="back-home-link"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+
+
+        <div class="login-left-panel">
+            <div class="login-bg-img"></div>
+            <div class="login-overlay"></div>
+            <div class="login-left-content">
+                <h2>Welcome to<br>SweetCrumbs Portal</h2>
+                <p>Manage your orders, track sweet deliveries, and bring smiles to dessert lovers everywhere.</p>
+            </div>
+        </div>
+
+
+        <div class="login-right-panel">
+            <div class="login-card-inner">
+
+                <div class="login-logo">
+                    <a href="index.html"><img src="./asset/roselogo.webp" alt="logo"></a>
+                </div>
+
+                <div class="login-header">
+                    <h3>Hello Again! 👋</h3>
+                    <p>Login to your staff portal to continue.</p>
+                </div>
+
+
+                <div id="globalSuccessMsg" class="global-success"></div>
+
+                <form id="staffLoginForm" novalidate>
+
+
+                    <div class="login-input-group" id="groupRole">
+                        <i class="fa-solid fa-id-badge left-icon"></i>
+                        <select id="userRole" class="login-input">
+                            <option value="" disabled selected>Select Your Role</option>
+                            <option value="manager">Shop Manager Dashboard</option>
+                            <option value="delivery">Delivery Partner Dashboard</option>
+                        </select>
+                        <div class="error-msg" id="errRole">Please select your designated role.</div>
+                    </div>
+
+
+                    <div class="login-input-group" id="groupEmail">
+                        <i class="fa-regular fa-envelope left-icon"></i>
+                        <input type="email" id="userEmail" class="login-input" placeholder="Email Address"
+                            autocomplete="off">
+                        <div class="error-msg" id="errEmail">Please enter a valid email address.</div>
+                    </div>
+
+
+                    <div class="login-input-group" id="groupPassword">
+                        <i class="fa-solid fa-lock left-icon"></i>
+                        <input type="password" id="userPassword" class="login-input" placeholder="Password">
+                        <i class="fa-regular fa-eye toggle-pwd" id="togglePwdBtn"></i>
+                        <div class="error-msg" id="errPassword">Password must be at least 6 characters.</div>
+                    </div>
+
+
+                    <div class="login-options">
+                        <label class="remember-me"><input type="checkbox"> Remember Me</label>
+                        <a href="404page.html" class="forgot-pwd">Forgot Password?</a>
+                    </div>
+
+                    <button type="submit" class="login-submit-btn" id="submitBtn">Access Dashboard</button>
+
+                </form>
+
+                <div class="login-divider">OR CONTINUE WITH</div>
+
+                <div class="social-logins">
+                    <a href="404page.html" class="social-icon-btn"><i class="fa-brands fa-google"></i></a>
+                    <a href="404page.html" class="social-icon-btn"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="404page.html" class="social-icon-btn"><i class="fa-brands fa-apple"></i></a>
+                </div>
+
+                <div class="create-account-link">
+                    Don't have an account? <a href="signup.html">Sign Up</a>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const loginForm = document.getElementById("staffLoginForm");
+            const roleInput = document.getElementById("userRole");
+            const emailInput = document.getElementById("userEmail");
+            const passwordInput = document.getElementById("userPassword");
+
+            const groupRole = document.getElementById("groupRole");
+            const groupEmail = document.getElementById("groupEmail");
+            const groupPassword = document.getElementById("groupPassword");
+
+            const successMsg = document.getElementById("globalSuccessMsg");
+            const submitBtn = document.getElementById("submitBtn");
+
+
+            const togglePwdBtn = document.getElementById("togglePwdBtn");
+            togglePwdBtn.addEventListener("click", function () {
+                const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
+                passwordInput.setAttribute("type", type);
+                this.classList.toggle("fa-eye");
+                this.classList.toggle("fa-eye-slash");
+            });
+
+
+            roleInput.addEventListener("change", () => groupRole.classList.remove("error"));
+            emailInput.addEventListener("input", () => groupEmail.classList.remove("error"));
+            passwordInput.addEventListener("input", () => groupPassword.classList.remove("error"));
+
+
+            loginForm.addEventListener("submit", (e) => {
+                e.preventDefault();
+                let isValid = true;
+                successMsg.style.display = 'none';
+
+
+                if (roleInput.value === "") {
+                    groupRole.classList.add("error");
+                    isValid = false;
+                }
+
+
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(emailInput.value.trim())) {
+                    groupEmail.classList.add("error");
+                    isValid = false;
+                }
+
+
+                if (passwordInput.value.trim().length < 6) {
+                    groupPassword.classList.add("error");
+                    isValid = false;
+                }
+
+
+                if (isValid) {
+
+                    localStorage.setItem('userEmail', emailInput.value.trim());
+
+
+                    successMsg.textContent = "Login Successful! Redirecting to Dashboard...";
+                    successMsg.style.display = "block";
+
+                    submitBtn.style.backgroundColor = "#38a169";
+                    submitBtn.innerHTML = 'Verifying <i class="fa-solid fa-spinner fa-spin"></i>';
+
+
+                    const selectedRole = roleInput.value;
+                    let targetPage = "";
+
+                    if (selectedRole === "manager") {
+                        targetPage = "manager-dashboard.html";
+                    } else if (selectedRole === "delivery") {
+                        targetPage = "delivery-dashboard.html";
+                    }
+
+
+                    setTimeout(() => {
+                        window.location.href = targetPage;
+                    }, 1000);
+                }
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>

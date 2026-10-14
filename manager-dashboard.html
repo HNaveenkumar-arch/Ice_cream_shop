@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SweetCrumbs - Manager Portal</title>
+
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Nunito:wght@400;600;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="manager-dashboard.css">
+</head>
+
+<body>
+
+
+    <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+
+
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-logo">
+            <a href="index.html">
+                <img src="./asset/roselogo.webp" alt="SweetCrumbs Logo">
+            </a>
+            <div class="dashboard-badge">Manager Dashboard</div>
+        </div>
+
+        <div class="nav-menu">
+            <div class="nav-item active" onclick="switchTab('tab-overview', this, 'Store Overview')"><i
+                    class="fa-solid fa-chart-pie"></i> Store Overview</div>
+            <div class="nav-item" onclick="switchTab('tab-finance', this, 'Sales & Finance')"><i
+                    class="fa-solid fa-indian-rupee-sign"></i> Sales & Finance</div>
+            <div class="nav-item" onclick="switchTab('tab-inventory', this, 'Inventory Status')"><i
+                    class="fa-solid fa-boxes-stacked"></i> Inventory </div>
+            <div class="nav-item" onclick="switchTab('tab-staff', this, 'Staff Management')"><i
+                    class="fa-solid fa-users-gear"></i> Staff Management</div>
+            <div class="nav-item" onclick="switchTab('tab-customers', this, 'Customer Relations')"><i
+                    class="fa-solid fa-heart"></i> Customers</div>
+            <div class="nav-item" onclick="switchTab('tab-settings', this, 'Store Settings')"><i
+                    class="fa-solid fa-sliders"></i> Store Settings</div>
+        </div>
+
+        <div class="sidebar-profile">
+
+            <div class="profile-img-box">
+                <img src="./asset/d3.webp" alt="User Profile">
+            </div>
+            <div class="profile-details">
+                <h4 id="sidebarName">Loading...</h4>
+                <p id="sidebarEmail">loading@email.com</p>
+            </div>
+        </div>
+    </nav>
+
+
+    <main class="main-wrapper">
+
+
+        <header class="top-header">
+            <div class="header-left">
+                <i class="fa-solid fa-bars menu-toggle" onclick="toggleSidebar()"></i>
+                <h2 id="pageTitle" class="page-title">Store Overview</h2>
+            </div>
+            <div class="header-right">
+                <a href="index.html" class="header-btn btn-home"><i class="fa-solid fa-house"></i> <span>Home</span></a>
+                <button onclick="logout()" class="header-btn btn-logout"><i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Logout</span></button>
+            </div>
+        </header>
+
+
+        <div class="dashboard-body">
+
+
+
+
+            <div id="tab-overview" class="content-tab active">
+                <div class="dashboard-grid">
+
+
+                    <div class="premium-card card-full" data-aos="fade-up">
+                        <div class="section-title"><i class="fa-solid fa-bolt"></i> Today's Snapshot</div>
+                        <div class="stats-grid">
+                            <div class="stat-box">
+                                <div class="stat-icon"><i class="fa-solid fa-wallet"></i></div>
+                                <div class="stat-info">
+                                    <h4>Net Revenue</h4>
+                                    <h2>₹45,200</h2>
+                                </div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-icon"><i class="fa-solid fa-bag-shopping"></i></div>
+                                <div class="stat-info">
+                                    <h4>Total Orders</h4>
+                                    <h2>124</h2>
+                                </div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-icon"><i class="fa-solid fa-users"></i></div>
+                                <div class="stat-info">
+                                    <h4>Footfall</h4>
+                                    <h2>340</h2>
+                                </div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-icon"><i class="fa-solid fa-star"></i></div>
+                                <div class="stat-info">
+                                    <h4>Avg Rating</h4>
+                                    <h2>4.8</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="premium-card card-full" data-aos="fade-up">
+                        <div class="section-title"><i class="fa-solid fa-chart-line"></i> Weekly Sales Analytics</div>
+                        <div class="chart-container"><canvas id="salesChart"></canvas></div>
+                    </div>
+
+
+                    <div class="premium-card card-half" data-aos="fade-up">
+                        <div class="section-title"><i class="fa-solid fa-crown"></i> Top Flavors Today</div>
+                        <div class="image-grid">
+                            <div class="img-card"><img src="./asset/a1.webp" alt="Flavor">
+                                <div class="img-label">Strawberry</div>
+                            </div>
+                            <div class="img-card"><img src="./asset/c5.webp" alt="Flavor">
+                                <div class="img-label">Choco Fudge</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="premium-card card-half" data-aos="fade-up">
+                        <div class="section-title"><i class="fa-solid fa-bullseye"></i> Store Targets</div>
+                        <div class="progress-list">
+                            <div class="prog-item">
+                                <div class="prog-head"><span>Sales Target (₹5 Lakhs)</span><span>85%</span></div>
+                                <div class="prog-bg">
+                                    <div class="prog-fill" style="width: 85%;"></div>
+                                </div>
+                            </div>
+                            <div class="prog-item">
+                                <div class="prog-head"><span>Wastage Reduction</span><span>2%</span></div>
+                                <div class="prog-bg">
+                                    <div class="prog-fill" style="width: 20%; background: #ea580c;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="premium-card card-full" data-aos="fade-up">
+                        <div class="section-title"><i class="fa-solid fa-receipt"></i> Live POS Transactions</div>
+                        <div class="table-responsive">
+                            <table class="premium-table">
+                                <thead>
+                                    <tr>
+                                        <th>Order ID</th>
+                                        <th>Customer</th>
+                                        <th>Items</th>
+                                        <th>Amount</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>#ORD-1045</td>
+                                        <td>Rahul M.</td>
+                                        <td>2x Chocolate Sundae</td>
+                                        <td>₹450</td>
+                                        <td><span class="badge bg-green">Completed</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>#ORD-1046</td>
+                                        <td>Priya S.</td>
+                                        <td>1x Vanilla Tub</td>
+                                        <td>₹850</td>
+                                        <td><span class="badge bg-orange">Preparing</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>#ORD-1047</td>
+                                        <td>Karthik</td>
+                                        <td>Strawberry Cones</td>
+                                        <td>₹200</td>
+                                        <td><span class="badge bg-green">Completed</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div id="tab-finance" class="content-tab">
+                <div class="dashboard-grid">
+
+                    <div class="premium-card card-full" data-aos="fade-up">
+                        <div class="section-title"><i class="fa-solid fa-coins"></i> Financial Overview</div>
+                        <div class="stats-grid">
+                            <div class="stat-box">
+                                <div class="stat-icon"><i class="fa-solid fa-money-bill-trend-up"></i></div>
+                                <div class="stat-info">
+                                    <h4>Monthly Revenue</h4>
+                                    <h2>₹4.2L</h2>
+                                </div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-icon"><i class="fa-solid fa-money-bill-transfer"></i></div>
+                                <div class="stat-info">
+                                    <h4>Total Expenses</h4>
+                                    <h2>₹1.8L</h2>
+                                </div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-icon"><i class="fa-solid fa-piggy-bank"></i></div>
+                                <div class="stat-info">
+                                    <h4>Net Profit</h4>
+                                    <h2>₹2.4L</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="premium-card card-half" data-aos="fade-up">
+                        <div class="section-title"><i class="fa-solid fa-credit-card"></i> Payment Methods</div>
+                        <div class="progress-list">
+                            <div class="prog-item">
+                                <div class="prog-head"><span>UPI / QR Codes</span><span>65%</span></div>
+                                <div class="prog-bg">
+                                    <div class="prog-fill" style="width: 65%;"></div>
+                                </div>
+                            </div>
+                            <div class="prog-item">
+                                <div class="prog-head"><span>Cards</span><span>25%</span></div>
+                                <div class="prog-bg">
+                                    <div class="prog-fill" style="width: 25%; background: #3b82f6;"></div>
+                                </div>
+                            </div>
+                            <div class="prog-item">
+                                <div class="prog-head"><span>Cash</span><span>10%</span></div>
+                                <div class="prog-bg">
+                                    <div class="prog-fill" style="width: 10%; background: #ea580c;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="premium-card card-half" data-aos="fade-up">
+                        <div class="section-title"><i class="fa-solid fa-chart-pie"></i> Profit Margins</div>
+                        <div class="action-list">
+                            <div class="action-item">
+                                <div class="action-text">
+                                    <h4>Scoops & Cones</h4>
+                                    <p>High Volume Category</p>
+                                </div>
+                                <h2 style="color:var(--primary-color);">65%</h2>
+                            </div>
+                            <div class="action-item">
+                                <div class="action-text">
+                                    <h4>Sundaes & Specials</h4>
+                                    <p>Premium Category</p>
+                                </div>
+                                <h2 style="color:var(--primary-color);">55%</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="premium-card card-full" data-aos="fade-up">
+                        <div class="section-title"><i class="fa-solid fa-file-invoice"></i> Recent Expenses & Payouts
+                        </div>
+                        <div class="table-responsive">
+                            <table class="premium-table">
+                                <thead>
+                                    <tr>
+                                        <th>Expense Type</th>
+                                        <th>Paid To</th>
+                                        <th>Date</th>
+                                        <th>Amount</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Supplier Payment</td>
+                                        <td>Dairy Farm Co.</td>
+                                        <td>Oct 12, 2026</td>
+                                        <td>₹45,000</td>
+                                        <td><span class="badge bg-green">Paid</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Electricity Bill</td>
+                                        <td>TNEB</td>
+                                        <td>Oct 15, 2026</td>
+                                        <td>₹12,500</td>
+                                        <td><span class="badge bg-orange">Pending</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+            <div id="tab-inventory" class="content-tab">
+                <div class="dashboard-grid">
+
+                    <div class="premium-card card-full" data-aos="fade-up">
+                        <div class="section-title"><i class="fa-solid fa-list"></i> Critical Ingredients Shortage</div>
+                        <div class="table-responsive">
+                            <table class="premium-table">
+                                <thead>
+                                    <tr>
+                                        <th>Item Name</th>
+                                        <th>Category</th>
+                                        <th>Current Stock</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Fresh Strawberries</td>
+                                        <td>Fruits</td>
+                                        <td>2 kg</td>
+                                        <td><span class="badge bg-orange">Low Stock</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Waffle Cones</td>
+                                        <td>Packaging</td>
+                                        <td>50 units</td>
+                                        <td><span class="badge bg-red">Order Now</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Full Cream Milk</td>
+                                        <td>Dairy</td>
+                                        <td>45 Liters</td>
+                                        <td><span class="badge bg-green">Sufficient</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="premium-card card-half" data-aos="fade-up">
+                        <div class="section-title"><i class="fa-solid fa-snowflake"></i> Freezer Capacity</div>
+                        <div class="progress-list">
+                            <div class="prog-item">
+                                <div class="prog-head"><span>Main Cold Storage</span><span>90% Full</span></div>
+                                <div class="prog-bg">
+                                    <div class="prog-fill" style="width: 90%; background: #e53e3e;"></div>
+                                </div>
+                            </div>
+                            <div class="prog-item">
+                                <div class="prog-head"><span>Display Freezer</span><span>60% Full</span></div>
+                                <div class="prog-bg">
+                                    <div class="prog-fill" style="width: 60%; background: #16a34a;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="premium-card card-half" data-aos="fade-up">
+                        <div class="section-title"><i class="fa-solid fa-trash-can"></i> Wastage Report</div>
+                        <div class="progress-list">
+                            <div class="prog-item">
+                                <div class="prog-head"><span>Melted/Spoiled Items</span><span>4%</span></div>
+                                <div class="prog-bg">
+                                    <div class="prog-fill" style="width: 4%; background: #ea580c;"></div>
+                                </div>
+                            </div>
+                            <div class="prog-item">
+                                <div class="prog-head"><span>Packaging Damage</span><span>1.5%</span></div>
+                                <div class="prog-bg">
+                                    <div class="prog-fill" style="width: 1.5%; background: #3b82f6;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="premium-card card-full" data-aos="fade-up">
+                        <div class="section-title"><i class="fa-solid fa-clipboard-check"></i> Restock Operations</div>
+                        <div class="action-list" style="display: flex; flex-direction: row; flex-wrap: wrap;">
+                            <div class="action-item" style="flex: 1; min-width: 250px;">
+                                <div class="action-text">
+                                    <h4>Place Vendor Order</h4>
+                                    <p>Draft PO for Milk.</p>
+                                </div><a href="404page.html" class="btn-action">Order</a>
+                            </div>
+                            <div class="action-item" style="flex: 1; min-width: 250px;">
+                                <div class="action-text">
+                                    <h4>Manual Audit Log</h4>
+                                    <p>Check yesterday's count.</p>
+                                </div><a href="404page.html" class="btn-action">View</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+            <div id="tab-staff" class="content-tab">
+                <div class="dashboard-grid">
+
+                    <div class="premium-card card-full" data-aos="fade-up">
+                        <div class="section-title"><i class="fa-solid fa-user-group"></i> Shift Overview</div>
+                        <div class="stats-grid">
+                            <div class="stat-box">
+                                <div class="stat-icon"><i class="fa-solid fa-user-check"></i></div>
+                                <div class="stat-info">
+                                    <h4>Active Staff</h4>
+                                    <h2>14</h2>
+                                </div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-icon"><i class="fa-solid fa-clock"></i></div>
+                                <div class="stat-info">
+                                    <h4>On Shift</h4>
+                                    <h2>5</h2>
+                                </div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-icon"><i class="fa-solid fa-plane"></i></div>
+                                <div class="stat-info">
+                                    <h4>On Leave</h4>
+                                    <h2>2</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="premium-card card-half" data-aos="fade-up">
+                        <div class="section-title"><i class="fa-solid fa-envelope-open-text"></i> Leave Approvals</div>
+                        <div class="action-list">
+                            <div class="action-item">
+                                <div class="action-text">
+                                    <h4>Karthik (Server)</h4>
+                                    <p>Sick Leave - Oct 15</p>
+                                </div><a href="404page.html" class="btn-action">Approve</a>
+                            </div>
+                            <div class="action-item">
+                                <div class="action-text">
+                                    <h4>Sneha (Kitchen)</h4>
+                                    <p>Casual Leave - Oct 20</p>
+                                </div><a href="404page.html" class="btn-action">Approve</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="premium-card card-half" data-aos="fade-up">
+                        <div class="section-title"><i class="fa-solid fa-bullhorn"></i> Announcements</div>
+                        <p class="text-content">Team meeting scheduled for Friday 9:00 AM before store opening. We will
+                            discuss the new Diwali special menu. Attendance is mandatory.</p>
+                    </div>
+
+                    <div class="premium-card card-full" data-aos="fade-up">
+                        <div class="section-title"><i class="fa-solid fa-calendar-days"></i> Today's Roster</div>
+                        <div class="table-responsive">
+                            <table class="premium-table">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Role</th>
+                                        <th>Shift Timing</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Manoj K.</td>
+                                        <td>Cashier</td>
+                                        <td>10:00 AM - 06:00 PM</td>
+                                        <td><span class="badge bg-green">Checked In</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Divya S.</td>
+                                        <td>Server</td>
+                                        <td>10:00 AM - 06:00 PM</td>
+                                        <td><span class="badge bg-green">Checked In</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Arjun R.</td>
+                                        <td>Delivery</td>
+                                        <td>02:00 PM - 10:00 PM</td>
+                                        <td><span class="badge bg-orange">Scheduled</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+            <div id="tab-customers" class="content-tab">
+                <div class="dashboard-grid">
+
+                    <div class="premium-card card-full" data-aos="fade-up">
+                        <div class="section-title"><i class="fa-solid fa-comments"></i> Latest Reviews</div>
+                        <div class="table-responsive">
+                            <table class="premium-table">
+                                <thead>
+                                    <tr>
+                                        <th>Customer</th>
+                                        <th>Rating</th>
+                                        <th>Comment</th>
+                                        <th>Source</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Rajesh K.</td>
+                                        <td>⭐⭐⭐⭐⭐</td>
+                                        <td>Best Strawberry ice cream ever!</td>
+                                        <td>Zomato</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Anita P.</td>
+                                        <td>⭐⭐⭐⭐</td>
+                                        <td>Great ambiance, slightly crowded.</td>
+                                        <td>Google</td>
+                                    </tr>
+                                    <tr>
+                                        <td>John D.</td>
+                                        <td>⭐⭐⭐⭐⭐</td>
+                                        <td>Kids loved the fudge sundae.</td>
+                                        <td>Swiggy</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="premium-card card-half" data-aos="fade-up">
+                        <div class="section-title"><i class="fa-solid fa-chart-bar"></i> Ratings Breakdown</div>
+                        <div class="progress-list">
+                            <div class="prog-item">
+                                <div class="prog-head"><span>5 Stars</span><span>80%</span></div>
+                                <div class="prog-bg">
+                                    <div class="prog-fill" style="width: 80%; background:#16a34a;"></div>
+                                </div>
+                            </div>
+                            <div class="prog-item">
+                                <div class="prog-head"><span>4 Stars</span><span>15%</span></div>
+                                <div class="prog-bg">
+                                    <div class="prog-fill" style="width: 15%; background:#84cc16;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="premium-card card-half" data-aos="fade-up">
+                        <div class="section-title"><i class="fa-solid fa-reply"></i> Needs Response</div>
+                        <div class="action-list">
+                            <div class="action-item">
+                                <div class="action-text">
+                                    <h4>Vikas (3 Stars)</h4>
+                                    <p>"Delivery was delayed."</p>
+                                </div><a href="404page.html" class="btn-action">Reply</a>
+                            </div>
+                            <div class="action-item">
+                                <div class="action-text">
+                                    <h4>Meera (5 Stars)</h4>
+                                    <p>"Amazing cake!"</p>
+                                </div><a href="404page.html" class="btn-action">Thank</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="premium-card card-full" data-aos="fade-up">
+                        <div class="section-title"><i class="fa-brands fa-instagram"></i> Social Media Mentions</div>
+                        <div class="image-grid">
+                            <div class="img-card"><img src="./asset/w2.webp" alt="Customer">
+                                <div class="img-label">@foodie_chennai</div>
+                            </div>
+                            <div class="img-card"><img src="./asset/w7.webp" alt="Customer">
+                                <div class="img-label">@sweet_tooth</div>
+                            </div>
+                            <div class="img-card"><img src="./asset/w9.webp" alt="Customer">
+                                <div class="img-label">@dessert_lover</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+            <div id="tab-settings" class="content-tab">
+                <div class="dashboard-grid">
+
+                    <div class="premium-card card-full" data-aos="fade-up">
+                        <div class="section-title"><i class="fa-solid fa-id-card"></i> Manager Profile</div>
+                        <div class="stats-grid">
+                            <div class="stat-box">
+                                <div class="stat-icon"><i class="fa-solid fa-user-shield"></i></div>
+                                <div class="stat-info">
+                                    <h4>Role</h4>
+                                    <h2>Store Manager</h2>
+                                </div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-icon"><i class="fa-solid fa-at"></i></div>
+                                <div class="stat-info">
+                                    <h4>Registered Email</h4>
+                                    <h2 id="setEmail" style="font-size:1.1rem; word-break:break-all;">email</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="premium-card card-half" data-aos="fade-up">
+                        <div class="section-title"><i class="fa-solid fa-link"></i> POS Integrations</div>
+                        <div class="action-list">
+                            <div class="action-item">
+                                <div class="action-text">
+                                    <h4>Google POS</h4>
+                                </div><span class="badge bg-green">Active</span>
+                            </div>
+                            <div class="action-item">
+                                <div class="action-text">
+                                    <h4>Swiggy / Zomato</h4>
+                                </div><span class="badge bg-green">Active</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="premium-card card-half" data-aos="fade-up">
+                        <div class="section-title"><i class="fa-solid fa-bell"></i> Notifications</div>
+                        <div class="action-list">
+                            <div class="action-item">
+                                <div class="action-text">
+                                    <h4>New Order Alert</h4>
+                                </div><input type="checkbox" checked
+                                    style="width:20px; height:20px; accent-color: var(--primary-color);">
+                            </div>
+                            <div class="action-item">
+                                <div class="action-text">
+                                    <h4>Low Stock Alert</h4>
+                                </div><input type="checkbox" checked
+                                    style="width:20px; height:20px; accent-color: var(--primary-color);">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="premium-card card-full" data-aos="fade-up" style="border: 1px solid #fee2e2;">
+                        <div class="section-title" style="color: #ef4444; border-bottom-color:#fecaca;"><i
+                                class="fa-solid fa-triangle-exclamation" style="color: #ef4444;"></i> Danger Zone</div>
+                        <p class="text-content" style="margin-bottom: 20px;">Once you delete a staff account or factory
+                            reset the POS system, there is no going back. Please be certain.</p>
+                        <button onclick="window.location.href='404page.html'" class="header-btn"
+                            style="background:#ef4444; color:#fff; border:none; padding:12px 25px; cursor:pointer;">Factory
+                            Reset System</button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+
+
+        document.addEventListener("DOMContentLoaded", () => {
+
+
+            const storedEmail = localStorage.getItem('userEmail');
+
+            if (!storedEmail) {
+                alert("Unauthorized Access! Please login to view the dashboard.");
+                window.location.replace("login.html");
+            } else {
+
+                if (typeof AOS !== 'undefined') {
+                    AOS.init({ duration: 800, once: true, offset: 50, disable: 'mobile' });
+                }
+
+
+                let extractedName = storedEmail.split('@')[0];
+                extractedName = extractedName.charAt(0).toUpperCase() + extractedName.slice(1);
+
+
+                const sideName = document.getElementById("sidebarName");
+                const sideEmail = document.getElementById("sidebarEmail");
+                if (sideName) sideName.textContent = extractedName;
+                if (sideEmail) sideEmail.textContent = storedEmail;
+
+                const setEmail = document.getElementById("setEmail");
+                if (setEmail) setEmail.textContent = storedEmail;
+
+
+                initChart();
+            }
+        });
+
+
+        window.toggleSidebar = function () {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('sidebarOverlay');
+            sidebar.classList.toggle('mobile-open');
+            if (sidebar.classList.contains('mobile-open')) {
+                overlay.classList.add('show');
+                document.body.style.overflow = 'hidden'; 
+            } else {
+                overlay.classList.remove('show');
+                document.body.style.overflow = 'auto';
+            }
+        };
+
+
+        window.switchTab = function (tabId, element, pageTitle) {
+
+            document.querySelectorAll('.content-tab').forEach(tab => tab.classList.remove('active'));
+
+            document.querySelectorAll('.nav-item').forEach(nav => nav.classList.remove('active'));
+
+
+            document.getElementById(tabId).classList.add('active');
+            element.classList.add('active');
+
+
+            document.getElementById('pageTitle').innerText = pageTitle;
+
+
+            if (typeof AOS !== 'undefined' && window.innerWidth > 992) {
+                setTimeout(() => { AOS.refresh(); }, 100);
+            }
+
+
+            if (window.innerWidth <= 992) { toggleSidebar(); }
+        };
+
+
+        window.logout = function () {
+            localStorage.removeItem('userEmail');
+            window.location.href = "login.html";
+        };
+
+
+        function initChart() {
+            const ctx = document.getElementById('salesChart');
+            if (ctx && typeof Chart !== 'undefined') {
+                new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                        datasets: [{
+                            label: 'Sales (₹)',
+                            data: [12000, 15000, 14000, 18000, 25000, 45000, 42000],
+                            backgroundColor: '#ff5e78',
+                            borderRadius: 6,
+                            borderWidth: 0,
+                            hoverBackgroundColor: '#1a202c'
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: { legend: { display: false } },
+                        scales: {
+                            y: { beginAtZero: true, grid: { color: '#e2e8f0', borderDash: [5, 5] } },
+                            x: { grid: { display: false } }
+                        },
+                        animation: {
+                            duration: 1500,
+                            easing: 'easeOutQuart'
+                        }
+                    }
+                });
+            }
+        }
+    </script>
+</body>
+
+</html>

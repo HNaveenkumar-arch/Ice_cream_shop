@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium Ice Cream Shop</title>
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="common.css">
+</head>
+
+<body>
+
+
+  <div id="preloader">
+    <div class="loader-container">
+      <div class="circle-spinner"></div>
+      <i class="fa-solid fa-ice-cream flying-icecream fly-1"></i>
+      <i class="fa-solid fa-ice-cream flying-icecream fly-2"></i>
+      <i class="fa-solid fa-ice-cream flying-icecream fly-3"></i>
+    </div>
+    <div class="loader-text">Scooping Happiness...</div>
+  </div>
+
+
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+
+  <header class="header" id="header" data-aos="fade-down" data-aos-duration="1000">
+    <nav class="navbar">
+
+      <div class="nav-left">
+        <a href="index.html" class="logo">
+          <img src="./asset/roselogo.webp" alt="logo"> </a>
+      </div>
+
+
+      <div class="nav-center">
+        <ul class="nav-links">
+          <li data-aos="fade-down" data-aos-delay="200"><a href="index.html" class="hover-effect active">Home</a></li>
+          <li data-aos="fade-down" data-aos-delay="300"><a href="about.html" class="hover-effect">About</a></li>
+          <li data-aos="fade-down" data-aos-delay="400"><a href="service.html" class="hover-effect">Service</a></li>
+          <li data-aos="fade-down" data-aos-delay="500"><a href="blog.html" class="hover-effect">Blog</a></li>
+          <li data-aos="fade-down" data-aos-delay="600"><a href="contact.html" class="hover-effect">Contact</a></li>
+        </ul>
+      </div>
+
+
+      <div class="nav-right" data-aos="fade-left" data-aos-delay="800">
+        <div class="auth-buttons">
+          <a href="login.html" class="btn-login">Login</a>
+          <a href="signup.html" class="btn-signup">Sign Up</a>
+        </div>
+
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+
+  <div class="mobile-overlay"></div>
+  <aside class="mobile-sidebar">
+    <div class="mobile-header">
+      <a href="index.html" class="logo">
+        <img src="./asset/roselogo.webp" alt="logo">
+      </a>
+      <div class="close-btn"><i class="fa-solid fa-xmark"></i></div>
+    </div>
+
+    <div class="mobile-body">
+      <ul class="mobile-nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="service.html">Service</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="mobile-auth-buttons">
+        <a href="login.html" class="btn-login-mobile">Login</a>
+        <a href="signup.html" class="btn-signup-mobile">Sign Up</a>
+      </div>
+    </div>
+  </aside>
+
+
+  <section id="home" class="split-hero-section">
+
+
+    <div class="split-slide active">
+      <div class="split-bg" style="background-image: url('./asset/w14.webp');">
+      </div>
+      <div class="split-overlay"></div>
+
+      <div class="split-container">
+
+
+        <div class="split-img-box left-box">
+          <img src="./asset/c12.webp" alt="Strawberry Scoop">
+        </div>
+
+
+        <div class="split-content">
+          <div class="glass-badge"><i class="fa-solid fa-leaf"></i> 100% Freshly Made</div>
+          <h1>Happiness Comes<br>in Every Scoop.</h1>
+          <p>Experience the perfect blend of sweet strawberries and rich vanilla cream. Crafted with love to melt your
+            heart.</p>
+          <div class="split-buttons">
+            <a href="404page.html" class="btn-premium-rose">Explore Flavors</a>
+            <a href="404page.html" class="btn-premium-glass">Order Now</a>
+          </div>
+        </div>
+
+
+        <div class="split-img-box right-box">
+          <img src="./asset/w20.webp" alt="Vanilla Cone">
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="split-slide">
+      <div class="split-bg" style="background-image: url('./asset/w22.webp');">
+      </div>
+      <div class="split-overlay"></div>
+
+      <div class="split-container">
+
+        <div class="split-img-box left-box">
+          <img src="./asset/c10.webp" alt="Chocolate Cone">
+        </div>
+
+        <div class="split-content">
+          <div class="glass-badge"><i class="fa-solid fa-medal"></i> Premium Ingredients</div>
+          <h1>Indulge in Rich<br>Chocolate Magic.</h1>
+          <p>Dive into the deep, dark, and delicious world of Belgian chocolate topped with smooth caramel drizzle.</p>
+          <div class="split-buttons">
+            <a href="404page.html" class="btn-premium-rose">View Menu</a>
+            <a href="404page.html" class="btn-premium-glass">Book an Event</a>
+          </div>
+        </div>
+
+        <div class="split-img-box right-box">
+          <img src="./asset/w9.webp" alt="Chocolate Truffle">
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="split-nav">
+      <div class="split-dot active" onclick="jumpSplitSlide(0)"></div>
+      <div class="split-dot" onclick="jumpSplitSlide(1)"></div>
+    </div>
+
+  </section>
+
+
+  <section id="flavors" class="flavor-section">
+
+
+    <div class="flavor-header">
+      <h2 class="gradient-heading gsap-reveal-title">Find Your Favorite Flavor</h2>
+      <p class="gsap-reveal-text">Explore our handcrafted collection of premium ice creams. Made with 100% natural
+        ingredients, every scoop is a journey of pure delight.</p>
+    </div>
+
+
+    <div class="flavor-marquee-container gsap-reveal-cards">
+      <div class="marquee-wrapper">
+
+
+        <div class="flavor-track">
+
+          <div class="flavor-card">
+            <div class="flavor-img-box">
+              <img src="./asset/w19.webp" alt="Strawberry Bliss">
+            </div>
+            <div class="flavor-info">
+              <h3>Strawberry Bliss </h3>
+              <p>Sweet, fresh, and perfectly pink. Made with real organic strawberries.</p>
+              <a href="404page.html" class="flavor-btn"><i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="flavor-card">
+            <div class="flavor-img-box">
+              <img src="./asset/w1.webp" alt="Belgian Chocolate">
+            </div>
+            <div class="flavor-info">
+              <h3>Belgian Chocolate </h3>
+              <p>Rich, dark, and luxuriously smooth. Crafted with premium Belgian cocoa.</p>
+              <a href="404page.html" class="flavor-btn"><i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="flavor-card">
+            <div class="flavor-img-box">
+              <img src="./asset/w2.webp" alt="Classic Vanilla">
+            </div>
+            <div class="flavor-info">
+              <h3>Classic Vanilla </h3>
+              <p>Simple, elegant, and timelessly delicious with original vanilla beans.</p>
+              <a href="404page.html" class="flavor-btn"><i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="flavor-card">
+            <div class="flavor-img-box">
+              <img src="./asset/w15.webp" alt="Mango Tango">
+            </div>
+            <div class="flavor-info">
+              <h3>Mango Tango </h3>
+              <p>Tropical, fruity, and vibrantly refreshing. A true summer favorite.</p>
+              <a href="404page.html" class="flavor-btn"><i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="flavor-track">
+
+          <div class="flavor-card">
+            <div class="flavor-img-box">
+              <img src="./asset/w19.webp" alt="Strawberry Bliss">
+            </div>
+            <div class="flavor-info">
+              <h3>Strawberry Bliss </h3>
+              <p>Sweet, fresh, and perfectly pink. Made with real organic strawberries.</p>
+              <a href="404page.html" class="flavor-btn"><i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="flavor-card">
+            <div class="flavor-img-box">
+              <img src="./asset/w1.webp" alt="Belgian Chocolate">
+            </div>
+            <div class="flavor-info">
+              <h3>Belgian Chocolate </h3>
+              <p>Rich, dark, and luxuriously smooth. Crafted with premium Belgian cocoa.</p>
+              <a href="404page.html" class="flavor-btn"><i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="flavor-card">
+            <div class="flavor-img-box">
+              <img src="./asset/w2.webp" alt="Classic Vanilla">
+            </div>
+            <div class="flavor-info">
+              <h3>Classic Vanilla </h3>
+              <p>Simple, elegant, and timelessly delicious with original vanilla beans.</p>
+              <a href="404page.html" class="flavor-btn"><i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="flavor-card">
+            <div class="flavor-img-box">
+              <img src="./asset/w15.webp" alt="Mango Tango">
+            </div>
+            <div class="flavor-info">
+              <h3>Mango Tango </h3>
+              <p>Tropical, fruity, and vibrantly refreshing. A true summer favorite.</p>
+              <a href="404page.html" class="flavor-btn"><i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section id="signature" class="signature-section">
+    <div class="sig-container">
+
+
+      <div class="sig-header gsap-sig-reveal">
+        <h2 class="gradient-heading">Our Signature Scoops</h2>
+        <p>Bestselling Collection</p>
+      </div>
+
+
+      <div class="sig-grid">
+
+
+        <div class="sig-card tall-card gsap-sig-card">
+          <div class="sig-img-wrap">
+            <img src="./asset/w4.webp" alt="Royal Belgian Chocolate">
+          </div>
+          <div class="bestseller-badge">Bestseller</div>
+          <div class="sig-details">
+            <div class="sig-header-row">
+              <h3>Royal Chocolate</h3>
+              <span class="price">$6.99</span>
+            </div>
+            <div class="sig-hidden">
+              <p>Rich chocolate with a smooth, creamy finish.</p>
+              <button onclick="window.location.href='404page.html'" class="add-cart-btn"><i
+                  class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="sig-card short-card gsap-sig-card">
+          <div class="sig-img-wrap">
+            <img src="./asset/w7.webp" alt="Strawberry Dream">
+          </div>
+          <div class="bestseller-badge">Bestseller</div>
+          <div class="sig-details">
+            <div class="sig-header-row">
+              <h3>Strawberry Dream</h3>
+              <span class="price">$5.49</span>
+            </div>
+            <div class="sig-hidden">
+              <p>Fresh strawberry flavor with a fruity twist.</p>
+              <button onclick="window.location.href='404page.html'" class="add-cart-btn"><i
+                  class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="sig-card short-card gsap-sig-card">
+          <div class="sig-img-wrap">
+            <img src="./asset/w13.webp" alt="Pistachio Paradise">
+          </div>
+          <div class="bestseller-badge">Bestseller</div>
+          <div class="sig-details">
+            <div class="sig-header-row">
+              <h3>Pistachio Paradise</h3>
+              <span class="price">$6.49</span>
+            </div>
+            <div class="sig-hidden">
+              <p>Nutty pistachio with a luxurious texture.</p>
+              <button onclick="window.location.href='404page.html'" class="add-cart-btn"><i
+                  class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="sig-card tall-card gsap-sig-card">
+          <div class="sig-img-wrap">
+            <img src="./asset/w17.webp" alt="Caramel Crunch">
+          </div>
+          <div class="bestseller-badge">Bestseller</div>
+          <div class="sig-details">
+            <div class="sig-header-row">
+              <h3>Caramel Crunch</h3>
+              <span class="price">$5.99</span>
+            </div>
+            <div class="sig-hidden">
+              <p>Sweet caramel with a delightful crunchy finish.</p>
+              <button onclick="window.location.href='404page.html'" class="add-cart-btn"><i
+                  class="fa-solid fa-cart-shopping"></i> Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="marquee-section gsap-marquee-reveal">
+
+
+    <div class="marquee-strip pink-strip move-left">
+      <div class="marquee-content">
+
+        <span>SCOOP THE HAPPINESS <i class="fa-solid fa-ice-cream"></i></span>
+        <span>TASTE THE MAGIC <i class="fa-solid fa-star"></i></span>
+        <span>MADE FRESH DAILY <i class="fa-solid fa-leaf"></i></span>
+        <span>LOVE AT FIRST BITE <i class="fa-solid fa-heart"></i></span>
+
+        <span>SCOOP THE HAPPINESS <i class="fa-solid fa-ice-cream"></i></span>
+        <span>TASTE THE MAGIC <i class="fa-solid fa-star"></i></span>
+        <span>MADE FRESH DAILY <i class="fa-solid fa-leaf"></i></span>
+        <span>LOVE AT FIRST BITE <i class="fa-solid fa-heart"></i></span>
+      </div>
+    </div>
+
+
+    <div class="marquee-strip cream-strip move-right">
+      <div class="marquee-content">
+
+        <span>100% NATURAL INGREDIENTS <i class="fa-solid fa-lemon"></i></span>
+        <span>RICH & CREAMY TEXTURE <i class="fa-solid fa-droplet"></i></span>
+        <span>PREMIUM QUALITY <i class="fa-solid fa-medal"></i></span>
+        <span>CRAFTED WITH JOY <i class="fa-solid fa-face-smile"></i></span>
+
+        <span>100% NATURAL INGREDIENTS <i class="fa-solid fa-lemon"></i></span>
+        <span>RICH & CREAMY TEXTURE <i class="fa-solid fa-droplet"></i></span>
+        <span>PREMIUM QUALITY <i class="fa-solid fa-medal"></i></span>
+        <span>CRAFTED WITH JOY <i class="fa-solid fa-face-smile"></i></span>
+      </div>
+    </div>
+
+
+    <div class="marquee-strip choco-strip move-left">
+      <div class="marquee-content">
+
+        <span>PURE CHOCOLATE BLISS <i class="fa-solid fa-mug-hot"></i></span>
+        <span>INDULGE YOURSELF <i class="fa-solid fa-cookie-bite"></i></span>
+        <span>UNFORGETTABLE TASTE <i class="fa-solid fa-crown"></i></span>
+        <span>SWEET TREATS <i class="fa-solid fa-candy-cane"></i></span>
+
+        <span>PURE CHOCOLATE BLISS <i class="fa-solid fa-mug-hot"></i></span>
+        <span>INDULGE YOURSELF <i class="fa-solid fa-cookie-bite"></i></span>
+        <span>UNFORGETTABLE TASTE <i class="fa-solid fa-crown"></i></span>
+        <span>SWEET TREATS <i class="fa-solid fa-candy-cane"></i></span>
+      </div>
+    </div>
+
+  </section>
+
+
+
+  <section id="build-sundae" class="sundae-section">
+    <div class="sundae-container">
+
+
+      <div class="sundae-left">
+        <div class="preview-box">
+          <img src="./asset/w24.webp" alt="Your Custom Sundae" class="main-sundae-img" id="sundae-preview-img">
+          <div class="floating-item float-1"><i class="fa-solid fa-cookie"></i></div>
+          <div class="floating-item float-2"><i class="fa-solid fa-candy-cane"></i></div>
+          <div class="floating-item float-3"><i class="fa-solid fa-leaf"></i></div>
+        </div>
+      </div>
+
+
+      <div class="sundae-right">
+        <div class="sundae-header">
+          <h2 class="gradient-heading">Build Your Own Sundae</h2>
+          <p>Mix and match! Add as many toppings as you want.</p>
+        </div>
+
+        <form id="sundae-form" class="sundae-form">
+
+
+          <div class="sundae-step">
+            <h3>1. Choose Your Base <span>($4.00)</span></h3>
+            <div class="options-grid">
+              <label class="custom-option">
+                <input type="radio" name="base" value="Vanilla" checked data-price="4.00" onchange="updatePrice()">
+                <span class="option-card">Vanilla</span>
+              </label>
+              <label class="custom-option">
+                <input type="radio" name="base" value="Chocolate" data-price="4.00" onchange="updatePrice()">
+                <span class="option-card">Chocolate</span>
+              </label>
+              <label class="custom-option">
+                <input type="radio" name="base" value="Strawberry" data-price="4.00" onchange="updatePrice()">
+                <span class="option-card">Strawberry</span>
+              </label>
+            </div>
+          </div>
+
+
+          <div class="sundae-step">
+            <h3>2. Add Toppings <span>(+$0.50 each)</span></h3>
+            <div class="options-grid">
+              <label class="custom-option">
+                <input type="checkbox" name="topping" value="Nuts" data-price="0.50" onchange="updatePrice()">
+                <span class="option-card">Mixed Nuts</span>
+              </label>
+              <label class="custom-option">
+                <input type="checkbox" name="topping" value="Sprinkles" data-price="0.50" onchange="updatePrice()">
+                <span class="option-card">Sprinkles</span>
+              </label>
+              <label class="custom-option">
+                <input type="checkbox" name="topping" value="Choco Chips" data-price="0.50" onchange="updatePrice()">
+                <span class="option-card">Choco Chips</span>
+              </label>
+            </div>
+          </div>
+
+
+          <div class="sundae-step">
+            <h3>3. Add Sauce <span>(+$0.75 each)</span></h3>
+            <div class="options-grid">
+              <label class="custom-option">
+                <input type="checkbox" name="sauce" value="Caramel" data-price="0.75" onchange="updatePrice()">
+                <span class="option-card">Caramel</span>
+              </label>
+              <label class="custom-option">
+                <input type="checkbox" name="sauce" value="Chocolate" data-price="0.75" onchange="updatePrice()">
+                <span class="option-card">Chocolate</span>
+              </label>
+              <label class="custom-option">
+                <input type="checkbox" name="sauce" value="Strawberry" data-price="0.75" onchange="updatePrice()">
+                <span class="option-card">Strawberry</span>
+              </label>
+            </div>
+          </div>
+
+
+          <div class="sundae-summary">
+            <div class="total-price">
+              Total: <span id="sundae-total">$4.00</span>
+            </div>
+            <button type="button" class="build-btn" onclick="orderSundae()">
+              Create My Sundae <i class="fa-solid fa-wand-magic-sparkles"></i>
+            </button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+  <script>
+    function updatePrice() {
+      let total = 0;
+
+
+      let baseOpt = document.querySelector('input[name="base"]:checked');
+      if (baseOpt) total += parseFloat(baseOpt.getAttribute('data-price'));
+
+
+      let toppings = document.querySelectorAll('input[name="topping"]:checked');
+      toppings.forEach(t => total += parseFloat(t.getAttribute('data-price')));
+
+
+      let sauces = document.querySelectorAll('input[name="sauce"]:checked');
+      sauces.forEach(s => total += parseFloat(s.getAttribute('data-price')));
+
+
+      let totalDisplay = document.getElementById('sundae-total');
+      if (totalDisplay) {
+        totalDisplay.innerText = "$" + total.toFixed(2);
+
+
+        totalDisplay.style.transform = 'scale(1.3)';
+        totalDisplay.style.color = '#ff416c';
+        setTimeout(() => {
+          totalDisplay.style.transform = 'scale(1)';
+          totalDisplay.style.color = '#1a202c';
+        }, 300);
+      }
+    }
+
+    function orderSundae() {
+      let finalPrice = document.getElementById('sundae-total').innerText;
+      window.location.href = '404page.html';
+    }
+  </script>
+
+
+
+
+  <section id="timeline" class="timeline-section">
+    <div class="timeline-container">
+
+
+      <div class="timeline-header gsap-timeline-header">
+        <h2 class="gradient-heading">The Scoop Timeline</h2>
+        <p>From Fresh Ingredients to Happy Moments</p>
+      </div>
+
+
+      <div class="timeline-wrapper">
+
+        <div class="timeline-line"></div>
+        <div class="timeline-progress" id="timeline-progress"></div>
+
+
+        <div class="timeline-item left">
+          <div class="timeline-dot">1</div>
+          <div class="timeline-content">
+            <h3>Fresh Ingredients</h3>
+            <p>We start by carefully selecting the finest, 100% natural and organic ingredients from local farms.</p>
+          </div>
+          <div class="timeline-image">
+            <img src="./asset/w16.webp" alt="Fresh Ingredients">
+          </div>
+        </div>
+
+
+        <div class="timeline-item right">
+          <div class="timeline-dot">2</div>
+          <div class="timeline-content">
+            <h3>Creamy Preparation</h3>
+            <p>Our artisans gently mix the fresh milk, rich cream, and natural sweeteners to create the perfect base.
+            </p>
+          </div>
+          <div class="timeline-image">
+            <img src="./asset/w1.webp" alt="Creamy Preparation">
+          </div>
+        </div>
+
+
+        <div class="timeline-item left">
+          <div class="timeline-dot">3</div>
+          <div class="timeline-content">
+            <h3>Perfect Churning</h3>
+            <p>The mixture is slowly churned at optimal temperatures, developing our signature smooth and airy texture.
+            </p>
+          </div>
+          <div class="timeline-image">
+            <img src="./asset/w2.webp" alt="Perfect Churning">
+          </div>
+        </div>
+
+
+        <div class="timeline-item right">
+          <div class="timeline-dot">4</div>
+          <div class="timeline-content">
+            <h3>Flavor Creation</h3>
+            <p>We fold in real fruits, premium chocolates, and special ingredients to craft our unique, irresistible
+              flavors.</p>
+          </div>
+          <div class="timeline-image">
+            <img src="./asset/w12.webp" alt="Flavor Creation">
+          </div>
+        </div>
+
+
+        <div class="timeline-item left">
+          <div class="timeline-dot">5</div>
+          <div class="timeline-content">
+            <h3>Ready to Scoop</h3>
+            <p>Freshly frozen and beautifully served. A masterpiece in a cone or cup, ready to bring a smile to your
+              face.</p>
+          </div>
+          <div class="timeline-image">
+            <img src="./asset/w11.webp" alt="Ready to Scoop">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section id="seasonal" class="seasonal-section">
+
+
+    <div class="seasonal-parallax-bg" style="background-image: url('./asset/w6.webp');"></div>
+    <div class="seasonal-overlay"></div>
+
+    <div class="seasonal-container">
+
+
+      <div class="seasonal-text gsap-season-text">
+        <div class="season-badge"><i class="fa-solid fa-gem"></i> Signature Edition</div>
+        <h2 class="seasonal-title">Raspberry Rose Symphony</h2>
+        <p class="seasonal-desc">
+          Experience the elegant harmony of tart wild raspberries and velvety white chocolate, infused with a delicate
+          hint of natural rose petals. A luxurious, melt-in-your-mouth delight crafted for pure romance.
+        </p>
+        <a href="404page.html" class="btn-seasonal">
+          Taste The Magic <i class="fa-solid fa-arrow-right-long"></i>
+        </a>
+      </div>
+
+
+      <div class="seasonal-image-group gsap-season-img">
+
+
+        <div class="main-image-box">
+          <img src="./asset/w9.webp" alt="Raspberry Rose Ice Cream">
+        </div>
+
+
+        <div class="overlap-image-box">
+          <img src="./asset/a1.webp" alt="Fresh Raspberries">
+        </div>
+
+
+        <div class="floating-dec dec-heart"><i class="fa-solid fa-heart"></i></div>
+        <div class="floating-dec dec-sparkle"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <section id="reviews" class="reviews-section">
+
+
+    <div class="bg-decor decor-star-1"><i class="fa-solid fa-star"></i></div>
+    <div class="bg-decor decor-icecream"><i class="fa-solid fa-ice-cream"></i></div>
+    <div class="bg-decor decor-star-2"><i class="fa-solid fa-star"></i></div>
+
+    <div class="reviews-container">
+
+
+      <div class="reviews-left gsap-rev-left">
+        <h2 class="theme-heading">A Little Scoop of Happiness.</h2>
+        <p class="reviews-sub">Don't just take our word for it. See what our lovely customers have to say about our
+          signature flavors.</p>
+
+        <div class="rating-summary">
+          <div class="summary-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+              class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p><strong>4.9/5</strong> average rating from 2,500+ happy customers</p>
+        </div>
+      </div>
+
+
+      <div class="reviews-right gsap-rev-right">
+
+        <div class="carousel-wrapper">
+
+
+          <div class="testi-slide active">
+            <i class="fa-solid fa-quote-left quote-icon"></i>
+            <p class="review-text">"Every scoop tastes amazing! The strawberry and Belgian chocolate flavors are now my
+              family's absolute favorites. The creamy texture is just out of this world!"</p>
+            <div class="customer-profile">
+              <img src="./asset/d1.webp" alt="Customer Avatar">
+              <div class="customer-info">
+                <h4>Sarah Jenkins</h4>
+                <div class="cust-stars">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="testi-slide">
+            <i class="fa-solid fa-quote-left quote-icon"></i>
+            <p class="review-text">"I tried the Raspberry Rose Symphony and it completely blew my mind. You can really
+              taste the freshness and quality of the ingredients. Highly recommended!"</p>
+            <div class="customer-profile">
+              <img src="./asset/d2.webp" alt="Customer Avatar">
+              <div class="customer-info">
+                <h4>David Peterson</h4>
+                <div class="cust-stars">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="testi-slide">
+            <i class="fa-solid fa-quote-left quote-icon"></i>
+            <p class="review-text">"The best ice cream I've had in years. The texture is so smooth and the flavors are
+              perfectly balanced. It's my go-to dessert place for every weekend."</p>
+            <div class="customer-profile">
+              <img src="./asset/d3.webp" alt="Customer Avatar">
+              <div class="customer-info">
+                <h4>Emily Chen</h4>
+                <div class="cust-stars">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                    class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="carousel-controls">
+          <button class="nav-arrow prev-arrow" onclick="prevTestimonial()"><i
+              class="fa-solid fa-arrow-left"></i></button>
+          <div class="carousel-dots">
+            <span class="dot active" onclick="goToTestimonial(0)"></span>
+            <span class="dot" onclick="goToTestimonial(1)"></span>
+            <span class="dot" onclick="goToTestimonial(2)"></span>
+          </div>
+          <button class="nav-arrow next-arrow" onclick="nextTestimonial()"><i
+              class="fa-solid fa-arrow-right"></i></button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <section id="visit-us" class="visit-section">
+    <div class="visit-container">
+
+
+      <div class="visit-left gsap-visit-left">
+        <div class="visit-img-box">
+          <img src="./asset/w23.webp" alt="Ice Cream Shop Interior">
+
+
+          <div class="visit-badge">
+            <i class="fa-solid fa-store"></i> Your Neighborhood Scoop Shop
+          </div>
+
+
+          <div class="floating-loc">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="visit-right gsap-visit-right">
+        <h2 class="theme-heading">Your Next Favorite Scoop Is Waiting.</h2>
+        <p class="visit-sub">Step into our sweet haven. Enjoy our freshly crafted flavors in a cozy, welcoming
+          atmosphere.</p>
+
+
+        <div class="visit-info-grid">
+
+
+          <div class="info-item">
+            <div class="info-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+            <div class="info-text">
+              <h4>Address</h4>
+              <p>MMR Complex, Chinna Thirupathi,<br> near Chinna Muniyappan Kovil,
+                Salem</p>
+            </div>
+          </div>
+
+
+          <div class="info-item">
+            <div class="info-icon"><i class="fa-regular fa-clock"></i></div>
+            <div class="info-text">
+              <h4>Opening Hours</h4>
+              <p>Mon - Sun: 10:00 AM - 11:00 PM<br><em>(Open all holidays)</em></p>
+            </div>
+          </div>
+
+
+          <div class="info-item">
+            <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+            <div class="info-text">
+              <h4>Contact</h4>
+              <p>+91 9876543210<br>info@thestackly.com</p>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="visit-action-area">
+          <div class="map-preview">
+            <img src="./asset/w13.webp" alt="Map Location Preview">
+          </div>
+
+          <div class="action-btns">
+            <a href="404page.html" class="btn-rose">Get Directions <i class="fa-solid fa-location-arrow"></i></a>
+            <a href="404page.html" class="btn-outline">Contact Us</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+  <section id="final-cta" class="final-cta-section" style="background-image: url('./asset/w17.webp');">
+
+
+    <div class="cta-overlay"></div>
+
+
+    <div class="cta-decor icon-1"><i class="fa-solid fa-ice-cream"></i></div>
+    <div class="cta-decor icon-2"><i class="fa-solid fa-heart"></i></div>
+    <div class="cta-decor icon-3"><i class="fa-solid fa-star"></i></div>
+    <div class="cta-decor icon-4"><i class="fa-solid fa-spoon"></i></div>
+
+    <div class="cta-container gsap-cta-reveal">
+
+
+      <h2 class="cta-heading">Life Is Better with Ice Cream.</h2>
+      <p class="cta-desc">
+        Discover your favorite flavors, try something new, and make every moment a little sweeter.
+      </p>
+
+
+      <div class="cta-actions">
+        <a href="404page.html" class="btn-cta-primary">
+          <i class="fa-solid fa-cart-shopping"></i> Order Now
+        </a>
+        <a href="404page.html" class="btn-cta-secondary">
+          <i class="fa-solid fa-compass"></i> Explore All
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+  <footer class="footer-section">
+    <div class="footer-container">
+
+
+      <div class="footer-col" data-aos="fade-up" data-aos-delay="100">
+        <a href="index.html" class="logo">
+          <img src="./asset/roselogo.webp" alt="logo">
+        </a>
+        <p class="footer-desc">
+          "Scooping happiness daily! Handcrafted artisanal ice creams made with organic ingredients. Treat yourself to a
+          swirl of joy every single day without fail."
+        </p>
+        <div class="social-icons">
+          <a href="404page.html"><i class="fa-brands fa-instagram"></i></a>
+          <a href="404page.html"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="404page.html"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="404page.html"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+
+
+      <div class="footer-col" data-aos="fade-up" data-aos-delay="200">
+        <h4>Explore</h4>
+        <ul class="footer-links">
+          <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+          <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
+          <li><a href="service.html"><i class="fa-solid fa-chevron-right"></i> Services</a></li>
+          <li><a href="blog.html"><i class="fa-solid fa-chevron-right"></i> Blog</a></li>
+          <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i> Contact</a></li>
+        </ul>
+      </div>
+
+
+      <div class="footer-col" data-aos="fade-up" data-aos-delay="300">
+        <h4>Visit Us</h4>
+        <ul class="footer-contact">
+          <li><i class="fa-regular fa-envelope"></i> info@thestackly.com</li>
+          <li><i class="fa-solid fa-location-dot"></i> MMR Complex, Chinna Thirupathi,near Chinna Muniyappan Kovil,
+            Salem</li>
+          <li><i class="fa-solid fa-phone"></i> +91 98765 43210</li>
+          <li><i class="fa-regular fa-clock"></i> Mon - Sun: 10 AM - 11 PM</li>
+        </ul>
+      </div>
+
+
+      <div class="footer-col" data-aos="fade-up" data-aos-delay="400">
+        <h4>Quick Order</h4>
+        <p class="footer-desc">
+          Craving a sweet midnight treat? Enter your ZIP code and order now!
+        </p>
+        <form id="orderForm" class="order-form">
+          <input type="text" id="areaCode" placeholder="Area / ZIP">
+          <button type="submit"> ORDER</button>
+        </form>
+        <div id="errorMsg" class="error-msg">Please enter your area code!</div>
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom" data-aos="fade-in" data-aos-delay="500">
+      <p>&copy; 2026 Scoops Ice Cream. All rights reserved.</p>
+      <div class="legal-links">
+        <a href="404page.html">Terms & Conditions</a>
+        <a href="404page.html">Privacy Policy</a>
+        <a href="404page.html">Refund Policy</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script src="script.js"></script>
+
+  <script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const splitSlides = document.querySelectorAll('.split-slide');
+      const splitDots = document.querySelectorAll('.split-dot');
+      let currentSplitSlide = 0;
+      let splitInterval;
+
+
+      window.jumpSplitSlide = function (index) {
+        if (splitSlides.length === 0) return;
+
+
+        splitSlides.forEach(slide => slide.classList.remove('active'));
+        splitDots.forEach(dot => dot.classList.remove('active'));
+
+        currentSplitSlide = index;
+        if (currentSplitSlide >= splitSlides.length) currentSplitSlide = 0;
+
+
+        splitSlides[currentSplitSlide].classList.add('active');
+        splitDots[currentSplitSlide].classList.add('active');
+
+        resetSplitInterval();
+      };
+
+
+      function startSplitInterval() {
+        splitInterval = setInterval(() => {
+          let nextSlide = currentSplitSlide + 1;
+          if (nextSlide >= splitSlides.length) nextSlide = 0;
+          jumpSplitSlide(nextSlide);
+        }, 6000);
+      }
+
+      function resetSplitInterval() {
+        clearInterval(splitInterval);
+        startSplitInterval();
+      }
+
+
+      if (splitSlides.length > 0) {
+        startSplitInterval();
+      }
+    });
+
+
+    if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+      gsap.registerPlugin(ScrollTrigger);
+
+
+      gsap.from(".gsap-reveal-title", {
+        scrollTrigger: {
+          trigger: ".flavor-section",
+          start: "top 80%",
+          toggleActions: "play none none reverse"
+        },
+        y: 60,
+        opacity: 0,
+        duration: 1.2,
+        ease: "power3.out"
+      });
+
+
+      gsap.from(".gsap-reveal-text", {
+        scrollTrigger: {
+          trigger: ".flavor-section",
+          start: "top 75%",
+          toggleActions: "play none none reverse"
+        },
+        y: 40,
+        opacity: 0,
+        duration: 1.2,
+        delay: 0.2,
+        ease: "power3.out"
+      });
+
+
+      gsap.from(".gsap-reveal-cards", {
+        scrollTrigger: {
+          trigger: ".flavor-header",
+          start: "top 60%",
+          toggleActions: "play none none reverse"
+        },
+        y: 80,
+        scale: 0.95,
+        opacity: 0,
+        duration: 1.5,
+        ease: "expo.out"
+      });
+    }
+
+
+
+    if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+
+
+      gsap.from(".gsap-sig-reveal", {
+        scrollTrigger: {
+          trigger: ".signature-section",
+          start: "top 80%",
+          toggleActions: "play none none reverse"
+        },
+        y: 50,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out"
+      });
+
+
+      gsap.from(".gsap-sig-card", {
+        scrollTrigger: {
+          trigger: ".sig-grid",
+          start: "top 75%",
+          toggleActions: "play none none reverse"
+        },
+        y: 80,
+        opacity: 0,
+        duration: 1.2,
+        stagger: 0.2,
+        ease: "back.out(1.2)"
+      });
+    }
+
+
+
+
+    if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+
+      gsap.from(".gsap-marquee-reveal", {
+        scrollTrigger: {
+          trigger: ".marquee-section",
+          start: "top 85%",
+          toggleActions: "play none none reverse"
+        },
+        y: 50,
+        opacity: 0,
+        duration: 1.2,
+        ease: "power3.out"
+      });
+
+    }
+
+
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+      if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+
+
+        gsap.from(".gsap-timeline-header", {
+          scrollTrigger: { trigger: ".timeline-section", start: "top 80%", toggleActions: "play none none reverse" },
+          y: 40, opacity: 0, duration: 1, ease: "power3.out"
+        });
+
+
+        gsap.to("#timeline-progress", {
+          height: "100%",
+          ease: "none",
+          scrollTrigger: {
+            trigger: ".timeline-wrapper",
+            start: "top center",
+            end: "bottom center",
+            scrub: 1
+          }
+        });
+
+
+        const timelineItems = document.querySelectorAll('.timeline-item');
+
+        timelineItems.forEach((item) => {
+
+          let isLeft = item.classList.contains('left');
+          let xDistance = window.innerWidth > 992 ? (isLeft ? -80 : 80) : 50;
+
+          gsap.from(item.querySelector('.timeline-content'), {
+            scrollTrigger: { trigger: item, start: "top 80%", toggleActions: "play none none reverse" },
+            x: xDistance, opacity: 0, duration: 1.2, ease: "power3.out"
+          });
+
+          gsap.from(item.querySelector('.timeline-image'), {
+            scrollTrigger: { trigger: item, start: "top 80%", toggleActions: "play none none reverse" },
+            x: -xDistance, opacity: 0, duration: 1.2, ease: "power3.out"
+          });
+
+          gsap.from(item.querySelector('.timeline-dot'), {
+            scrollTrigger: { trigger: item, start: "top 80%", toggleActions: "play none none reverse" },
+            scale: 0, opacity: 0, duration: 0.8, ease: "back.out(1.7)"
+          });
+        });
+      }
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+
+
+        gsap.to("#timeline-progress", {
+          height: "100%",
+          ease: "none",
+          scrollTrigger: {
+            trigger: ".timeline-wrapper",
+            start: "top center",
+            end: "bottom center",
+            scrub: 1
+          }
+        });
+
+
+        const timelineItems = document.querySelectorAll('.timeline-item');
+        timelineItems.forEach((item) => {
+          gsap.from(item, {
+            scrollTrigger: { trigger: item, start: "top 85%", toggleActions: "play none none reverse" },
+            y: 50, opacity: 0, duration: 0.8, ease: "power2.out"
+          });
+        });
+
+
+        gsap.to(".seasonal-parallax-bg", {
+          yPercent: 20, ease: "none",
+          scrollTrigger: { trigger: ".seasonal-section", start: "top bottom", end: "bottom top", scrub: true }
+        });
+
+        gsap.from(".gsap-season-text", {
+          scrollTrigger: { trigger: ".seasonal-section", start: "top 75%", toggleActions: "play none none reverse" },
+          x: -50, opacity: 0, duration: 1, ease: "power3.out"
+        });
+
+        gsap.from(".gsap-season-img", {
+          scrollTrigger: { trigger: ".seasonal-section", start: "top 75%", toggleActions: "play none none reverse" },
+          x: 50, opacity: 0, duration: 1, ease: "power3.out"
+        });
+      }
+    });
+
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+
+      const testiSlides = document.querySelectorAll('.testi-slide');
+      const testiDots = document.querySelectorAll('.carousel-dots .dot');
+      let currentTesti = 0;
+
+      function showTestimonial(index) {
+
+        testiSlides.forEach(slide => slide.classList.remove('active'));
+        testiDots.forEach(dot => dot.classList.remove('active'));
+
+
+        testiSlides[index].classList.add('active');
+        testiDots[index].classList.add('active');
+      }
+
+
+      window.nextTestimonial = function () {
+        currentTesti++;
+        if (currentTesti >= testiSlides.length) currentTesti = 0;
+        showTestimonial(currentTesti);
+      }
+
+      window.prevTestimonial = function () {
+        currentTesti--;
+        if (currentTesti < 0) currentTesti = testiSlides.length - 1;
+        showTestimonial(currentTesti);
+      }
+
+      window.goToTestimonial = function (index) {
+        currentTesti = index;
+        showTestimonial(currentTesti);
+      }
+
+
+      if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+
+        gsap.from(".gsap-rev-left", {
+          scrollTrigger: { trigger: ".reviews-section", start: "top 75%", toggleActions: "play none none reverse" },
+          x: -50, opacity: 0, duration: 1.2, ease: "power3.out"
+        });
+
+        gsap.from(".gsap-rev-right", {
+          scrollTrigger: { trigger: ".reviews-section", start: "top 75%", toggleActions: "play none none reverse" },
+          x: 50, opacity: 0, duration: 1.2, ease: "power3.out"
+        });
+
+      }
+    });
+
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+
+
+        gsap.from(".gsap-visit-left", {
+          scrollTrigger: {
+            trigger: ".visit-section",
+            start: "top 75%",
+            toggleActions: "play none none reverse"
+          },
+          x: -60,
+          opacity: 0,
+          duration: 1.2,
+          ease: "power3.out"
+        });
+
+
+        gsap.from(".gsap-visit-right", {
+          scrollTrigger: {
+            trigger: ".visit-section",
+            start: "top 75%",
+            toggleActions: "play none none reverse"
+          },
+          x: 60,
+          opacity: 0,
+          duration: 1.2,
+          delay: 0.2,
+          ease: "power3.out"
+        });
+
+      }
+    });
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+
+
+        gsap.from(".gsap-cta-reveal", {
+          scrollTrigger: {
+            trigger: ".final-cta-section",
+            start: "top 85%",
+            toggleActions: "play none none reverse"
+          },
+          y: 50,
+          opacity: 0,
+          duration: 1.2,
+          ease: "power3.out"
+        });
+
+      }
+    });
+
+
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SweetCrumbs - Create Account</title>
+
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Nunito:wght@400;600;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-cream: #fffdf8;
+            --text-dark: #1a202c;
+            --text-gray: #64748b;
+            --neon-rose: #ff5e78;
+            --border-light: #e2e8f0;
+            --error-red: #e53e3e;
+            --success-green: #38a169;
+            --font-title: 'Playfair Display', serif;
+            --font-text: 'Nunito', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-text);
+            background-color: var(--bg-cream);
+            overflow-x: hidden;
+        }
+
+
+        .signup-split-section {
+            display: flex;
+            min-height: 100vh;
+            width: 100%;
+            position: relative;
+        }
+
+
+        .back-home-link {
+            position: absolute;
+            top: 30px;
+            left: 40px;
+            z-index: 100;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1rem;
+            font-weight: 700;
+            color: #fff;
+            text-decoration: none;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px 20px;
+            border-radius: 50px;
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+        }
+
+        .back-home-link:hover {
+            background: var(--neon-rose);
+            transform: translateY(-2px);
+        }
+
+
+        .signup-left-panel {
+            flex: 1.2;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 50px;
+        }
+
+        .signup-bg-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('./asset/w17.webp');
+            background-size: cover;
+            background-position: center;
+            z-index: 1;
+        }
+
+        .signup-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(26, 32, 44, 0.85) 0%, rgba(26, 32, 44, 0.4) 100%);
+            z-index: 2;
+        }
+
+        .signup-left-content {
+            position: relative;
+            z-index: 5;
+            color: #fff;
+            animation: fadeUp 1s ease-out;
+        }
+
+        .signup-left-content h2 {
+            font-family: var(--font-title);
+            font-size: 3.5rem;
+            font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .signup-left-content p {
+            font-size: 1.15rem;
+            color: #e2e8f0;
+            line-height: 1.6;
+            max-width: 450px;
+        }
+
+
+        .signup-right-panel {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            background-color: var(--bg-cream);
+            animation: fadeUp 1.2s ease-out;
+        }
+
+        .signup-card-inner {
+            width: 100%;
+            max-width: 450px;
+            margin: 40px 0;
+        }
+
+        .signup-logo {
+            font-family: var(--font-title);
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--neon-rose);
+            text-align: center;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .signup-logo img {
+            width: 150px;
+        }
+
+
+
+        .signup-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .signup-header h3 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+
+        .signup-header p {
+            font-size: 1rem;
+            color: var(--text-gray);
+        }
+
+
+        .input-group {
+            position: relative;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        .left-icon {
+            position: absolute;
+            top: 18px;
+            left: 20px;
+            color: #94a3b8;
+            font-size: 1.1rem;
+            transition: 0.3s;
+            pointer-events: none;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 18px 20px 18px 50px;
+            border: 2px solid var(--border-light);
+            border-radius: 16px;
+            background-color: #fff;
+            font-size: 1rem;
+            color: var(--text-dark);
+            font-family: inherit;
+            font-weight: 600;
+            outline: none;
+            transition: 0.3s;
+            box-sizing: border-box;
+        }
+
+
+        input[type="password"]::-ms-reveal,
+        input[type="password"]::-ms-clear {
+            display: none !important;
+        }
+
+        select.form-input {
+            appearance: none;
+            cursor: pointer;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231a202c' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 20px center;
+            background-size: 15px;
+        }
+
+        .form-input:focus {
+            border-color: var(--neon-rose);
+            box-shadow: 0 0 0 4px rgba(255, 94, 120, 0.1);
+        }
+
+        .form-input:focus~.left-icon {
+            color: var(--neon-rose);
+        }
+
+
+        .toggle-pwd {
+            position: absolute;
+            top: 18px;
+            right: 20px;
+            color: #94a3b8;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        .toggle-pwd:hover {
+            color: var(--neon-rose);
+        }
+
+
+        .error-msg {
+            color: var(--error-red);
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-top: 8px;
+            margin-left: 10px;
+            display: none;
+        }
+
+        .input-group.error .form-input {
+            border-color: var(--error-red);
+            background: #fff5f5;
+            animation: shake 0.4s ease-in-out;
+        }
+
+        .input-group.error .left-icon {
+            color: var(--error-red);
+        }
+
+        .input-group.error .error-msg {
+            display: block;
+        }
+
+        @keyframes shake {
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            25%,
+            75% {
+                transform: translateX(-5px);
+            }
+
+            50% {
+                transform: translateX(5px);
+            }
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        .submit-btn {
+            width: 100%;
+            padding: 18px;
+            background-color: var(--neon-rose);
+            color: #fff;
+            border: none;
+            border-radius: 16px;
+            font-size: 1.1rem;
+            font-weight: 800;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 10px 20px rgba(255, 94, 120, 0.2);
+            margin-top: 10px;
+            margin-bottom: 25px;
+        }
+
+        .submit-btn:hover {
+            background-color: var(--text-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 25px rgba(26, 32, 44, 0.2);
+        }
+
+
+        .global-success {
+            color: var(--success-green);
+            font-size: 1.05rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 20px;
+            display: none;
+        }
+
+
+        .login-link {
+            text-align: center;
+            font-size: 0.95rem;
+            color: var(--text-gray);
+            font-weight: 600;
+            margin-top: 15px;
+        }
+
+        .login-link a {
+            color: var(--neon-rose);
+            font-weight: 800;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+            color: var(--text-dark);
+        }
+
+
+        @media screen and (max-width: 992px) {
+            .signup-split-section {
+                flex-direction: column;
+                display: block;
+                padding-top: 70px;
+            }
+
+            .signup-left-panel {
+                display: none;
+            }
+
+            .back-home-link {
+                top: 15px;
+                left: 15px;
+                background: #ffe4e8;
+                color: var(--neon-rose);
+                border: 1px solid var(--neon-rose);
+            }
+
+            .signup-right-panel {
+                padding: 15px;
+                background: transparent;
+            }
+        }
+
+
+        @media screen and (max-width: 576px) {
+            .back-home-link {
+                font-size: 0.9rem;
+                padding: 8px 15px;
+            }
+
+            .signup-card-inner {
+                background: #fff;
+                padding: 30px 20px;
+                border-radius: 24px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+                margin: 0 auto;
+                width: 100%;
+            }
+
+            .signup-logo {
+                font-size: 1.6rem;
+                margin-bottom: 15px;
+            }
+
+            .signup-header h3 {
+                font-size: 1.5rem;
+                margin-bottom: 5px;
+            }
+
+            .signup-header p {
+                font-size: 0.9rem;
+            }
+
+            .form-input {
+                padding: 15px 15px 15px 42px;
+                font-size: 0.95rem;
+                border-radius: 12px;
+            }
+
+            .left-icon {
+                top: 16px;
+                left: 15px;
+                font-size: 1rem;
+            }
+
+            .toggle-pwd {
+                top: 16px;
+                right: 15px;
+                font-size: 1rem;
+            }
+
+            select.form-input {
+                padding-right: 30px;
+                background-position: right 15px center;
+            }
+
+            .submit-btn {
+                padding: 15px;
+                font-size: 1rem;
+                border-radius: 12px;
+                margin-bottom: 20px;
+            }
+
+            .error-msg {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="signup-split-section">
+
+
+        <a href="index.html" class="back-home-link"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+
+
+        <div class="signup-left-panel">
+            <div class="signup-bg-img"></div>
+            <div class="signup-overlay"></div>
+            <div class="signup-left-content">
+                <h2>Join Our<br>Sweet Team</h2>
+                <p>Create your staff account to manage orders, update menus, and spread happiness one scoop at a time.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="signup-right-panel">
+            <div class="signup-card-inner">
+
+                <div class="signup-logo">
+                    <a href="index.html"><img src="./asset/roselogo.webp" alt="logo"></a>
+                </div>
+
+                <div class="signup-header">
+                    <h3>Create an Account</h3>
+                    <p>Fill in the details below to get started.</p>
+                </div>
+
+
+                <div id="globalSuccessMsg" class="global-success"></div>
+
+                <form id="staffSignupForm" novalidate>
+
+
+                    <div class="input-group" id="groupRole">
+                        <i class="fa-solid fa-id-badge left-icon"></i>
+                        <select id="userRole" class="form-input">
+                            <option value="" disabled selected>Select Your Role</option>
+                            <option value="manager">Shop Manager Dashboard</option>
+                            <option value="delivery">Delivery Partner Dashboard</option>
+                        </select>
+                        <div class="error-msg" id="errRole">Please select your designated role.</div>
+                    </div>
+
+
+                    <div class="input-group" id="groupName">
+                        <i class="fa-regular fa-user left-icon"></i>
+                        <input type="text" id="userName" class="form-input" placeholder="Full Name" autocomplete="off">
+                        <div class="error-msg" id="errName">Numbers and special characters not allowed. Use letters,
+                            spaces, or hyphen (-).</div>
+                    </div>
+
+
+                    <div class="input-group" id="groupEmail">
+                        <i class="fa-regular fa-envelope left-icon"></i>
+                        <input type="email" id="userEmail" class="form-input" placeholder="Email Address"
+                            autocomplete="off">
+                        <div class="error-msg" id="errEmail">Please enter a valid email address.</div>
+                    </div>
+
+
+                    <div class="input-group" id="groupPassword">
+                        <i class="fa-solid fa-lock left-icon"></i>
+                        <input type="password" id="userPassword" class="form-input" placeholder="Password">
+                        <i class="fa-regular fa-eye toggle-pwd" id="togglePwdBtn1"></i>
+                        <div class="error-msg" id="errPassword">Password must be at least 6 characters.</div>
+                    </div>
+
+
+                    <div class="input-group" id="groupConfirmPassword">
+                        <i class="fa-solid fa-lock left-icon"></i>
+                        <input type="password" id="confirmPassword" class="form-input" placeholder="Confirm Password">
+                        <i class="fa-regular fa-eye toggle-pwd" id="togglePwdBtn2"></i>
+                        <div class="error-msg" id="errConfirmPassword">Passwords do not match.</div>
+                    </div>
+
+                    <button type="submit" class="submit-btn" id="submitBtn">Create Account</button>
+
+                </form>
+
+                <div class="login-link">
+                    Already have an account? <a href="login.html">Login Here</a>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            const signupForm = document.getElementById("staffSignupForm");
+
+            const roleInput = document.getElementById("userRole");
+            const nameInput = document.getElementById("userName");
+            const emailInput = document.getElementById("userEmail");
+            const passwordInput = document.getElementById("userPassword");
+            const confirmInput = document.getElementById("confirmPassword");
+
+            const groupRole = document.getElementById("groupRole");
+            const groupName = document.getElementById("groupName");
+            const groupEmail = document.getElementById("groupEmail");
+            const groupPassword = document.getElementById("groupPassword");
+            const groupConfirm = document.getElementById("groupConfirmPassword");
+
+            const successMsg = document.getElementById("globalSuccessMsg");
+            const submitBtn = document.getElementById("submitBtn");
+
+
+            function setupToggle(btnId, inputId) {
+                const btn = document.getElementById(btnId);
+                const input = document.getElementById(inputId);
+                btn.addEventListener("click", function () {
+                    const type = input.getAttribute("type") === "password" ? "text" : "password";
+                    input.setAttribute("type", type);
+                    this.classList.toggle("fa-eye");
+                    this.classList.toggle("fa-eye-slash");
+                });
+            }
+            setupToggle("togglePwdBtn1", "userPassword");
+            setupToggle("togglePwdBtn2", "confirmPassword");
+
+
+            roleInput.addEventListener("change", () => groupRole.classList.remove("error"));
+            nameInput.addEventListener("input", () => groupName.classList.remove("error"));
+            emailInput.addEventListener("input", () => groupEmail.classList.remove("error"));
+            passwordInput.addEventListener("input", () => groupPassword.classList.remove("error"));
+            confirmInput.addEventListener("input", () => groupConfirm.classList.remove("error"));
+
+
+            signupForm.addEventListener("submit", (e) => {
+                e.preventDefault();
+                let isValid = true;
+                successMsg.style.display = 'none';
+
+
+                if (roleInput.value === "") {
+                    groupRole.classList.add("error");
+                    document.getElementById('errRole').textContent = "Please select your designated role.";
+                    isValid = false;
+                }
+
+
+                const nameRegex = /^[A-Za-z\s\-]+$/;
+                if (nameInput.value.trim() === "") {
+                    groupName.classList.add("error");
+                    document.getElementById('errName').textContent = "Please enter your full name.";
+                    isValid = false;
+                } else if (!nameRegex.test(nameInput.value.trim())) {
+                    groupName.classList.add("error");
+                    document.getElementById('errName').textContent = "Numbers and special characters not allowed. Use letters, spaces, or hyphen (-).";
+                    isValid = false;
+                }
+
+
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(emailInput.value.trim())) {
+                    groupEmail.classList.add("error");
+                    isValid = false;
+                }
+
+
+                if (passwordInput.value.trim().length < 6) {
+                    groupPassword.classList.add("error");
+                    isValid = false;
+                }
+
+
+                if (confirmInput.value.trim() === "") {
+                    groupConfirm.classList.add("error");
+                    document.getElementById('errConfirmPassword').textContent = "Please confirm your password.";
+                    isValid = false;
+                } else if (confirmInput.value !== passwordInput.value) {
+                    groupConfirm.classList.add("error");
+                    document.getElementById('errConfirmPassword').textContent = "Passwords do not match.";
+                    isValid = false;
+                }
+
+
+                if (isValid) {
+                    successMsg.textContent = "Account Created Successfully! Redirecting to Login...";
+                    successMsg.style.display = "block";
+
+                    submitBtn.style.backgroundColor = "#38a169";
+                    submitBtn.innerHTML = 'Creating Account <i class="fa-solid fa-spinner fa-spin"></i>';
+
+
+                    setTimeout(() => {
+                        window.location.href = "login.html";
+                    }, 1500);
+                }
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>

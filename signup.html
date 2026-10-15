@@ -595,15 +595,15 @@
                     isValid = false;
                 }
 
+                const nameRegex = /^[A-Za-z\s\-']+$/;
 
-                const nameRegex = /^[A-Za-z\s\-]+$/;
                 if (nameInput.value.trim() === "") {
                     groupName.classList.add("error");
                     document.getElementById('errName').textContent = "Please enter your full name.";
                     isValid = false;
                 } else if (!nameRegex.test(nameInput.value.trim())) {
                     groupName.classList.add("error");
-                    document.getElementById('errName').textContent = "Numbers and special characters not allowed. Use letters, spaces, or hyphen (-).";
+                    document.getElementById('errName').textContent = "Numbers and special characters not allowed. Use letters, spaces, hyphen (-), or apostrophe (').";
                     isValid = false;
                 }
 
